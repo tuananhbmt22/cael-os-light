@@ -1,0 +1,5 @@
+{
+  "before": "deny",
+  "old_after_swap": "deny",
+  "rebuilt_after_swap": "allow"
+}

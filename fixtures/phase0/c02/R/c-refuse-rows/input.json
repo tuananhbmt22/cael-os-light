@@ -1,0 +1,44 @@
+{
+  "quarantined_rows": [],
+  "ruleSet": {
+    "archetype": "C",
+    "fields": {
+      "halal": { "kind": "boolean", "hard": true },
+      "wheelchair": { "kind": "boolean", "hard": true }
+    },
+    "token_synonyms": { "pho": "pho", "quiet": "quiet" },
+    "category_axis": { "field": "category", "token_categories": { "pho": "restaurant" } },
+    "soft_rank": {
+      "top_n": 2,
+      "token_present_score": 10,
+      "token_absent_penalty": -2,
+      "token_negated_present_penalty": -8,
+      "token_unknown_score": 0,
+      "category_match_score": 3
+    }
+  },
+  "cases": [
+    {
+      "id": "field-hard-gate-empty",
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["pho"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-not-halal", "category": "restaurant", "fields": { "halal": false, "wheelchair": true }, "tokens": { "pho": "present" }, "rating": 4.9, "popularity": 100, "review_count": 220 }
+          ]
+        }
+      }
+    },
+    {
+      "id": "offer-alternative-no-accessible-row",
+      "input": {
+        "subject": { "field_constraints": { "wheelchair": true }, "tokens": ["quiet"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "stairs-only", "category": "restaurant", "fields": { "halal": true, "wheelchair": false }, "tokens": { "quiet": "present" }, "rating": 4.1, "popularity": 50, "review_count": 60 }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "originalRuleSet": {
+    "archetype": "A",
+    "roles": ["Manager"],
+    "departments": ["Finance", "Engineering"],
+    "classifications": [
+      { "id": "Public", "rank": 1 },
+      { "id": "Confidential", "rank": 3 }
+    ],
+    "normalization": { "roles": {}, "departments": {} },
+    "role_hierarchy": { "Manager": ["Manager"] },
+    "access": [
+      { "role": "Manager", "classification": "Public", "allow": true, "rule_id": "a_manager_public" },
+      { "role": "Manager", "classification": "Confidential", "allow": true, "same_dept": true, "rule_id": "a_manager_confidential_same_dept" }
+    ]
+  },
+  "swappedRuleSet": {
+    "archetype": "A",
+    "roles": ["Manager"],
+    "departments": ["Finance", "Engineering"],
+    "classifications": [
+      { "id": "Public", "rank": 1 },
+      { "id": "Confidential", "rank": 3 }
+    ],
+    "normalization": { "roles": {}, "departments": {} },
+    "role_hierarchy": { "Manager": ["Manager"] },
+    "access": [
+      { "role": "Manager", "classification": "Public", "allow": true, "rule_id": "a_manager_public" },
+      { "role": "Manager", "classification": "Confidential", "allow": true, "rule_id": "a_manager_confidential_any_dept" }
+    ]
+  },
+  "input": {
+    "subject": { "role": "Manager", "user_dept": "Finance" },
+    "object": { "docs": [{ "id": "doc-eng-conf", "doc_dept": "Engineering", "doc_classification": "Confidential" }] }
+  }
+}

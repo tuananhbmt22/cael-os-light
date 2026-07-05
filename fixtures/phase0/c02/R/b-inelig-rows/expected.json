@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "underage-ineligibility-top",
+      "decision": "score",
+      "firing_rule": "b_underage_guardian",
+      "ranked_ids": ["guardian_verification"],
+      "fallback_used": false
+    }
+  ]
+}

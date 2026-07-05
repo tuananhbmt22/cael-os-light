@@ -1,0 +1,70 @@
+{
+  "declared_allow_minimum": 3,
+  "ruleSet": {
+    "archetype": "A",
+    "roles": ["Analyst", "Manager", "Executive"],
+    "departments": ["Finance", "Engineering", "Phòng Công Nghệ"],
+    "classifications": [
+      { "id": "Public", "rank": 1 },
+      { "id": "Internal", "rank": 2 },
+      { "id": "Confidential", "rank": 3 },
+      { "id": "Privileged", "rank": 4 }
+    ],
+    "normalization": {
+      "roles": { "Exec": "Executive", "Lead": "Manager" },
+      "departments": { "Phong Cong Nghe": "Phòng Công Nghệ", "Phòng Công nghệ": "Phòng Công Nghệ" }
+    },
+    "role_hierarchy": {
+      "Analyst": ["Analyst"],
+      "Manager": ["Manager", "Analyst"],
+      "Executive": ["Executive", "Manager", "Analyst"]
+    },
+    "access": [
+      { "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "a_allow_public" },
+      { "role": "Analyst", "classification": "Internal", "allow": true, "same_dept": true, "rule_id": "a_allow_internal_same_dept" },
+      { "role": "Manager", "classification": "Public", "allow": true, "rule_id": "a_manager_public" },
+      { "role": "Manager", "classification": "Internal", "allow": true, "rule_id": "a_manager_internal" },
+      { "role": "Manager", "classification": "Confidential", "allow": true, "same_dept": true, "rule_id": "a_manager_confidential_same_dept" },
+      { "role": "Executive", "classification": "Public", "allow": true, "rule_id": "a_exec_public" },
+      { "role": "Executive", "classification": "Internal", "allow": true, "rule_id": "a_exec_internal" },
+      { "role": "Executive", "classification": "Confidential", "allow": true, "rule_id": "a_exec_confidential" },
+      { "role": "Executive", "classification": "Privileged", "allow": true, "rule_id": "a_exec_privileged" }
+    ]
+  },
+  "cases": [
+    {
+      "id": "analyst-internal-same-dept",
+      "input": {
+        "subject": { "role": "Analyst", "user_dept": "Finance" },
+        "object": {
+          "docs": [{ "id": "doc-fin-internal", "doc_dept": "Finance", "doc_classification": "Internal" }]
+        }
+      }
+    },
+    {
+      "id": "exec-synonym-vn-dept-privileged",
+      "input": {
+        "subject": { "role": "Exec", "user_dept": "Phong Cong Nghe" },
+        "object": {
+          "docs": [{ "id": "doc-vn-privileged", "doc_dept": "Phòng Công Nghệ", "doc_classification": "Privileged" }]
+        }
+      }
+    },
+    {
+      "id": "manager-block-level-most-restrictive",
+      "input": {
+        "subject": { "role": "Lead", "user_dept": "Engineering" },
+        "object": {
+          "docs": [
+            {
+              "id": "doc-eng-mixed",
+              "doc_dept": "Engineering",
+              "doc_classification": "Public",
+              "blocks": [{ "classification": "Public" }, { "classification": "Confidential" }]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

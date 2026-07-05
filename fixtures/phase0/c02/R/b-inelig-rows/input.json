@@ -1,0 +1,34 @@
+{
+  "ruleSet": {
+    "archetype": "B",
+    "cap": 3,
+    "thresholds": { "min_age": 18, "high_risk_score": 70, "low_loyalty_score": 20 },
+    "rules": [
+      {
+        "rule_id": "b_underage_guardian",
+        "recommendation": "guardian_verification",
+        "priority": 100,
+        "threshold_refs": ["min_age"],
+        "conditions": [{ "field": "age", "op": "lt", "threshold_id": "min_age" }]
+      },
+      {
+        "rule_id": "b_high_risk_review",
+        "recommendation": "manual_risk_review",
+        "priority": 90,
+        "threshold_refs": ["high_risk_score"],
+        "conditions": [{ "field": "risk_score", "op": "gte", "threshold_id": "high_risk_score" }]
+      }
+    ],
+    "fallback": { "rule_id": "b_fallback_healthy_discovery", "recommendation": "healthy_discovery_loyalty", "priority": 10 }
+  },
+  "cases": [
+    {
+      "id": "underage-ineligibility-top",
+      "input": {
+        "subject": { "age": 15, "risk_score": 10, "loyalty_score": 50, "tags": [] },
+        "object": {},
+        "ctx": { "question": "Different wording must not matter" }
+      }
+    }
+  ]
+}

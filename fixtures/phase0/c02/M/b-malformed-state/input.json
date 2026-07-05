@@ -1,0 +1,17 @@
+{
+  "malformedRuleSet": {
+    "archetype": "B",
+    "rules": [],
+    "fallback": { "rule_id": "b_fallback_healthy_discovery", "recommendation": "healthy_discovery_loyalty", "priority": 10 }
+  },
+  "input": {
+    "subject": "not-a-state-object",
+    "object": {},
+    "ctx": { "question": "This must refuse cleanly" }
+  },
+  "expected": {
+    "id": "malformed-state-refuses",
+    "decision": "refuse",
+    "firing_rule": "eligibility_input_state_malformed"
+  }
+}

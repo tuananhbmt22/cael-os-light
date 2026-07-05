@@ -29,3 +29,36 @@ export {
 } from "./kernel/state-kernel.js";
 export type { LedgerTurn, LedgerTurnEntry, SessionTurnRecord } from "./kernel/ledger-memory.js";
 export { LedgerMemory, ledgerTurnEntrySchema, sessionTurnRecordSchema } from "./kernel/ledger-memory.js";
+export type {
+  DecisionEvidence,
+  GateArchetype,
+  GateDecision,
+  GateInput,
+  GatePrimitive,
+  GateRuleSet,
+  RankedCandidate
+} from "./gate/gate-engine.js";
+export { buildRuleSet, GateRuleSetValidationError, refuseDecision } from "./gate/gate-engine.js";
+export type {
+  ClassificationRank,
+  ComparisonOperator,
+  EligibilityCondition,
+  EligibilityRuleData,
+  EligibilityRuleSetData,
+  FieldKind,
+  OpenWorldCategoryAxis,
+  OpenWorldFieldDefinition,
+  OpenWorldRuleSetData,
+  OpenWorldSoftRankConfig,
+  RbacAccessRow,
+  RbacRuleSetData
+} from "./gate/rule-set-schema.js";
+export {
+  eligibilityRuleSetSchema,
+  openWorldRuleSetSchema,
+  primitiveValueSchema,
+  rbacRuleSetSchema,
+  validateEligibilityRuleSetData,
+  validateOpenWorldRuleSetData,
+  validateRbacRuleSetData
+} from "./gate/rule-set-schema.js";

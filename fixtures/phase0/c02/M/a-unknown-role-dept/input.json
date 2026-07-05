@@ -1,0 +1,36 @@
+{
+  "ruleSet": {
+    "archetype": "A",
+    "roles": ["Analyst", "Manager", "Executive"],
+    "departments": ["Finance", "Engineering", "Phòng Công Nghệ"],
+    "classifications": [
+      { "id": "Public", "rank": 1 },
+      { "id": "Internal", "rank": 2 },
+      { "id": "Confidential", "rank": 3 },
+      { "id": "Privileged", "rank": 4 }
+    ],
+    "normalization": { "roles": {}, "departments": {} },
+    "role_hierarchy": {
+      "Analyst": ["Analyst"],
+      "Manager": ["Manager", "Analyst"],
+      "Executive": ["Executive", "Manager", "Analyst"]
+    },
+    "access": [{ "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "a_allow_public" }]
+  },
+  "cases": [
+    {
+      "id": "unknown-role-denies",
+      "input": {
+        "subject": { "role": "Contractor", "user_dept": "Finance" },
+        "object": { "docs": [{ "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" }] }
+      }
+    },
+    {
+      "id": "unknown-dept-denies",
+      "input": {
+        "subject": { "role": "Analyst", "user_dept": "Legal" },
+        "object": { "docs": [{ "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" }] }
+      }
+    }
+  ]
+}

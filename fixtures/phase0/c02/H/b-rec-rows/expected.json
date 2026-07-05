@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {
+      "id": "rank-cap-three",
+      "decision": "score",
+      "firing_rule": "b_underage_guardian",
+      "ranked_ids": ["guardian_verification", "manual_risk_review", "discovery_offer"],
+      "fallback_used": false
+    },
+    {
+      "id": "healthy-fallback-never-empty",
+      "decision": "score",
+      "firing_rule": "b_fallback_healthy_discovery",
+      "ranked_ids": ["healthy_discovery_loyalty"],
+      "fallback_used": true
+    }
+  ]
+}

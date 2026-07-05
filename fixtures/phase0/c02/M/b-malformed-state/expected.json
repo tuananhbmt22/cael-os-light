@@ -1,0 +1,9 @@
+{
+  "cases": [
+    {
+      "id": "malformed-state-refuses",
+      "decision": "refuse",
+      "firing_rule": "eligibility_input_state_malformed"
+    }
+  ]
+}
