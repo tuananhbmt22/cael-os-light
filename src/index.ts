@@ -132,3 +132,16 @@ export type {
   ConformanceTurn
 } from "./adapter/conformance.js";
 export { runConformance } from "./adapter/conformance.js";
+export type {
+  NotificationEmission,
+  NotificationPackDeclarations,
+  NotifyContext,
+  NotifyDeps,
+  NotifyEngine,
+  NotifyEngineOptions,
+  NotifyLogEvent,
+  NotifyPack
+} from "./notify/notify.js";
+export { arbitrate, createNotifyEngine } from "./notify/notify.js";
+export type { AddressParts, NormalizeHooks, NormalizeRecipe, NormalizeResult, NormalizeStep } from "./normalize/normalize.js";
+export { accentFold, canonicalizeDept, expandAbbreviations, normalize, parseSimpleAddress } from "./normalize/normalize.js";

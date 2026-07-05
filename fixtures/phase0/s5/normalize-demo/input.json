@@ -1,0 +1,12 @@
+{
+  "accentText": "Phòng Đăng ký Đắk Lắk",
+  "abbrevText": "P ĐK xe",
+  "addressText": "12 Lê Lợi, P Tân Lợi, TP Buôn Ma Thuột",
+  "deptName": "Phong Dang ky",
+  "deptDict": {
+    "Phòng Đăng ký": "Registration",
+    "Phong Dang ky": "Registration",
+    "P ĐK": "Registration"
+  }
+}
+
