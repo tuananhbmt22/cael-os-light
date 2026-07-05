@@ -1,0 +1,8 @@
+{
+  "expected_code": "undeclared-scored-surface",
+  "mutation": {
+    "path": "$.scored_surfaces.bindings[0].eval_key",
+    "operation": "replace",
+    "value": "missing-eval-key"
+  }
+}

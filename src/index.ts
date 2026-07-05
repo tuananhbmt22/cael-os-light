@@ -78,3 +78,31 @@ export type {
 export { decideEscalation } from "./graded-cooper/graded-cooper.js";
 export type { S3Pack, TurnDeps, TurnInput, TurnResult } from "./spine/run-turn.js";
 export { runTurn } from "./spine/run-turn.js";
+export type {
+  LoadedPack,
+  PackLoadError,
+  PackLoadErrorCode,
+  PackLoadResult,
+  PackRegistry
+} from "./pack/pack-loader.js";
+export { createPackRegistry, loadPack, registerPack, routePack } from "./pack/pack-loader.js";
+export type {
+  AdapterDeclaration,
+  BrokenKeyClaim,
+  DomainPackRaw,
+  NotificationTemplateDeclaration,
+  NotificationTriggerDeclaration,
+  ScoredSurfaceBinding,
+  StateDeclarations,
+  ThresholdDerivation
+} from "./pack/pack-schema.js";
+export type {
+  ImageBootSession,
+  ImageLoadError,
+  ImageLoadErrorCode,
+  ImageLoadResult,
+  ImageUpdateHeartbeat,
+  LoadImageOptions,
+  LoadedImage
+} from "./image/image-loader.js";
+export { createImageBootSession, hashImageBytes, loadImage } from "./image/image-loader.js";
