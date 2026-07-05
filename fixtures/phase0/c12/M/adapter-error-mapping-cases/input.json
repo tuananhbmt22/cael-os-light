@@ -1,0 +1,6 @@
+{
+  "cases": [
+    "transient->retry",
+    "fatal->terminal"
+  ]
+}

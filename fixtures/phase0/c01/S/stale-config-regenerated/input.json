@@ -1,0 +1,7 @@
+{
+  "stale_config": {
+    "schema_version": "stale",
+    "head_adapter": "stub"
+  },
+  "expected_head_adapter": "stub"
+}

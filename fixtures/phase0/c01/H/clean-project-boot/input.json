@@ -1,0 +1,13 @@
+{
+  "commands": [
+    "npm install <local-tarball> --offline --no-audit --no-fund",
+    "npx cael-os-light init --fixture"
+  ],
+  "status_shape": {
+    "os_sha": "sha256",
+    "packs": [
+      "synthetic-eligibility-vn"
+    ],
+    "head_adapter": "stub"
+  }
+}

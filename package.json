@@ -18,6 +18,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
     "test:file": "vitest run --reporter=basic",
+    "acceptance:install": "node scripts/acceptance/install-acceptance.mjs",
+    "prepack": "npm run build",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
   },
   "dependencies": {},

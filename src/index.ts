@@ -106,3 +106,29 @@ export type {
   LoadedImage
 } from "./image/image-loader.js";
 export { createImageBootSession, hashImageBytes, loadImage } from "./image/image-loader.js";
+export type {
+  AdapterErrorInput,
+  AdapterErrorKind,
+  AdapterErrorOutcome,
+  AdapterEvent,
+  AdapterFailureKind,
+  AdapterStructuredFailure,
+  AdapterStructuredResult,
+  HeadAdapter,
+  HeadAdapterRequest,
+  HeadAdapterResponse,
+  ToolCall,
+  ToolSpec
+} from "./adapter/head-adapter.js";
+export { mapAdapterError, stableCachePrefixHash, validateStructuredAdapterOutput } from "./adapter/head-adapter.js";
+export type { StubHeadAdapterOptions } from "./adapter/stub-adapter.js";
+export { createStubHeadAdapter } from "./adapter/stub-adapter.js";
+export type {
+  ConformanceErrorCase,
+  ConformanceFailure,
+  ConformanceFailureCode,
+  ConformanceResult,
+  ConformanceTranscript,
+  ConformanceTurn
+} from "./adapter/conformance.js";
+export { runConformance } from "./adapter/conformance.js";
