@@ -1,0 +1,30 @@
+{
+  "pack": {
+    "packId": "phase0-s3-fixture-pack",
+    "imageSha": "sha-fixture-s3",
+    "gateRuleSet": {
+      "archetype": "A",
+      "roles": ["Analyst", "Executive"],
+      "departments": ["Finance", "Engineering"],
+      "classifications": [{ "id": "Public", "rank": 1 }, { "id": "Internal", "rank": 2 }, { "id": "Privileged", "rank": 4 }],
+      "normalization": { "roles": {}, "departments": {} },
+      "role_hierarchy": { "Analyst": ["Analyst"], "Executive": ["Executive", "Analyst"] },
+      "access": [
+        { "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "allow_public" },
+        { "role": "Analyst", "classification": "Internal", "allow": true, "same_dept": true, "rule_id": "allow_internal_same_dept" },
+        { "role": "Executive", "classification": "Privileged", "allow": true, "rule_id": "exec_privileged" }
+      ]
+    },
+    "corpus": { "units": [{ "id": "ev-renewal-window", "source": "policy.md", "facts": ["Renewal is covered for 30 days. Tài liệu hợp lệ."], "keywords": ["renewal", "covered", "30"], "numbers": [30] }] }
+  },
+  "input": {
+    "userId": "user-s3",
+    "sessionId": "session-s3",
+    "turnId": "turn-allow-c03",
+    "subject": { "role": "Analyst", "user_dept": "Finance" },
+    "object": { "docs": [{ "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" }] },
+    "query": "renewal covered 30",
+    "answerClaim": { "text": "Renewal is covered for 30 days", "requiredEvidenceId": "ev-renewal-window", "requiredTerms": ["renewal", "covered", "30"], "number": 30 }
+  }
+}
+

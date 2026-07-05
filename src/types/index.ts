@@ -35,6 +35,7 @@ export interface Receipt {
   evidence_refs: EvidenceRef[];
   confidence: number;
   escalation_used: boolean;
+  escalation_trigger?: string | undefined;
   pack_id: string;
   image_sha: string;
   schema_version: string;

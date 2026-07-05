@@ -22,6 +22,7 @@ const receiptBaseSchema: Schema<Receipt> = s.object(
     evidence_refs: s.array(evidenceRefSchema),
     confidence: s.number(),
     escalation_used: s.boolean(),
+    escalation_trigger: s.optional(s.string()),
     pack_id: s.string(),
     image_sha: s.string(),
     schema_version: s.string()

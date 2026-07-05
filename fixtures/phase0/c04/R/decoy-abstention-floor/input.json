@@ -1,0 +1,5 @@
+{
+  "corpus": { "units": [{ "id": "ev-visible-neighbor", "source": "neighbor.md", "facts": ["Warranty is covered for 30 days."], "keywords": ["warranty", "covered", "30"], "numbers": [30] }] },
+  "claim": { "text": "Renewal is covered for 30 days", "requiredEvidenceId": "ev-renewal-window", "requiredTerms": ["renewal", "covered", "30"] }
+}
+

@@ -1,0 +1,5 @@
+{
+  "pack": { "packId": "phase0-s3-fixture-pack", "imageSha": "sha-fixture-s3", "gateRuleSet": {}, "corpus": { "units": [] }, "triggerConfig": { "enabled": ["step_up_action"] } },
+  "state": { "stepUpAction": true }
+}
+

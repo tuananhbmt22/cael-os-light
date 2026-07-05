@@ -62,3 +62,19 @@ export {
   validateOpenWorldRuleSetData,
   validateRbacRuleSetData
 } from "./gate/rule-set-schema.js";
+export type { CorpusScope, CorpusUnit, EmbeddingRecipe, EvidenceUnit, GroundResult } from "./ground/ground.js";
+export { ground } from "./ground/ground.js";
+export type { AnswerClaim, VerifyResult } from "./verify/verify.js";
+export { verify } from "./verify/verify.js";
+export type { AuditSink, DualChannelResult, DualChannelSinks, ResolvedTarget } from "./dual-channel/dual-channel.js";
+export { emit, GENERIC_CLOSED_MESSAGE, GENERIC_DENY_MESSAGE, MemoryAuditSink } from "./dual-channel/dual-channel.js";
+export type {
+  EscalationDecision,
+  EscalationTrigger,
+  SecondBrain,
+  TriggerConfig,
+  TurnStateForEscalation
+} from "./graded-cooper/graded-cooper.js";
+export { decideEscalation } from "./graded-cooper/graded-cooper.js";
+export type { S3Pack, TurnDeps, TurnInput, TurnResult } from "./spine/run-turn.js";
+export { runTurn } from "./spine/run-turn.js";

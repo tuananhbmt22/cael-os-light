@@ -1,0 +1,6 @@
+{
+  "packA": { "packId": "phase0-s3-fixture-pack", "imageSha": "sha-fixture-s3", "gateRuleSet": {}, "corpus": { "units": [] }, "triggerConfig": { "enabled": ["low_retrieval_confidence"], "lowRetrievalConfidenceBelow": 0.2 } },
+  "packB": { "packId": "phase0-s3-fixture-pack", "imageSha": "sha-fixture-s3", "gateRuleSet": {}, "corpus": { "units": [] }, "triggerConfig": { "enabled": ["low_retrieval_confidence"], "lowRetrievalConfidenceBelow": 0.5 } },
+  "state": { "retrievalConfidence": 0.4 }
+}
+

@@ -1,0 +1,5 @@
+{
+  "corpus": { "units": [{ "id": "ev-renewal-window-new", "source": "policy-v2.md", "facts": ["Renewal is covered for 30 days."], "keywords": ["renewal", "covered", "30"], "numbers": [30] }] },
+  "claim": { "text": "Renewal is covered for 30 days", "requiredEvidenceId": "ev-renewal-window-old", "requiredTerms": ["renewal", "covered", "30"] }
+}
+

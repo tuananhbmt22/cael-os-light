@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "packId": "phase0-s3-fixture-pack",
+    "imageSha": "sha-fixture-s3",
+    "gateRuleSet": { "archetype": "A", "roles": ["Analyst"], "departments": ["Finance"], "classifications": [{ "id": "Public", "rank": 1 }], "normalization": { "roles": {}, "departments": {} },
+      "role_hierarchy": { "Analyst": ["Analyst"] }, "access": [{ "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "allow_public" }] },
+    "corpus": { "units": [{ "id": "ev-renewal-window", "source": "policy.md", "facts": ["Renewal is covered for 30 days."], "keywords": ["renewal", "covered", "30"], "numbers": [30] }] },
+    "triggerConfig": { "enabled": ["residual_metadata_intent_conflict"] }
+  },
+  "input": { "userId": "user-s3", "sessionId": "session-s3", "turnId": "turn-c07-failure", "subject": { "role": "Analyst", "user_dept": "Finance" }, "object": { "docs": [{ "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" }] }, "query": "renewal covered 30", "answerClaim": { "text": "Renewal is covered for 30 days", "requiredEvidenceId": "ev-renewal-window", "requiredTerms": ["renewal", "covered", "30"] }, "escalationState": { "residualMetadataIntentConflict": true } }
+}
+
