@@ -1,0 +1,11 @@
+{
+  "goal": {
+    "id": "goal-done",
+    "user_id": "user-a",
+    "objective": "Lưu lại mục tiêu đã hoàn tất",
+    "status": "completed"
+  },
+  "next_status": "executing",
+  "expected_code": "illegal-goal-transition"
+}
+

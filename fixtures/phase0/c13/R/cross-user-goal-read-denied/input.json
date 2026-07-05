@@ -1,0 +1,16 @@
+{
+  "goal": {
+    "id": "goal-a-private",
+    "user_id": "user-a",
+    "objective": "Chuẩn bị hồ sơ riêng của user A",
+    "status": "ready"
+  },
+  "blocked": {
+    "id": "goal-b-dependent",
+    "user_id": "user-b",
+    "objective": "Việc của user B không được thấy mục tiêu user A",
+    "status": "ready",
+    "blocked_by": ["goal-a-private"]
+  }
+}
+

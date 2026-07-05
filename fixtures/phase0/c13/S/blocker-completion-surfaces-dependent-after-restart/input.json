@@ -1,0 +1,16 @@
+{
+  "blocker": {
+    "id": "goal-blocker",
+    "user_id": "user-b",
+    "objective": "Nhận xác nhận giấy tờ",
+    "status": "awaiting_verification"
+  },
+  "dependent": {
+    "id": "goal-dependent",
+    "user_id": "user-b",
+    "objective": "Nộp hồ sơ sau khi có xác nhận",
+    "status": "ready",
+    "blocked_by": ["goal-blocker"]
+  }
+}
+

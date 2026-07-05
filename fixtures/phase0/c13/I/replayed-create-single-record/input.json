@@ -1,0 +1,10 @@
+{
+  "goal": {
+    "id": "goal-replay",
+    "user_id": "user-a",
+    "objective": "Không tạo trùng mục tiêu khi replay",
+    "status": "decoded"
+  },
+  "expected_count": 1
+}
+

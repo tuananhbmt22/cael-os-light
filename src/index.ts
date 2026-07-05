@@ -177,3 +177,22 @@ export type {
   L2TurnRecord
 } from "./eval/l2-runner.js";
 export { KernelAuditSink, replayL2Recording, runL2 } from "./eval/l2-runner.js";
+export type {
+  CreateGoalInput,
+  GoalRecord,
+  GoalRelation,
+  GoalStatus,
+  GoalStep,
+  RelationKind
+} from "./goal-light/goal-schema.js";
+export {
+  createGoalInputSchema,
+  goalRecordSchema,
+  goalStatuses,
+  goalStatusSchema,
+  GOAL_SCHEMA_VERSION,
+  relationKindSchema,
+  relationKinds
+} from "./goal-light/goal-schema.js";
+export type { GoalLightError, GoalLightErrorCode, GoalLightOptions, GoalLightResult } from "./goal-light/goal-light.js";
+export { builtInAllowedTransitions, createGoalLight, GoalLight } from "./goal-light/goal-light.js";
