@@ -145,3 +145,35 @@ export type {
 export { arbitrate, createNotifyEngine } from "./notify/notify.js";
 export type { AddressParts, NormalizeHooks, NormalizeRecipe, NormalizeResult, NormalizeStep } from "./normalize/normalize.js";
 export { accentFold, canonicalizeDept, expandAbbreviations, normalize, parseSimpleAddress } from "./normalize/normalize.js";
+export type {
+  L1ClientFlag,
+  L1EvalCase,
+  L1EvalSet,
+  L1KeyReport,
+  L1Report,
+  L1RowResult,
+  ScoredFunction,
+  ScoredFunctionMap
+} from "./eval/l1-harness.js";
+export { scoreL1 } from "./eval/l1-harness.js";
+export type {
+  Rubric,
+  RubricJudge,
+  RubricJudgeResult,
+  RubricReceipt,
+  RubricSample
+} from "./eval/rubric-judge.js";
+export { judgeRubric } from "./eval/rubric-judge.js";
+export type { ProvenanceInput, ProvenanceRecord } from "./eval/provenance.js";
+export { emitProvenanceRecord } from "./eval/provenance.js";
+export type {
+  L2Deps,
+  L2NotifyRecord,
+  L2Prompt,
+  L2PromptSet,
+  L2Recording,
+  L2Scores,
+  L2SessionSpec,
+  L2TurnRecord
+} from "./eval/l2-runner.js";
+export { KernelAuditSink, replayL2Recording, runL2 } from "./eval/l2-runner.js";

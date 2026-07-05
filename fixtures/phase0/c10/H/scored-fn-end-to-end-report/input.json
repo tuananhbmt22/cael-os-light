@@ -1,0 +1,7 @@
+{
+  "eval_set_version": "c10-public-v1",
+  "expected_public_eval_keys": [
+    "eligibility.public",
+    "tier.public"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "expected_sessions": [
+    "session-a",
+    "session-b"
+  ],
+  "bleed_prompt_id": "l2-bleed-probe",
+  "crash_prompt_id": "l2-crash",
+  "notify_prompt_id": "l2-notify-restart"
+}

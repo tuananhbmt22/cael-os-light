@@ -1,0 +1,4 @@
+{
+  "notify_prompt_id": "l2-notify-restart",
+  "expected_duplicate_after_restart": 0
+}
