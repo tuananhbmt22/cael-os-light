@@ -1,0 +1,14 @@
+{
+  "schema": "cael.bounded_cooper_record.v1",
+  "goal_id": "goal-20260704-0712",
+  "builder_verdict": "clean",
+  "court_status": "closed",
+  "unresolved_issues": 0,
+  "review": true,
+  "cooper_required": true,
+  "builder_report": "docs/handoff/jobs/593-0712-s6b-goal-light-build/report/REPORT.md",
+  "judge_report": "docs/handoff/jobs/_briefs/0712-BUILD-JUDGE-VERIFICATION.md",
+  "builder_job": "586-593 (0712 S1-S6b slice builds, codex)",
+  "accepted_at": "2026-07-05T06:55:00Z",
+  "provenance": "Phase-0 HARNESS BUILD cooper record, RADIO-authored from on-disk evidence at the merge gate. Builder side: 8 codex slice jobs (586 S1 state-kernel, 587 S2 gate-engine, 588 S3 ground/verify/dual-channel/graded-cooper, 589 S4a loaders, 590 S4b install/adapter, 591 S5 notify/normalize, 592 S6a eval-harness, 593 S6b goal-light) each with builder REPORT.md + job.py done, committed per slice on the lane branch. Judge side: RADIO heir-19 (Claude) B1 census verification BY EXECUTION at the merge gate - fence diff 243 files all in-fence zero deletions; tsc build exit 0; vitest 85/85 (17 files); install acceptance PASS live (offline local tarball + npx init --fixture + status {os_sha, packs:[synthetic-eligibility-vn], head_adapter:stub} + post-init tree match); fixture grids c01-c13 present; client-data scan clean (2 unicode-escape false positives); zero runtime deps; ready packet tcell green, zero warnings, no goal-ops. Full evidence: docs/handoff/jobs/_briefs/0712-BUILD-JUDGE-VERIFICATION.md. Honest caveat recorded there: per-slice formal judge-closes absent in-lane; this census re-execution is the independent verification of record (codex built, Claude judged); POSIX-sh acceptance builder-attested, PS form judge-re-executed. Court: no contested findings; rounds 0; unresolved 0."
+}

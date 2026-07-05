@@ -1,0 +1,295 @@
+{
+  "acceptance_tests": [
+    "c01 install acceptance (spec section 1): on a CLEAN fixture project exactly two commands - npm install <local tarball fixture> (no registry/network) then npx cael-os-light init --fixture - after which npx cael-os-light status boots the turn spine on the bundled synthetic pack + fixture cael.os.md and prints {os_sha, packs[], head_adapter}; verified on Windows PowerShell AND POSIX sh; STUB head-adapter so the run is fully offline; expected post-init file tree diffed against the fixture",
+    "fixture manifest law (spec section 11 table): every named fixture exists at cael-os-light/fixtures/phase0/c<NN>/<class>/<fixture-id>/ per the c01-c13 grid; a named fixture missing on disk = the condition is red; declared '-' N/A cells listed in the report, not silently skipped",
+    "gate batteries (c02): A closed-world RBAC battery green incl. multi-doc MAX-restrictiveness, canonicalization, deny-if-any, declared allow-row minimums; B eligibility battery green incl. rank/cap-3/never-empty fallback + question-independence (same state => same output across questions); C open-world battery green incl. tri-state missing!=false, field-over-token, sole-discriminator hard-kill, negation, honest-fallback, precision-by-construction, PARTITIONED fixture set with valid-coverage minimum and false-refusal cap on clean rows",
+    "dual-channel zero-leak (c03): across the full deny battery the user channel carries generic id-free refusals, audit records carry resolved ids, ZERO denied content/existence in the user channel at string level; audit-write failure fails closed",
+    "refuse-without-evidence (c04): ungrounded => refusal citing missing evidence; grounded => cited answer; abstention floor holds on the decoy fixture",
+    "receipts (c05): every turn validates against the typed schema; a forced-invalid turn degrades locally (chat survives; mutation blocked) and logs",
+    "ledger isolation (c06): continuity across turns; user A can never read user B via ANY surface (adversarial probes); replayed append = single entry; restart-mid-session resumes",
+    "graded-cooper (c07): ordinary battery = ZERO second-brain calls; each configured trigger (low-confidence, permission-boundary, step-up, residual) fires on its fixture row; escalation visible in receipts; escalation-seam failure refuses rather than answers",
+    "pack loader (c08): loads the valid synthetic pack; REFUSES each of the 7 malformed variants with named errors (no-derivation, foreign-derivation, red-derivation-fixture, template-trigger-misalign, undeclared-scored-surface, undeclared-state-ref, evidence-free-broken-key-claim); unparseable pack refused; re-register no duplicate",
+    "image (c09): boots from the fixture cael.os.md; identical cached prefix across turns (stable prefix hash); SHA mismatch => refuse boot; mid-session image swap refused",
+    "eval harness (c10+c11): L1 scored-fn end-to-end report naming public scope; planted broken key quarantined ONLY via predeclared claim; L2 two-session composition proof recorded on two synthetic packs (mixed prompts; gate holds turn-to-turn; planted bleed probe caught) + provenance pack emitted",
+    "adapter conformance (c12): the conformance suite (fixed transcript replay) green on adapter #1/stub: expected tool-call/event envelopes, stable cache-prefix hash across replays, structured-output failure semantics, retry/error mapping, receipt equivalence",
+    "goal-light (c13): goal records persist across restart; illegal lifecycle transition REFUSED; relations hold across restart (blocker completion surfaces dependent); per-user goal isolation; replayed create = single record; pack-level goal templates enforced by the loader (undeclared goal writes refused)",
+    "engineering hygiene: TypeScript builds clean from a cold clone (npm ci + build); full Phase-0 test suite green offline in one command; zero client-data markers (rg scan over the package for known client identifiers empty); BUILD cooper record valid strict JSON attached via lane.py attach-build-cooper-record before ready"
+  ],
+  "autonomous_window": {
+    "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+    "max_lifecycle": "until judge-close or block",
+    "mode": "natural_completion",
+    "stop_route": "return_to_radio"
+  },
+  "blocker_policy": {
+    "blocker_route": "return_to_radio"
+  },
+  "constraints": [
+    "CONVERGE-ONLY until P0 blockers (0576/0631) verified AND Kajima co-converge locks the spec",
+    "build fires via RADIO contract, never solo",
+    "no client data in repo/image",
+    "compiled-only shipping",
+    "spec doc = docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md"
+  ],
+  "contract_id": "radio-contract:goal-20260704-0712:a5ea350ff38a57e5",
+  "contractor_lane_type": "unsupervise",
+  "cooper_policy": {
+    "cooper_required": false,
+    "record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0712-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "eeb24ca69f02960238de7096a43c67bf7f6146f7405a33a293e4bacdf25a7659",
+      "source_goal_id": "goal-20260704-0712",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0712"
+    },
+    "review": false
+  },
+  "created_at": "2026-07-05T03:31:56Z",
+  "created_by": "CAEL RADIO",
+  "end_manual": null,
+  "execution_plan": [
+    "S1 state-kernel + receipt schemas + structuredOutput validation + ledger isolation (winning c05, c06 fixtures)",
+    "S2 gate engine + A/B/C interpreters + batteries (winning c02)",
+    "S3 ground + verify + dual-channel + graded-cooper (winning c03, c04, c07)",
+    "S4 pack loader + image loader + install/init + adapter #1 stub + conformance suite (winning c01, c08, c09, c12)",
+    "S5 notify + normalize-minimal incl. pack-load template/trigger alignment checks",
+    "S6 eval harness L1 + rubric-judge + L2 runner/recorder + provenance + goal-light conditions (winning c10, c11, c13)"
+  ],
+  "goal_snapshot": {
+    "autonomous_window": {
+      "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+      "max_lifecycle": "until judge-close or block",
+      "mode": "natural_completion",
+      "stop_route": "return_to_radio"
+    },
+    "constraints": [
+      "CONVERGE-ONLY until P0 blockers (0576/0631) verified AND Kajima co-converge locks the spec",
+      "build fires via RADIO contract, never solo",
+      "no client data in repo/image",
+      "compiled-only shipping",
+      "spec doc = docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md"
+    ],
+    "evidence_refs": [
+      "Inputs: cael-os-light-AGREEMENT-DRAFT-1.md sec 1-12 (LOCKED round-1) + cael-os-light-P1-FIELD-PREP.md (verified field) + track goals 0700-0711 build-steps + goal-0579 Kajima locks (cael.os.md third compile target",
+      "API-metered client-key serving",
+      "head-adapter portability gates)",
+      "KAJIMA KICK + STOP-POINT PIN (2026-07-05, live): 'Kick it now... We now executing. Outcome. Before any tracks for clients deliver i want us to stop right at the harness os light complete installable. Then we will do each track later after that. You are in control now.' => s3 converge CLOSED by Kajima; autonomous execution authorized INSIDE the boundary; HARD STOP-POINT = Phase-0 winning conditions green + install acceptance proven (sec 11 incl c01 install). NO track pack (0700-0711) fires until Kajima re-opens tracks - the sec 15 fire-map is Kajima-gated at the stop-point, not auto-continued.",
+      "SPEC LOCKED 2026-07-05 (s3 CLOSED): hardening trail = refute #579 (10/10 folded) -> delta-verify #580 (F10 cured via manifest table) -> live Kajima s3 (s3-1 goal-light core primitive RATIFIED, s3-2 demo-UI post-Phase-0 + npm deferred) -> lock-conformance #582 fix-then-lock (c13 goal-light condition, sec7.4 goal templates, sec15 stop-point law) -> LOCKED under Kajima kick. NEXT = s4: build via RADIO contract, gated on sec16 (0576 crit6 scenario run after boundary re-freeze; 0663 Phase-4 tail; 0631 DONE 2026-07-05). Stop-point: harness complete+installable then STOP."
+    ],
+    "execution_plan": [
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "s1 DRAFT the Phase-0 spec (DRAFT-1): agreement sec 1-12 + 3 gate archetypes + the 12 track build-steps -> Fable's buildable Part-1 contract at docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md",
+        "owner": null,
+        "state": "done",
+        "step_id": "s1",
+        "verify": "spec doc committed on the heir-17 envelope PR with primitive inventory, pack contract, winning conditions, hard rejects, build order"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "s2 REFUTATION COOPER on the draft (independent second brain attacks completeness vs the 12 build-steps, core-vs-module minimality, pack-seam correctness vs the corrected P4/P5, winning-condition checkability, hidden-eval discipline); fold corrections",
+        "owner": null,
+        "state": "done",
+        "step_id": "s2",
+        "verify": "cooper record closed + corrections folded into DRAFT-2 or confirmed clean"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "s3 CO-CONVERGE WITH KAJIMA multi-round -> LOCK the spec (his gates: owner-forks sec 7, delivery shape, scope cuts)",
+        "owner": null,
+        "state": "done",
+        "step_id": "s3",
+        "verify": "Kajima lock recorded on this goal + the spec status flips LOCKED"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "s4 BUILD via RADIO contract + build cooper (blocked until 0576 + 0631 verify AND s3 lock; contract minted from this goal)",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s4",
+        "verify": "radio_contract build+check green; lane build judged clean on disk"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "s5 Phase-0 WINNING CONDITIONS green on synthetic fixture packs (gate batteries A/B/C, dual-channel zero-leak, refuse-without-evidence, receipts, ledger isolation, graded-cooper triggers, pack/image loaders, L1+L2 harness, head-adapter parity)",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s5",
+        "verify": "all Phase-0 conditions pass + judge-verified; only then do track goals 0700-0711 fire"
+      }
+    ],
+    "goal_id": "goal-20260704-0712",
+    "goal_type": "code",
+    "missing_decisions": [],
+    "primary_goal": "",
+    "questions": [],
+    "relations": {
+      "blocked_by": [],
+      "duplicate_of": null,
+      "parent_goal_id": "goal-20260701-0579",
+      "relates_to": [
+        "goal-20260701-0576",
+        "goal-20260702-0631",
+        "goal-20260702-0663"
+      ],
+      "supersedes": []
+    },
+    "schema_version": "goal.v0.2",
+    "status": "executing",
+    "substrate": "work",
+    "success_criteria": [
+      "Phase-0 spec drafted (DRAFT-1) + refutation-cooper hardened + co-converged WITH Kajima into a LOCKED buildable contract",
+      "after 0576/0631 verify + lock: built via RADIO contract",
+      "Phase-0 winning conditions green on SYNTHETIC fixture packs (never client data)"
+    ],
+    "surface_request": "The shared Part-1 runtime core both archetypes boot on (agreement sec 4 Phase-0): gate engine (3 archetypes), ground/verify/structuredOutput/dual-channel/ledger-memory/graded-cooper, pack+image loaders, headless scored surfaces + 2-layer eval harness. Nothing ships until this is real.",
+    "title": "cael-os-light HARNESS PHASE-0 (Part-1 core) - spec -> cooper -> Kajima-lock -> build [the 70pct; all 12 tracks fire after this]",
+    "world_surfaces_needed": []
+  },
+  "goal_snapshot_sha": "a5ea350ff38a57e5601ff34a8ecd64fa9fd84157a3599e694c00daf5aeb9e109",
+  "ground_truth_refs": [
+    "docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md",
+    "docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md",
+    "docs/handoff/jobs/_briefs/cael-os-light-P1-FIELD-PREP.md"
+  ],
+  "hard_rejects": [
+    "prose-parsed routing/actions anywhere; UI code in any scoring path (headless scored surfaces only)",
+    "any answer path bypassing the gate engine; second-brain call on the ordinary hot path; a model as its own only checker",
+    "public-eval-derived constants without a threshold_derivations[] record; P035 special-cased anywhere; public scores reported as hidden expectations",
+    "client data anywhere in repo/image/fixtures (SYNTHETIC packs only); secrets in receipts; factory machinery (courts/evals-governance/compiler/source) inside the shipped dep",
+    "provider-locked names or per-model prompt forks (role/contract naming only; head-adapter under the fixed role contract)",
+    "silent empty recommendation (never-empty fallback law); missing token treated as false (tri-state is engine-native); test-time broken-key quarantine without a predeclared broken_key_claims record",
+    "vision/image-OCR, websocket/live-GPS/map-render code (de-scoped)",
+    "writes outside the scope fence: zero writes to cael.agent.os/** (beyond lane-normal goal/lane state), v3/**, canon/routing docs, CLAUDE.md, AGENTS.md, .os_image.json; no generated boot artifact riding the diff",
+    "markdown cooper record; self-judge-close; prose completion claims (job.py done + judge on disk only)",
+    "foreground full-suite runs in the lane shell (detached-to-file only); npm network installs during acceptance runs (local tarball + offline stub adapter only)",
+    "opportunistic cleanup, doc retirement, or any second deliverable riding this lane"
+  ],
+  "lifecycle": {
+    "checkpoint_tail": {
+      "log_path": "cael.agent.os/contracts/goal-20260704-0712.phase_chain.ndjson",
+      "seq": 2,
+      "this_hash": "f22ae1fb057e35ec00ef80854d34896570fe3be81f03f36f179d5ab17ae20c1b"
+    },
+    "contractor_lane_id": "lane-goal-20260704-0712-1783222579",
+    "mission_id": null,
+    "mission_variant": null,
+    "phase": "contractor_build",
+    "phase_started_at": "2026-07-05T03:36:23Z",
+    "phase_status": "active",
+    "responsible_party": "contractor"
+  },
+  "merge_contract": {
+    "inspect_before_merge": [
+      "lane source delta confined to: cael-os-light/** (the NEW package root: src, fixtures/phase0/**, package config, README) + docs/handoff/jobs/<this-lane's job dirs>/** + lane-normal goal/lane state ops; ZERO writes to cael.agent.os/** hooks/canon/routing, v3/**, CLAUDE.md, AGENTS.md, .os_image.json",
+      "no generated boot or registry artifact riding the diff (canon/rails-registry.md untouched)",
+      "winning-condition evidence in the lane report: per-condition c01-c13 pass table with per-slice (S1-S6) logs, install-acceptance transcripts for PS and POSIX, and the fixture-manifest presence check",
+      "BUILD cooper record attached and valid (builder_verdict clean, court closed, unresolved 0); judge-on-disk closure in-lane before ready",
+      "no client data, keys, or secrets anywhere in the diff (synthetic packs only; stub adapter fixtures)",
+      "package is self-contained: builds + tests green from the lane worktree with no dependency on factory machinery"
+    ]
+  },
+  "out_of_scope": [
+    "track packs P1-P12 (each fires later via its own RADIO contract from its prepared goal after Kajima re-opens the track; spec section 15 stop-point law)",
+    "the reusable client-demo UI (goal-0670 portal shape; FIRST post-Phase-0 deliverable, never Phase-0-core)",
+    "signer SERVICE tiers (C4 owner-fork); the cael.os.md compiler pipeline (C5; only the image ENVELOPE freezes here, boot from a FIXTURE image)",
+    "pricing/licensing and the npm publish channel decision (deferred behind the section-17 open-core-vs-license fork; install acceptance is local-tarball based)",
+    "deferred modules beyond their typed seams (engagement, payment/booking impl, doc-wallet, trace-clock, maps orchestration, parser impls)",
+    "Galaxy/PhongVu replication proofs; website-embed tenant SKU"
+  ],
+  "owner_forks_resolved": {
+    "missing_decisions": [],
+    "questions": [],
+    "waived_by": null,
+    "waiver_reason": null
+  },
+  "phase_checkpoints": [
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_phase_ready",
+      "next_responsible_party": "radio",
+      "payload_sha": "376d372285618323db4242fc01d9b92d6a2e53520e0e3567626a9f160ae0d03d",
+      "phase": "radio_converge",
+      "prev_hash": "genesis:radio-contract:radio-contract:goal-20260704-0712:a5ea350ff38a57e5",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 1,
+      "this_hash": "cf232b2901f1e94b77b53cfe85385742718cc7a634f828a09da9a2d8b134e639",
+      "ts": "2026-07-05T03:33:52Z"
+    },
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_build",
+      "next_responsible_party": "contractor",
+      "payload_sha": "e60dfaccbd206fbce56eb8634fea14e2075a4a33a251f6a8997170e44c359b7a",
+      "phase": "contractor_phase_ready",
+      "prev_hash": "cf232b2901f1e94b77b53cfe85385742718cc7a634f828a09da9a2d8b134e639",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 2,
+      "this_hash": "f22ae1fb057e35ec00ef80854d34896570fe3be81f03f36f179d5ab17ae20c1b",
+      "ts": "2026-07-05T03:36:23Z"
+    }
+  ],
+  "reports_required": {
+    "ready_artifacts": [
+      "contract_close_package"
+    ],
+    "reports": [
+      "report/REPORT.md"
+    ]
+  },
+  "review_disposition": {
+    "cooper_record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0712-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "eeb24ca69f02960238de7096a43c67bf7f6146f7405a33a293e4bacdf25a7659",
+      "source_goal_id": "goal-20260704-0712",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0712"
+    },
+    "cooper_required": false,
+    "review_required": false,
+    "reviewer_outcome": null
+  },
+  "root_goal_id": "goal-20260704-0712",
+  "schema": "cael.radio_contract.v2",
+  "scope": [
+    ""
+  ],
+  "signatures": {},
+  "stale_docs": [],
+  "status": "valid",
+  "success_criteria": [
+    "Phase-0 spec drafted (DRAFT-1) + refutation-cooper hardened + co-converged WITH Kajima into a LOCKED buildable contract",
+    "after 0576/0631 verify + lock: built via RADIO contract",
+    "Phase-0 winning conditions green on SYNTHETIC fixture packs (never client data)"
+  ],
+  "validity": {
+    "checked_at": "2026-07-05T03:36:23Z",
+    "checked_by": "cael.agent.os/hooks/contract_gate.py",
+    "contract_sha256": "e71862c765958fd70f2fa3d240701f3908aa88fd260673d78db55de68a150089",
+    "errors": [],
+    "result": "valid",
+    "validator_version": "radio_contract.py:v2"
+  },
+  "verification_plan": [
+    "Spec section 11 winning conditions c01-c13 ALL green on synthetic fixture packs, proven per build slice S1-S6 (section 14): S1 state-kernel+receipts+ledger-isolation; S2 gate engine+A/B/C interpreters+batteries; S3 ground+verify+dual-channel+graded-cooper; S4 pack loader+image loader+install/init+adapter#1-stub+conformance suite; S5 notify+normalize-minimal; S6 eval harness L1+rubric-judge+L2 runner/recorder+provenance. Each slice machine-checkable and judged on disk in-lane; install acceptance from LOCAL tarball with STUB adapter on PowerShell AND POSIX sh, fully offline; BUILD cooper record before lane ready; RADIO merge gate with blocking T-Cell at merge. LOCKED spec = docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md (build to THE SPEC; stop-and-flag on any spec-vs-reality contradiction instead of silently re-cutting)"
+  ]
+}

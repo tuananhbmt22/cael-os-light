@@ -1,0 +1,14 @@
+{
+  "schema": "cael.bounded_cooper_record.v1",
+  "goal_id": "goal-20260704-0712",
+  "builder_verdict": "clean",
+  "court_status": "closed",
+  "unresolved_issues": 0,
+  "review": true,
+  "cooper_required": true,
+  "builder_report": "docs/handoff/jobs/579-0712-s2-phase0-spec-refute/report/REFUTATION.md",
+  "judge_report": "docs/handoff/jobs/582-0712-s3-lock-conformance/report/JUDGE_CLOSE.md",
+  "builder_job": "582-0712-s3-lock-conformance",
+  "accepted_at": "2026-07-05T03:55:00Z",
+  "provenance": "Phase-0 HARNESS spec convergence chain (goal-0712 s1-s3, all judge-closed): s1 spec DRAFT-1 authored by heir-17 from committed ground truth (agreement sec 1-12 + 3 gate archetypes + 12 track build-steps, goals 0700-0711). s2 refutation cooper job 579 (REFUTATION.md, verdict needs-round-2, 10 findings F1-F10 ALL accepted and folded; core-membership line CONFIRMED-SOUND) -> s2b delta-verify job 580 (FOLD_VERIFY.md: F1-F9 CURED, F10 partial cured by the sec-11 fixture manifest table 12x5 with pinned paths + declared N/A cells). s3 live co-converge WITH Kajima 2026-07-05 (s3-1 goal-light core primitive RATIFIED from the 0579 vision lock + dogfood-to-product flip law; s3-2 demo-UI = first post-Phase-0 deliverable, npm channel deferred behind the sec-17 license fork, install acceptance tarball-based so non-load-bearing) -> s3 lock-conformance cooper job 582 (LOCK_CONFORMANCE.md, verdict fix-then-lock, 3 cures folded: c13 goal-light winning condition + sec-7.4 goal-template pack declarations + sec-15 stop-point law; clean checks: no ledger-memory/goal-light overlap, factory wall intact, P4-specializes-goal-light consistent). SPEC LOCKED 2026-07-05 on Kajima's kick ('Kick it now... You are in control now') with the HARD STOP-POINT: execution stops at harness complete + installable; tracks re-open by Kajima ONLY. Build-gates sec-16 cleared by RADIO heir-19 2026-07-05: (1) spec locked; (2) P0 stability - goal-0576 completed (crit6 first live cure_a boundary firing, receipts verified) + goal-0631 completed + 0596 completed; (3) transition job goal-0663 completed (Phase-4 tail done, zero-regression proven by tr_20260705_025619, 0579 dependency freeze-recorded); (4) CONVERGE-ONLY honored - this contract is minted from goal-0712 for a cooper-required unsupervise contractor lane; RADIO dispatches and ONLY merges. Lane-side obligations: builder builds to the LOCKED spec (stop-and-flag on spec-vs-reality contradictions, never silent re-cut), in-lane judge-on-disk closure per slice S1-S6, BUILD cooper record attached before ready."
+}
