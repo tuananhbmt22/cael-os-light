@@ -1,0 +1,3 @@
+{
+  "errorPaths": ["$.confidence", "$.unexpected"]
+}

@@ -1,0 +1,8 @@
+{
+  "userA": "user-a",
+  "userB": "user-b",
+  "sessionA": "session-a",
+  "sessionB": "session-b",
+  "userATurns": ["a-1", "a-2", "a-3"],
+  "userBTurns": ["b-1"]
+}

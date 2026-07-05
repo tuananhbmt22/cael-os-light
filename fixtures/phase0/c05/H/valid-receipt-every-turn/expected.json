@@ -1,0 +1,4 @@
+{
+  "validReceipts": 2,
+  "dedupedFirstReceiptIds": ["fact-001", "fact-002"]
+}

@@ -1,0 +1,27 @@
+{
+  "userId": "user-a",
+  "sessionId": "session-restart",
+  "beforeRestart": [
+    {
+      "turnId": "turn-001",
+      "outcome": "answer",
+      "text": "before restart one",
+      "receipt": null,
+      "metadata": {}
+    },
+    {
+      "turnId": "turn-002",
+      "outcome": "answer",
+      "text": "before restart two",
+      "receipt": null,
+      "metadata": {}
+    }
+  ],
+  "afterRestart": {
+    "turnId": "turn-003",
+    "outcome": "clarify",
+    "text": "after restart three",
+    "receipt": null,
+    "metadata": {}
+  }
+}

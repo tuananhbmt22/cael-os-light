@@ -1,0 +1,15 @@
+{
+  "receipt": {
+    "kind": "answer",
+    "decision": "allow",
+    "firing_rule": "fixture.malformed",
+    "cited_ids": ["fact-001"],
+    "evidence_refs": [],
+    "confidence": "certain",
+    "escalation_used": false,
+    "pack_id": "phase0.synthetic.receipts",
+    "image_sha": "sha256:phase0",
+    "schema_version": "receipt.v2",
+    "unexpected": "field"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "receipt": {
+    "kind": "answer",
+    "decision": "allow",
+    "firing_rule": "fixture.old-schema-readable",
+    "cited_ids": ["fact-old"],
+    "evidence_refs": [
+      {
+        "id": "fact-old",
+        "source": "synthetic-pack-v1",
+        "quote": "Old receipt stays structurally readable"
+      }
+    ],
+    "confidence": 0.91,
+    "escalation_used": false,
+    "pack_id": "phase0.synthetic.receipts",
+    "image_sha": "sha256:phase0-old",
+    "schema_version": "receipt.v1"
+  }
+}
