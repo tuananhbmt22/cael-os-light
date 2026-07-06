@@ -18,6 +18,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
     "test:file": "vitest run --reporter=basic",
+    "packs:install": "npm --prefix packs/p1-rbac ci && npm --prefix packs/p2-eligibility ci",
+    "packs:eval": "npm --prefix packs/p1-rbac test && npm --prefix packs/p2-eligibility test",
     "acceptance:install": "node scripts/acceptance/install-acceptance.mjs",
     "prepack": "npm run build",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""

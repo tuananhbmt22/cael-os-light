@@ -1,0 +1,17 @@
+{
+  "version": "synthetic-p1-corpus-v1",
+  "documents": [
+    { "id": "SYN-PUB-001", "department": "COMP", "classification": "Public" },
+    { "id": "SYN-HR-010", "department": "HR", "classification": "Confidential" },
+    { "id": "SYN-FIN-011", "department": "FIN", "classification": "Internal" },
+    { "id": "SYN-OPS-030", "department": "OPS", "classification": "Internal" },
+    { "id": "SYN-EXEC-037", "department": "EXEC", "classification": "Restricted" },
+    {
+      "id": "SYN-BLOCK-044",
+      "department": "ENG",
+      "classification": "Internal",
+      "blocks": [{ "classification": "Restricted" }]
+    },
+    { "id": "SYN-DECOY-016", "department": "OPS", "classification": "Restricted" }
+  ]
+}

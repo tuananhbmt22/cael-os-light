@@ -1,0 +1,77 @@
+{
+  "version": "synthetic-p1-archetype-a-v1",
+  "cases": [
+    {
+      "case_id": "SYN-ALLOW-PUBLIC",
+      "input": {
+        "query": "classification vocabulary handbook",
+        "user_role": "Employee",
+        "user_department": "Finance"
+      },
+      "expected": { "permission": "Allow", "document_id": "SYN-PUB-001" }
+    },
+    {
+      "case_id": "SYN-CANONICAL-HR",
+      "input": {
+        "query": "human resources hiring packets",
+        "user_role": "Manager",
+        "user_department": "Human Resources"
+      },
+      "expected": { "permission": "Allow", "document_id": "SYN-HR-010" }
+    },
+    {
+      "case_id": "SYN-CONFIDENTIAL-CROSS-DEPT",
+      "input": {
+        "query": "human resources hiring packets",
+        "user_role": "Employee",
+        "user_department": "Finance"
+      },
+      "expected": { "permission": "Deny", "document_id": "SYN-HR-010" }
+    },
+    {
+      "case_id": "SYN-RESTRICTED-EXECUTIVE",
+      "input": {
+        "query": "executive strategy acquisition",
+        "user_role": "Executive",
+        "user_department": "Executive Office"
+      },
+      "expected": { "permission": "Allow", "document_id": "SYN-EXEC-037" }
+    },
+    {
+      "case_id": "SYN-RESTRICTED-DIRECTOR-DENY",
+      "input": {
+        "query": "executive strategy acquisition",
+        "user_role": "Director",
+        "user_department": "Executive Office"
+      },
+      "expected": { "permission": "Deny", "document_id": "SYN-EXEC-037" }
+    },
+    {
+      "case_id": "SYN-MULTI-DOC-DENY-IF-ANY",
+      "input": {
+        "query": "finance forecast and executive strategy",
+        "user_role": "Manager",
+        "user_department": "Finance"
+      },
+      "expected": { "permission": "Deny", "document_id": ["SYN-FIN-011", "SYN-EXEC-037"] }
+    },
+    {
+      "case_id": "SYN-CROSS-BLOCK-MAX-RESTRICTIVE",
+      "input": {
+        "query": "engineering deployment rollback privileged",
+        "user_role": "Employee",
+        "user_department": "Engineering"
+      },
+      "expected": { "permission": "Deny", "document_id": "SYN-BLOCK-044" }
+    },
+    {
+      "case_id": "SYN-DECOY-ABSTENTION",
+      "input": {
+        "query": "access code decoy operations",
+        "user_role": "Employee",
+        "user_department": "Operations"
+      },
+      "expected": { "permission": "Deny", "document_id": "SYN-DECOY-016" }
+    }
+  ]
+}

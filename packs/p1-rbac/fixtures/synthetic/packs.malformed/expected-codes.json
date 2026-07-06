@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "no-derivation": "no-derivation",
+    "foreign-derivation": "foreign-derivation",
+    "red-derivation-fixture": "red-derivation-fixture",
+    "undeclared-state-ref": "undeclared-state-ref",
+    "template-trigger-misalign": "template-trigger-misalign",
+    "undeclared-scored-surface": "undeclared-scored-surface",
+    "evidence-free-broken-key-claim": "evidence-free-broken-key-claim",
+    "invalid-pack": "invalid-pack",
+    "invalid-gate-ruleset": "invalid-gate-ruleset"
+  }
+}
