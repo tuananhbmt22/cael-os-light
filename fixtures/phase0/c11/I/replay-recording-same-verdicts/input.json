@@ -1,0 +1,4 @@
+{
+  "replay_ref": "fixtures/phase0/c11/I/replay-recording-same-verdicts/input.json",
+  "expected_same_verdicts": true
+}

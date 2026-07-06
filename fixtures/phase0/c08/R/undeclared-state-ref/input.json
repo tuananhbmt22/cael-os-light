@@ -1,0 +1,8 @@
+{
+  "expected_code": "undeclared-state-ref",
+  "mutation": {
+    "path": "$.gate_rule_set.rules[0].conditions[0].field",
+    "operation": "replace",
+    "value": "undeclared_state"
+  }
+}

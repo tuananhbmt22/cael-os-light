@@ -1,0 +1,62 @@
+{
+  "ruleSet": {
+    "archetype": "A",
+    "roles": ["Analyst", "Manager", "Executive"],
+    "departments": ["Finance", "Engineering", "Phòng Công Nghệ"],
+    "classifications": [
+      { "id": "Public", "rank": 1 },
+      { "id": "Internal", "rank": 2 },
+      { "id": "Confidential", "rank": 3 },
+      { "id": "Privileged", "rank": 4 }
+    ],
+    "normalization": {
+      "roles": { "Exec": "Executive", "Lead": "Manager" },
+      "departments": { "Phong Cong Nghe": "Phòng Công Nghệ", "Phòng Công nghệ": "Phòng Công Nghệ" }
+    },
+    "role_hierarchy": {
+      "Analyst": ["Analyst"],
+      "Manager": ["Manager", "Analyst"],
+      "Executive": ["Executive", "Manager", "Analyst"]
+    },
+    "access": [
+      { "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "a_allow_public" },
+      { "role": "Analyst", "classification": "Internal", "allow": true, "same_dept": true, "rule_id": "a_allow_internal_same_dept" },
+      { "role": "Manager", "classification": "Public", "allow": true, "rule_id": "a_manager_public" },
+      { "role": "Manager", "classification": "Internal", "allow": true, "rule_id": "a_manager_internal" },
+      { "role": "Manager", "classification": "Confidential", "allow": true, "same_dept": true, "rule_id": "a_manager_confidential_same_dept" },
+      { "role": "Executive", "classification": "Privileged", "allow": true, "rule_id": "a_exec_privileged" }
+    ]
+  },
+  "cases": [
+    {
+      "id": "manager-confidential-cross-dept-deny",
+      "input": {
+        "subject": { "role": "Manager", "user_dept": "Finance" },
+        "object": {
+          "docs": [{ "id": "doc-eng-conf", "doc_dept": "Engineering", "doc_classification": "Confidential" }]
+        }
+      }
+    },
+    {
+      "id": "manager-privileged-executive-only",
+      "input": {
+        "subject": { "role": "Manager", "user_dept": "Finance" },
+        "object": {
+          "docs": [{ "id": "doc-fin-priv", "doc_dept": "Finance", "doc_classification": "Privileged" }]
+        }
+      }
+    },
+    {
+      "id": "multi-doc-deny-if-any-densest",
+      "input": {
+        "subject": { "role": "Manager", "user_dept": "Finance" },
+        "object": {
+          "docs": [
+            { "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" },
+            { "id": "doc-priv", "doc_dept": "Finance", "doc_classification": "Privileged" }
+          ]
+        }
+      }
+    }
+  ]
+}

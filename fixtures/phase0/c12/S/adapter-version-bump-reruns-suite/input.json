@@ -1,0 +1,7 @@
+{
+  "adapters": [
+    "stub",
+    "stub-v2"
+  ],
+  "expected": "same conformance transcript runs for each adapter name"
+}

@@ -1,0 +1,98 @@
+{
+  "quarantined_rows": [],
+  "ruleSet": {
+    "archetype": "C",
+    "fields": {
+      "halal": { "kind": "boolean", "hard": true },
+      "wheelchair": { "kind": "boolean", "hard": true },
+      "price_tier": { "kind": "string", "hard": false }
+    },
+    "token_synonyms": {
+      "phở": "pho",
+      "pho": "pho",
+      "noodle": "pho",
+      "quiet": "quiet",
+      "noisy": "noisy",
+      "cafe": "cafe",
+      "coffee": "cafe",
+      "vegan": "vegan"
+    },
+    "category_axis": {
+      "field": "category",
+      "token_categories": { "pho": "restaurant", "cafe": "cafe" }
+    },
+    "soft_rank": {
+      "top_n": 3,
+      "token_present_score": 10,
+      "token_absent_penalty": -2,
+      "token_negated_present_penalty": -8,
+      "token_unknown_score": 0,
+      "category_match_score": 3
+    }
+  },
+  "cases": [
+    {
+      "id": "field-over-token-precision",
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["pho"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "present", "quiet": "present", "noisy": "absent", "vegan": "unknown" }, "rating": 4.7, "popularity": 90, "review_count": 120 },
+            { "id": "pho-not-halal", "category": "restaurant", "fields": { "halal": false, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "present", "quiet": "present" }, "rating": 4.9, "popularity": 100, "review_count": 220 },
+            { "id": "pho-unknown-vegan", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "low" }, "tokens": { "pho": "present", "quiet": "present", "vegan": "unknown" }, "rating": 4.6, "popularity": 60, "review_count": 80 },
+            { "id": "burger-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "absent", "quiet": "absent" }, "rating": 5.0, "popularity": 110, "review_count": 300 }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tri-state-missing-not-false",
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["vegan", "quiet"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "present", "quiet": "present", "noisy": "absent", "vegan": "unknown" }, "rating": 4.7, "popularity": 90, "review_count": 120 },
+            { "id": "pho-unknown-vegan", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "low" }, "tokens": { "pho": "present", "quiet": "present", "vegan": "unknown" }, "rating": 4.6, "popularity": 60, "review_count": 80 },
+            { "id": "vegan-present", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "vegan": "present", "quiet": "unknown", "pho": "absent" }, "rating": 4.9, "popularity": 40, "review_count": 70 }
+          ]
+        }
+      }
+    },
+    {
+      "id": "vn-token-synonym-survives",
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["phở"] },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "present", "quiet": "present" }, "rating": 4.7, "popularity": 90, "review_count": 120 },
+            { "id": "burger-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "absent" }, "rating": 5.0, "popularity": 110, "review_count": 300 }
+          ]
+        }
+      }
+    },
+    {
+      "id": "negation-aware-rank",
+      "input": {
+        "subject": { "field_constraints": {}, "tokens": ["noisy"], "category": "cafe", "negations": ["noisy"] },
+        "object": {
+          "candidates": [
+            { "id": "cafe-quiet", "category": "cafe", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "cafe": "present", "quiet": "present", "noisy": "absent" }, "rating": 4.2, "popularity": 80, "review_count": 90 },
+            { "id": "cafe-noisy", "category": "cafe", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "cafe": "present", "quiet": "absent", "noisy": "present" }, "rating": 4.8, "popularity": 120, "review_count": 130 }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sole-discriminator-hard-kill",
+      "input": {
+        "subject": { "field_constraints": {}, "tokens": ["pho"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "present" }, "rating": 4.7, "popularity": 90, "review_count": 120 },
+            { "id": "burger-halal", "category": "restaurant", "fields": { "halal": true, "wheelchair": true, "price_tier": "mid" }, "tokens": { "pho": "absent" }, "rating": 5.0, "popularity": 110, "review_count": 300 }
+          ]
+        }
+      }
+    }
+  ]
+}

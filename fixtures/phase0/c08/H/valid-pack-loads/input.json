@@ -1,0 +1,290 @@
+{
+  "pack": {
+    "identity": {
+      "id": "synthetic-eligibility-vn",
+      "version": "1.0.0",
+      "archetype": "external",
+      "deployment": "B",
+      "image_sha": "fixture-image-sha"
+    },
+    "corpus": {
+      "units": [
+        {
+          "id": "ev-gold-offer",
+          "source": "synthetic-policy",
+          "facts": [
+            "Bạn đủ điều kiện nhận ưu đãi vàng."
+          ],
+          "keywords": [
+            "ưu đãi",
+            "vàng",
+            "eligibility"
+          ],
+          "confidence": 1
+        }
+      ],
+      "embeddingRecipe": {
+        "provider": "pack",
+        "name": "phase0-keyword"
+      },
+      "index_recipe": {
+        "recipe_id": "atomic-facts-v1",
+        "declared_fields": [
+          "loyalty_points",
+          "vehicle_count",
+          "renewal_due_days",
+          "tier"
+        ],
+        "atomic_fact_rules": [
+          "split_facts",
+          "strip_boilerplate",
+          "preserve_vietnamese_diacritics"
+        ]
+      }
+    },
+    "gate_rule_set": {
+      "archetype": "B",
+      "cap": 3,
+      "thresholds": {
+        "gold_min": 50
+      },
+      "rules": [
+        {
+          "rule_id": "gold-offer",
+          "recommendation": "gold",
+          "priority": 10,
+          "conditions": [
+            {
+              "field": "loyalty_points",
+              "op": "gte",
+              "value": 50,
+              "threshold_id": "gold_min"
+            }
+          ],
+          "threshold_refs": [
+            "gold_min"
+          ]
+        }
+      ],
+      "fallback": {
+        "rule_id": "fallback-discovery",
+        "recommendation": "discovery",
+        "priority": 1
+      }
+    },
+    "threshold_derivations": [
+      {
+        "track_id": "goal-20260704-0701",
+        "threshold_id": "gold_min",
+        "source_fields": [
+          "loyalty_points"
+        ],
+        "candidate_ranges": [
+          "40-60",
+          "50-70"
+        ],
+        "selected_value": 50,
+        "validation_fixture": {
+          "id": "gold-min-public-fixture",
+          "green": true
+        },
+        "public_scope": "public",
+        "copied_from": null,
+        "reviewer_attestation": "synthetic reviewer confirmed public fixture is green"
+      }
+    ],
+    "state": {
+      "entity_schemas": {
+        "user": {
+          "fields": [
+            "loyalty_points",
+            "vehicle_count",
+            "tier"
+          ],
+          "closed_vocabs": {
+            "tier": [
+              "silver",
+              "gold"
+            ]
+          },
+          "privacy_tags": [
+            "synthetic-user"
+          ]
+        },
+        "vehicle": {
+          "fields": [
+            "renewal_due_days"
+          ],
+          "closed_vocabs": {},
+          "privacy_tags": [
+            "synthetic-vehicle"
+          ]
+        }
+      },
+      "ownership_edges": [
+        {
+          "owner": "user",
+          "owns": [
+            "vehicle"
+          ]
+        }
+      ],
+      "event_schemas": {
+        "renewal_notice": {
+          "fields": [
+            "renewal_due_days"
+          ]
+        }
+      },
+      "idempotency_keys": [
+        "user_id",
+        "turn_id"
+      ],
+      "retention_tags": [
+        "synthetic-only"
+      ],
+      "privacy_tags": [
+        "no-client-data"
+      ],
+      "fixture_migrations": [
+        "phase0-seed"
+      ],
+      "goal_templates": {
+        "templates": {
+          "renewal_goal": {
+            "fields": [
+              "renewal_due_days"
+            ]
+          }
+        },
+        "allowed_transitions": [
+          "open",
+          "completed"
+        ],
+        "relation_shapes": [
+          "blocks",
+          "relates"
+        ]
+      }
+    },
+    "receipt_schemas": {
+      "default": {
+        "consumer": "phase0",
+        "schema_id": "receipt.phase0",
+        "fields": [
+          "decision",
+          "firing_rule",
+          "pack_id",
+          "image_sha"
+        ]
+      }
+    },
+    "notification_templates": {
+      "renewal_ready": {
+        "trigger_id": "renewal_due",
+        "body": "Nhắc khách chuẩn bị gia hạn."
+      }
+    },
+    "notification_triggers": {
+      "renewal_due": {
+        "template_id": "renewal_ready",
+        "event": "renewal_notice"
+      }
+    },
+    "adapters": {
+      "stub": {
+        "baseUrl": "https://example.invalid",
+        "bearer_provider": "fixture",
+        "headers": {
+          "x-fixture": "phase0"
+        },
+        "response_envelope": "json",
+        "otp_hooks": [
+          "none"
+        ],
+        "org_scope": "synthetic"
+      }
+    },
+    "scored_surfaces": {
+      "surfaces": {
+        "recommendation": {
+          "visibility": "public"
+        }
+      },
+      "eval_keys": [
+        "eligibility.public"
+      ],
+      "bindings": [
+        {
+          "fn_name": "p2_recommend",
+          "eval_key": "eligibility.public",
+          "surface_key": "recommendation",
+          "state_refs": [
+            "loyalty_points"
+          ]
+        }
+      ]
+    },
+    "broken_key_claims": [
+      {
+        "case_id": "bk-public-001",
+        "defect_type": "ambiguous_expected",
+        "corpus_evidence": [
+          "ev-gold-offer"
+        ],
+        "competing_expected": "gold",
+        "client_flag_text": "Synthetic public key is flagged, not silently merged.",
+        "score_disposition": {
+          "action": "flag",
+          "visibility": "public"
+        },
+        "reviewer": "phase0-builder"
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "recommend-offer",
+        "state_refs": [
+          "loyalty_points"
+        ]
+      }
+    ],
+    "trigger_config": {
+      "enabled": [],
+      "lowRetrievalConfidenceBelow": 0.5
+    },
+    "rubric": {
+      "rubric_id": "soft-eval-placeholder",
+      "criteria": [
+        "evidence cited"
+      ]
+    },
+    "parser_plugins": [
+      "none"
+    ]
+  },
+  "turn": {
+    "userId": "user-a",
+    "sessionId": "session-a",
+    "turnId": "turn-c08",
+    "subject": {
+      "loyalty_points": 80,
+      "vehicle_count": 1,
+      "tier": "gold"
+    },
+    "object": {},
+    "query": "ưu đãi vàng",
+    "answerClaim": {
+      "text": "Bạn đủ điều kiện nhận ưu đãi vàng.",
+      "requiredEvidenceId": "ev-gold-offer",
+      "requiredTerms": [
+        "đủ",
+        "điều",
+        "kiện",
+        "ưu",
+        "đãi",
+        "vàng"
+      ]
+    }
+  }
+}

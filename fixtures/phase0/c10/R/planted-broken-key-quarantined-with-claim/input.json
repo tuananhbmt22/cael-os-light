@@ -1,0 +1,5 @@
+{
+  "claimed_case": "case-broken-claimed",
+  "unclaimed_case": "case-broken-unclaimed",
+  "claim_gated": true
+}

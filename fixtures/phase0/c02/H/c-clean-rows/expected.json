@@ -1,0 +1,39 @@
+{
+  "false_refusal_cap": 0,
+  "valid_result_coverage_minimum": 1,
+  "cases": [
+    {
+      "id": "field-over-token-precision",
+      "decision": "score",
+      "absent_ranked_ids": ["pho-not-halal"],
+      "fallback_used": false
+    },
+    {
+      "id": "tri-state-missing-not-false",
+      "decision": "score",
+      "ranked_ids": ["vegan-present", "pho-halal", "pho-unknown-vegan"],
+      "evidence": [{ "key": "token:vegan:pho-unknown-vegan", "state": "unknown" }],
+      "fallback_used": false
+    },
+    {
+      "id": "vn-token-synonym-survives",
+      "decision": "score",
+      "ranked_ids": ["pho-halal", "burger-halal"],
+      "fallback_used": false
+    },
+    {
+      "id": "negation-aware-rank",
+      "decision": "score",
+      "ranked_ids": ["cafe-quiet", "cafe-noisy"],
+      "firing_rule": "token_negation:noisy",
+      "fallback_used": false
+    },
+    {
+      "id": "sole-discriminator-hard-kill",
+      "decision": "score",
+      "ranked_ids": ["pho-halal"],
+      "absent_ranked_ids": ["burger-halal"],
+      "fallback_used": false
+    }
+  ]
+}

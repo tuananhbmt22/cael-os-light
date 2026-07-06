@@ -1,0 +1,6 @@
+{
+  "cases": [
+    { "id": "unknown-role-denies", "decision": "deny", "firing_rule": "rbac_unknown_role" },
+    { "id": "unknown-dept-denies", "decision": "deny", "firing_rule": "rbac_unknown_department" }
+  ]
+}

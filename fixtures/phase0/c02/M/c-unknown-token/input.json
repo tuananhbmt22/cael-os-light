@@ -1,0 +1,31 @@
+{
+  "ruleSet": {
+    "archetype": "C",
+    "fields": {
+      "halal": { "kind": "boolean", "hard": true }
+    },
+    "token_synonyms": { "bí_mật": "secret_menu" },
+    "category_axis": { "field": "category", "token_categories": {} },
+    "soft_rank": {
+      "top_n": 1,
+      "token_present_score": 10,
+      "token_absent_penalty": -2,
+      "token_negated_present_penalty": -8,
+      "token_unknown_score": 0,
+      "category_match_score": 3
+    }
+  },
+  "cases": [
+    {
+      "id": "unknown-token-does-not-become-false",
+      "input": {
+        "subject": { "field_constraints": {}, "tokens": ["bí_mật"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "candidate-missing-token", "category": "restaurant", "fields": { "halal": true }, "tokens": { "pho": "present" }, "rating": 4.4, "popularity": 20, "review_count": 30 }
+          ]
+        }
+      }
+    }
+  ]
+}

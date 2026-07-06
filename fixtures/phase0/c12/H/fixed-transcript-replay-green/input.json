@@ -1,0 +1,95 @@
+{
+  "id": "fixed-transcript-replay-green",
+  "replayCount": 3,
+  "turns": [
+    {
+      "id": "turn-1",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Run the synthetic eligibility fixture."
+          }
+        ],
+        "tools": [
+          {
+            "name": "emit_receipt",
+            "description": "Emit a typed receipt.",
+            "inputSchema": {
+              "type": "object"
+            }
+          }
+        ],
+        "cachePrefix": "fixture-prefix-v1"
+      },
+      "expectedToolCalls": [
+        {
+          "id": "stub-tool-call-1",
+          "name": "emit_receipt",
+          "arguments": {
+            "receipt_id": "stub-receipt-1",
+            "cache_prefix_hash": "2d7f3579283f352209e54cd86f70024e0492fd47007c8509fd95f73293750dcb"
+          }
+        }
+      ],
+      "expectedEvents": [
+        {
+          "type": "adapter.event",
+          "name": "stub.completed",
+          "data": {
+            "adapter": "stub",
+            "message_count": 1,
+            "tool_count": 1
+          }
+        }
+      ],
+      "expectedStructured": {
+        "receipt": {
+          "kind": "answer",
+          "decision": "allow",
+          "firing_rule": "stub-fixed-transcript",
+          "cited_ids": [
+            "ev-gold-offer"
+          ],
+          "pack_id": "synthetic-eligibility-vn"
+        }
+      }
+    }
+  ],
+  "structuredFailureCase": {
+    "toolCalls": [],
+    "events": [],
+    "structured": {
+      "receipt": {
+        "kind": "answer",
+        "firing_rule": "missing-decision",
+        "cited_ids": [],
+        "pack_id": "synthetic-eligibility-vn"
+      }
+    }
+  },
+  "errorCases": [
+    {
+      "input": {
+        "kind": "transient",
+        "code": "rate_limit"
+      },
+      "expected": {
+        "outcome": "retry",
+        "retryable": true,
+        "code": "rate_limit"
+      }
+    },
+    {
+      "input": {
+        "kind": "fatal",
+        "code": "invalid_request"
+      },
+      "expected": {
+        "outcome": "terminal",
+        "retryable": false,
+        "code": "invalid_request"
+      }
+    }
+  ]
+}

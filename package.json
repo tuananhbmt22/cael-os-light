@@ -1,0 +1,31 @@
+{
+  "name": "@cael/os-light",
+  "version": "0.0.0-phase0",
+  "type": "module",
+  "bin": {
+    "cael-os-light": "dist/cli/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "fixtures"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:file": "vitest run --reporter=basic",
+    "acceptance:install": "node scripts/acceptance/install-acceptance.mjs",
+    "prepack": "npm run build",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

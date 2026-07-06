@@ -1,0 +1,5 @@
+{
+  "mutate": "expectedEvents[0].name",
+  "value": "stub.drifted",
+  "expected_failure": "envelope-drift"
+}

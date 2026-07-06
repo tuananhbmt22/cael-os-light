@@ -1,0 +1,4 @@
+{
+  "path": "corrupt.tgz",
+  "expected_code": "corrupt-tarball-refused"
+}

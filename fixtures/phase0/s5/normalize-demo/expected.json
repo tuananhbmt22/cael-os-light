@@ -1,0 +1,11 @@
+{
+  "accentFolded": "Phong Dang ky Dak Lak",
+  "abbrevExpanded": "Phòng Đăng ký xe",
+  "addressNormalized": "12 Le Loi | Phuong Tan Loi | Thanh pho Buon Ma Thuot",
+  "canonicalDept": "Registration",
+  "addressSteps": [
+    "accent-fold",
+    "abbrev-dict",
+    "address-parse"
+  ]
+}

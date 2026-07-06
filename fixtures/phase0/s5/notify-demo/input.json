@@ -1,0 +1,49 @@
+{
+  "pack": {
+    "identity": {
+      "id": "s5-notify-demo",
+      "version": "1.0.0",
+      "archetype": "external",
+      "deployment": "B",
+      "image_sha": "fixture-image-sha"
+    },
+    "notification_templates": {
+      "renewal_ready": {
+        "trigger_id": "renewal_due",
+        "body": "Xin chào {{customer.name}}, xe {{vehicle_plate}} cần gia hạn trước {{due_date}}."
+      },
+      "renewal_audit": {
+        "trigger_id": "renewal_audit",
+        "body": "Audit {{customer.name}} / {{dept}} / Đắk Lắk"
+      },
+      "broken_template_ref": {
+        "trigger_id": "missing-trigger",
+        "body": "This drift is only for runtime degradation tests."
+      }
+    },
+    "notification_triggers": {
+      "renewal_due": {
+        "template_id": "renewal_ready",
+        "event": "renewal_notice"
+      },
+      "renewal_audit": {
+        "template_id": "renewal_audit",
+        "event": "renewal_notice"
+      },
+      "runtime_missing_template": {
+        "template_id": "missing_template",
+        "event": "renewal_notice"
+      }
+    }
+  },
+  "ctx": {
+    "dedupeKey": "notice-001",
+    "customer": {
+      "name": "Cô Ánh"
+    },
+    "vehicle_plate": "47A-123.45",
+    "due_date": "2026-08-01",
+    "dept": "Đắk Lắk"
+  }
+}
+

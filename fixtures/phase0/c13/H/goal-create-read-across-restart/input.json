@@ -1,0 +1,20 @@
+{
+  "goal": {
+    "id": "goal-vn",
+    "user_id": "user-a",
+    "objective": "Gia hạn giấy phép lái xe cho mẹ",
+    "status": "decoded",
+    "steps": [
+      { "id": "step-1", "text": "Kiểm tra giấy tờ cần nộp", "done": false }
+    ],
+    "blocked_by": ["goal-docs"],
+    "relates_to": [
+      { "kind": "parent", "goal_id": "goal-family-admin" }
+    ],
+    "evidence": ["fixture:c13:h"],
+    "verification_hint": "Đối chiếu ngày hết hạn trên giấy phép",
+    "schema_version": "goal-light.v1"
+  },
+  "expected_objective": "Gia hạn giấy phép lái xe cho mẹ"
+}
+

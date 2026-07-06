@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "manager-confidential-cross-dept-deny",
+      "decision": "deny",
+      "firing_rule": "rbac_no_matching_allow:doc-eng-conf"
+    },
+    {
+      "id": "manager-privileged-executive-only",
+      "decision": "deny",
+      "firing_rule": "rbac_privileged_executive_only:doc-fin-priv"
+    },
+    {
+      "id": "multi-doc-deny-if-any-densest",
+      "decision": "deny",
+      "firing_rule": "rbac_privileged_executive_only:doc-priv",
+      "evidence": [{ "key": "classification", "state": "present", "value": "Privileged" }]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "pack": {
+    "packId": "phase0-s3-fixture-pack",
+    "imageSha": "sha-fixture-s3",
+    "gateRuleSet": {
+      "archetype": "A",
+      "roles": ["Analyst", "Executive"],
+      "departments": ["Finance", "Engineering"],
+      "classifications": [{ "id": "Public", "rank": 1 }, { "id": "Privileged", "rank": 4 }],
+      "normalization": { "roles": {}, "departments": {} },
+      "role_hierarchy": { "Analyst": ["Analyst"], "Executive": ["Executive", "Analyst"] },
+      "access": [{ "role": "Executive", "classification": "Privileged", "allow": true, "rule_id": "exec_privileged" }]
+    },
+    "corpus": { "units": [] }
+  },
+  "input": {
+    "userId": "user-s3",
+    "sessionId": "session-s3",
+    "turnId": "turn-deny-replay",
+    "subject": { "role": "Analyst", "user_dept": "Finance" },
+    "object": { "docs": [{ "id": "doc-secret-777", "doc_dept": "Engineering", "doc_classification": "Privileged" }] },
+    "query": "secret",
+    "answerClaim": "Secret project exists",
+    "resolvedTargets": [{ "id": "doc-secret-777" }],
+    "idempotencyKey": "deny-secret-777"
+  }
+}
+

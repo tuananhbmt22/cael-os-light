@@ -1,0 +1,8 @@
+{
+  "expected_code": "template-trigger-misalign",
+  "mutation": {
+    "path": "$.notification_templates.renewal_ready.trigger_id",
+    "operation": "replace",
+    "value": "missing-trigger"
+  }
+}

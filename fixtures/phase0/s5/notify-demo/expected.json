@@ -1,0 +1,18 @@
+{
+  "emissions": [
+    {
+      "trigger_id": "renewal_audit",
+      "template_id": "renewal_audit",
+      "renderedBody": "Audit Cô Ánh / Đắk Lắk / Đắk Lắk",
+      "dedupeKey": "notice-001"
+    },
+    {
+      "trigger_id": "renewal_due",
+      "template_id": "renewal_ready",
+      "renderedBody": "Xin chào Cô Ánh, xe 47A-123.45 cần gia hạn trước 2026-08-01.",
+      "dedupeKey": "notice-001"
+    }
+  ],
+  "logCode": "missing-template"
+}
+

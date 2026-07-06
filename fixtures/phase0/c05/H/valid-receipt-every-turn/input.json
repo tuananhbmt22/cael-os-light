@@ -1,0 +1,46 @@
+{
+  "turns": [
+    {
+      "turnId": "turn-001",
+      "receipt": {
+        "kind": "answer",
+        "decision": "allow",
+        "firing_rule": "fixture.allow.synthetic",
+        "cited_ids": ["fact-001", "fact-001", "fact-002"],
+        "evidence_refs": [
+          {
+            "id": "fact-001",
+            "source": "synthetic-pack",
+            "quote": "Synthetic answer evidence"
+          }
+        ],
+        "confidence": 0.98,
+        "escalation_used": false,
+        "pack_id": "phase0.synthetic.receipts",
+        "image_sha": "sha256:phase0",
+        "schema_version": "receipt.v2"
+      }
+    },
+    {
+      "turnId": "turn-002",
+      "receipt": {
+        "kind": "refusal",
+        "decision": "refuse",
+        "firing_rule": "fixture.refuse.missing-evidence",
+        "cited_ids": [],
+        "evidence_refs": [
+          {
+            "id": "missing-evidence",
+            "source": "synthetic-pack",
+            "quote": "No grounded evidence available"
+          }
+        ],
+        "confidence": 0.73,
+        "escalation_used": false,
+        "pack_id": "phase0.synthetic.receipts",
+        "image_sha": "sha256:phase0",
+        "schema_version": "receipt.v2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "snapshot": {
+    "entities": {},
+    "events": {
+      "user-a": [
+        {
+          "userId": "user-a",
+          "seq": 1,
+          "event": {
+            "sessionId": "session-corrupt",
+            "entry": {
+              "turnId": "turn-001",
+              "outcome": "answer",
+              "text": "valid before corrupt row",
+              "receipt": null,
+              "metadata": {}
+            }
+          }
+        },
+        {
+          "userId": "user-a",
+          "seq": 2,
+          "event": {
+            "sessionId": "session-corrupt",
+            "entry": {
+              "turnId": "turn-bad",
+              "outcome": "not-a-real-outcome",
+              "text": "corrupt row",
+              "receipt": null,
+              "metadata": {}
+            }
+          }
+        },
+        {
+          "userId": "user-a",
+          "seq": 3,
+          "event": {
+            "sessionId": "session-corrupt",
+            "entry": {
+              "turnId": "turn-003",
+              "outcome": "clarify",
+              "text": "valid after corrupt row",
+              "receipt": null,
+              "metadata": {}
+            }
+          }
+        }
+      ]
+    },
+    "idempotency": {}
+  }
+}

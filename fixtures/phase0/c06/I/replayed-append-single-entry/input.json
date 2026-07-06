@@ -1,0 +1,14 @@
+{
+  "userId": "user-a",
+  "sessionId": "session-idem",
+  "idempotencyKey": "idem-001",
+  "entry": {
+    "turnId": "turn-idem",
+    "outcome": "answer",
+    "text": "same replayed append stores once",
+    "receipt": null,
+    "metadata": {
+      "fixture": "c06-I"
+    }
+  }
+}

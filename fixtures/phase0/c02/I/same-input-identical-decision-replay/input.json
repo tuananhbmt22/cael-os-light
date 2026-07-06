@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "id": "replay-a",
+      "ruleSet": {
+        "archetype": "A",
+        "roles": ["Analyst"],
+        "departments": ["Finance"],
+        "classifications": [{ "id": "Public", "rank": 1 }],
+        "normalization": { "roles": {}, "departments": {} },
+        "role_hierarchy": { "Analyst": ["Analyst"] },
+        "access": [{ "role": "Analyst", "classification": "Public", "allow": true, "rule_id": "a_allow_public" }]
+      },
+      "input": {
+        "subject": { "role": "Analyst", "user_dept": "Finance" },
+        "object": { "docs": [{ "id": "doc-public", "doc_dept": "Finance", "doc_classification": "Public" }] }
+      }
+    },
+    {
+      "id": "replay-b",
+      "ruleSet": {
+        "archetype": "B",
+        "cap": 3,
+        "thresholds": { "high_risk_score": 70 },
+        "rules": [
+          {
+            "rule_id": "b_high_risk_review",
+            "recommendation": "manual_risk_review",
+            "priority": 90,
+            "threshold_refs": ["high_risk_score"],
+            "conditions": [{ "field": "risk_score", "op": "gte", "threshold_id": "high_risk_score" }]
+          }
+        ],
+        "fallback": { "rule_id": "b_fallback_healthy_discovery", "recommendation": "healthy_discovery_loyalty", "priority": 10 }
+      },
+      "input": {
+        "subject": { "risk_score": 72 },
+        "object": {},
+        "ctx": { "question": "Any wording" }
+      }
+    },
+    {
+      "id": "replay-c",
+      "ruleSet": {
+        "archetype": "C",
+        "fields": { "halal": { "kind": "boolean", "hard": true } },
+        "token_synonyms": { "pho": "pho" },
+        "category_axis": { "field": "category", "token_categories": { "pho": "restaurant" } },
+        "soft_rank": {
+          "top_n": 1,
+          "token_present_score": 10,
+          "token_absent_penalty": -2,
+          "token_negated_present_penalty": -8,
+          "token_unknown_score": 0,
+          "category_match_score": 3
+        }
+      },
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["pho"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true }, "tokens": { "pho": "present" }, "rating": 4.7, "popularity": 90, "review_count": 120 }
+          ]
+        }
+      }
+    }
+  ]
+}

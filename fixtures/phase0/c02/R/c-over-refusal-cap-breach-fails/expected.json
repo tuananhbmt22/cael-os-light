@@ -1,0 +1,11 @@
+{
+  "false_refusal_cap": 0,
+  "valid_result_coverage_minimum": 1,
+  "cases": [
+    {
+      "id": "clean-row-over-refused",
+      "decision": "score",
+      "ranked_ids": ["pho-halal"]
+    }
+  ]
+}

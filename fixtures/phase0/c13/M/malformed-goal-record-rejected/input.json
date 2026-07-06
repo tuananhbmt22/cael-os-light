@@ -1,0 +1,25 @@
+{
+  "malformed_goal": {
+    "id": "goal-bad",
+    "user_id": "user-a",
+    "status": "decoded"
+  },
+  "governed_goal": {
+    "id": "goal-governed",
+    "user_id": "user-a",
+    "objective": "Theo dõi hồ sơ gia hạn",
+    "template_id": "renewal"
+  },
+  "templates": {
+    "templates": {
+      "renewal": {
+        "fields": ["objective", "verification_hint"]
+      }
+    },
+    "allowed_transitions": ["decoded->ready"],
+    "relation_shapes": ["blocked_by"]
+  },
+  "expected_invalid_code": "invalid-goal-record",
+  "expected_template_code": "undeclared-goal-template"
+}
+

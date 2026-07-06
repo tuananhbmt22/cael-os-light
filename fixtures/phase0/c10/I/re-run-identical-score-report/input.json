@@ -1,0 +1,4 @@
+{
+  "eval_set_version": "c10-deterministic-v1",
+  "expected_replay_equal": true
+}

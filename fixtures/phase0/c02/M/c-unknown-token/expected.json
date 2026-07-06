@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "unknown-token-does-not-become-false",
+      "decision": "score",
+      "ranked_ids": ["candidate-missing-token"],
+      "evidence": [{ "key": "token:secret_menu:candidate-missing-token", "state": "unknown" }],
+      "fallback_used": false
+    }
+  ]
+}

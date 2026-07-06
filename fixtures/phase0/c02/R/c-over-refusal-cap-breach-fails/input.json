@@ -1,0 +1,33 @@
+{
+  "quarantined_rows": [],
+  "ruleSet": {
+    "archetype": "C",
+    "fields": {
+      "halal": { "kind": "boolean", "hard": true }
+    },
+    "token_synonyms": { "pho": "pho" },
+    "category_axis": { "field": "category", "token_categories": { "pho": "restaurant" } },
+    "soft_rank": {
+      "top_n": 2,
+      "token_present_score": 10,
+      "token_absent_penalty": -2,
+      "token_negated_present_penalty": -8,
+      "token_unknown_score": 0,
+      "category_match_score": 3,
+      "minimum_score": 999
+    }
+  },
+  "cases": [
+    {
+      "id": "clean-row-over-refused",
+      "input": {
+        "subject": { "field_constraints": { "halal": true }, "tokens": ["pho"], "category": "restaurant" },
+        "object": {
+          "candidates": [
+            { "id": "pho-halal", "category": "restaurant", "fields": { "halal": true }, "tokens": { "pho": "present" }, "rating": 4.7, "popularity": 90, "review_count": 120 }
+          ]
+        }
+      }
+    }
+  ]
+}

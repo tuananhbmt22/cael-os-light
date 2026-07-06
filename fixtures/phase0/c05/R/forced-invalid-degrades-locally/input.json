@@ -1,0 +1,18 @@
+{
+  "userId": "user-a",
+  "sessionId": "session-r",
+  "turnId": "turn-invalid",
+  "answerText": "Local degraded answer survives invalid receipt.",
+  "invalidReceipt": {
+    "kind": "answer",
+    "decision": "allow",
+    "firing_rule": "fixture.invalid",
+    "cited_ids": ["fact-001"],
+    "evidence_refs": [],
+    "confidence": "high",
+    "escalation_used": false,
+    "pack_id": "phase0.synthetic.receipts",
+    "image_sha": "sha256:phase0",
+    "schema_version": "receipt.v2"
+  }
+}

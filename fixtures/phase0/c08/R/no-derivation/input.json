@@ -1,0 +1,8 @@
+{
+  "expected_code": "no-derivation",
+  "mutation": {
+    "path": "$.threshold_derivations",
+    "operation": "replace",
+    "value": []
+  }
+}

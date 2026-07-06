@@ -1,0 +1,8 @@
+{
+  "expected_code": "evidence-free-broken-key-claim",
+  "mutation": {
+    "path": "$.broken_key_claims[0].corpus_evidence",
+    "operation": "replace",
+    "value": []
+  }
+}

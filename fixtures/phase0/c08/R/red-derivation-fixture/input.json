@@ -1,0 +1,8 @@
+{
+  "expected_code": "red-derivation-fixture",
+  "mutation": {
+    "path": "$.threshold_derivations[0].validation_fixture.green",
+    "operation": "replace",
+    "value": false
+  }
+}

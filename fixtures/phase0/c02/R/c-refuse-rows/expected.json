@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "field-hard-gate-empty",
+      "decision": "refuse",
+      "firing_rule": "openworld_field_hard_gate_empty:field:halal",
+      "fallback_used": true
+    },
+    {
+      "id": "offer-alternative-no-accessible-row",
+      "decision": "refuse",
+      "firing_rule": "openworld_field_hard_gate_empty:field:wheelchair",
+      "fallback_used": true
+    }
+  ]
+}

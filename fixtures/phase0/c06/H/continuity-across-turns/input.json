@@ -1,0 +1,33 @@
+{
+  "userId": "user-a",
+  "sessionId": "session-main",
+  "turns": [
+    {
+      "turnId": "turn-001",
+      "outcome": "answer",
+      "text": "Xin chào, hồ sơ đã được lưu đúng thứ tự.",
+      "receipt": null,
+      "metadata": {
+        "fixture": "c06-H"
+      }
+    },
+    {
+      "turnId": "turn-002",
+      "outcome": "clarify",
+      "text": "Bạn muốn tiếp tục với mục tiêu nào?",
+      "receipt": null,
+      "metadata": {
+        "fixture": "c06-H"
+      }
+    },
+    {
+      "turnId": "turn-003",
+      "outcome": "answer",
+      "text": "Tiếp tục phiên làm việc.",
+      "receipt": null,
+      "metadata": {
+        "fixture": "c06-H"
+      }
+    }
+  ]
+}

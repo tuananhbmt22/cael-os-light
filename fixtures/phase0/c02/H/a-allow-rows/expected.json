@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "analyst-internal-same-dept",
+      "decision": "allow",
+      "firing_rule": "a_allow_internal_same_dept",
+      "evidence": [
+        { "key": "role", "state": "present", "value": "Analyst" },
+        { "key": "classification", "state": "present", "value": "Internal" }
+      ]
+    },
+    {
+      "id": "exec-synonym-vn-dept-privileged",
+      "decision": "allow",
+      "firing_rule": "a_exec_privileged",
+      "evidence": [
+        { "key": "role", "state": "present", "value": "Executive" },
+        { "key": "user_dept", "state": "present", "value": "Phòng Công Nghệ" }
+      ]
+    },
+    {
+      "id": "manager-block-level-most-restrictive",
+      "decision": "allow",
+      "firing_rule": "a_manager_confidential_same_dept",
+      "evidence": [{ "key": "classification", "state": "present", "value": "Confidential" }]
+    }
+  ]
+}

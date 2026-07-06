@@ -1,0 +1,10 @@
+{
+  "expected_code": "foreign-derivation",
+  "mutation": {
+    "path": "$.threshold_derivations[0].source_fields",
+    "operation": "replace",
+    "value": [
+      "foreign_public_score"
+    ]
+  }
+}

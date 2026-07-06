@@ -1,0 +1,5 @@
+{
+  "corpus": { "units": [{ "id": "ev-other", "source": "other.md", "facts": ["Warranty is covered for 15 days."], "keywords": ["warranty", "covered", "15"], "numbers": [15] }] },
+  "claim": "Renewal is covered for 30 days"
+}
+
