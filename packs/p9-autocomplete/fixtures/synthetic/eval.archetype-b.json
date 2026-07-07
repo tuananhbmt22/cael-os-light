@@ -1,0 +1,126 @@
+{
+  "version": "p9-synthetic-archetype-b-v1",
+  "cases": [
+    {
+      "case_id": "SYN-P9-VIN-COLLISION",
+      "input": {
+        "prefix": "vin",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["Vincom Lê Lợi", "Vinpearl Cửa Hội", "VinMart Đồng Sen"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-VIN-TYPO",
+      "input": {
+        "prefix": "vincon",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["Vincom Lê Lợi", "vincom giờ mở cửa"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-Q1-ABBREVIATION",
+      "input": {
+        "prefix": "q1",
+        "limit": 4
+      },
+      "expected": {
+        "suggestions": ["Quận 1 Phố Đi Bộ", "quận 1", "quán ăn quận 1"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-BV-ABBREVIATION",
+      "input": {
+        "prefix": "bv",
+        "limit": 5
+      },
+      "expected": {
+        "suggestions": ["Bệnh viện Hoa Sen", "Bệnh viện Bình Minh", "bệnh viện gần nhất", "bệnh viện"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-INCOMPLETE-MULTITOKEN",
+      "input": {
+        "prefix": "nguyen hu",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["Phố sách Nguyễn Huệ"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-RECENT-REORDER",
+      "input": {
+        "prefix": "vin",
+        "recent_queries": ["Vinpearl Cửa Hội"],
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["Vinpearl Cửa Hội", "Vincom Lê Lợi", "VinMart Đồng Sen"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-NO-MATCH-FALLBACK",
+      "input": {
+        "prefix": "zzzz",
+        "limit": 5
+      },
+      "expected": {
+        "suggestions": ["bệnh viện gần nhất"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-DIACRITIC-FREE",
+      "input": {
+        "prefix": "san bay",
+        "limit": 4
+      },
+      "expected": {
+        "suggestions": ["Sân bay Đông Hà", "sân bay gần tôi", "sân bay"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-POPULAR-INCOMPLETE",
+      "input": {
+        "prefix": "tram sac g",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["trạm sạc gần nhất"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-ABBREVIATION-IN-PHRASE",
+      "input": {
+        "prefix": "quan an q1",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["quán ăn quận 1", "quận 1"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-CATEGORY-AND-POPULAR",
+      "input": {
+        "prefix": "dang kiem",
+        "limit": 4
+      },
+      "expected": {
+        "suggestions": ["đăng kiểm xe ô tô", "đăng kiểm", "Trung tâm Đăng Kiểm Mẫu"]
+      }
+    },
+    {
+      "case_id": "SYN-P9-INCOMPLETE-POI-AND-POPULAR",
+      "input": {
+        "prefix": "pho di",
+        "limit": 3
+      },
+      "expected": {
+        "suggestions": ["phố đi bộ cuối tuần", "Quận 1 Phố Đi Bộ"]
+      }
+    }
+  ]
+}

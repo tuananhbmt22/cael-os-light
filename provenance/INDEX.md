@@ -27,6 +27,25 @@ actual governance records that produced the code in this repository, unedited.
    scan, and the honest caveats. The merged tree was verified byte-identical
    to the judged tree.
 
+## Per-track build records
+
+The `tracks/<track>/` folders hold governed build provenance for each real,
+pack-backed track. Each folder points back to the pack code, the goal contract,
+the builder report, the independent judge verdict, and the copied governance
+records used to verify that build.
+
+- **`tracks/p1-rbac/PROVENANCE.md`** — Taco Track 1 / P1, Enterprise Knowledge
+  & Secure AI Search. The pack backs role-aware enterprise knowledge retrieval;
+  its public build record passed with permission 49/50 honest, document_id
+  49/50 honest, and zero client-data leaks.
+- **`tracks/p2-eligibility/PROVENANCE.md`** — Taco Track 2 / P2, AI Mobility
+  Growth & Engagement Platform. The pack backs eligibility logic; its public
+  build record passed 40/40 honest, with anti-gaming verification by an
+  independent strip-probe.
+
+These are the first two tracks of the 12-track program. More track folders port
+in as their packs become real.
+
 ## Why this matters
 
 Every winning condition in this package is machine-checkable, every build step

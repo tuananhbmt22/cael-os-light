@@ -1,0 +1,305 @@
+{
+  "acceptance_tests": [
+    "T1 pack loads into the INSTALLED dep; loader REFUSES malformed variants incl. template<->trigger misalignment (the P2 proof case), missing threshold derivations, undeclared state refs",
+    "T2 L1 REAL-data honest score via CAEL_P2_DATA_ROOT: 40/40 expected_recommendation on the public eval, state-driven, each pick citing its firing rule; committed report = numbers + row/user ids only; ANTI-GAMING PROBE: judge re-runs with expected fields stripped and question randomized - score must hold (question-independence: same user => identical rec across questions)",
+    "T3 per-user vehicle AGGREGATION proven (multi-vehicle synthetic fixtures; never first-vehicle); rank+cap-3+never-empty fallback battery (healthy user => Discovery/Loyalty)",
+    "T4 notification engine: deadline triggers fire on vehicle date fixtures; templates CORRECTED with documented source-misalignment dispositions; alignment validated at load",
+    "T5 track_port_manifest.v1 for P2 + showcase renders the track page project-label mode + judge-requirements rows (their requirement -> our understanding -> how Cael OS achieves it -> our solution on top -> evidence)",
+    "T6 showcase.replay.v1 archetype-B from a real run (ranked candidates + fallback_used cards), public_scope=internal; W4 gallery diff content-only beyond manifest registration",
+    "T7 receipts every turn (decision, firing_rule per pick, confidence, pack_id, image_sha); graded-cooper zero second-brain on ordinary rows",
+    "T8 scans (client-data bodies, secrets, demo strings) clean; both suites green offline; BUILD cooper record or park-on-MAIN fallback with ready-note"
+  ],
+  "autonomous_window": {
+    "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+    "max_lifecycle": "until judge-close or block",
+    "mode": "natural_completion",
+    "stop_route": "return_to_radio"
+  },
+  "blocker_policy": {
+    "blocker_route": "return_to_radio"
+  },
+  "constraints": [
+    "cael-os-light delivery track (child of goal-20260701-0579)",
+    "fires via RADIO contract AFTER the cael-os-light Part-1 harness (Phase 0) is built",
+    "the converged prep is the INPUT, do NOT start from 0",
+    "archetype=Radio-External",
+    "cluster=A Consumer-Copilot",
+    "eligibility-gate = the pluggable-gate analogue of P1 RBAC",
+    "deterministic state-driven recommender"
+  ],
+  "contract_id": "radio-contract:goal-20260704-0701:f2849a7651f91476",
+  "contractor_lane_type": "unsupervise",
+  "cooper_policy": {
+    "cooper_required": false,
+    "record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0701-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "361cf1facee57098d6b349f4719b36af3fcf3fbc47346614dd716f6e53d6ae21",
+      "source_goal_id": "goal-20260704-0701",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0701"
+    },
+    "review": false
+  },
+  "created_at": "2026-07-05T12:22:23Z",
+  "created_by": "CAEL RADIO",
+  "end_manual": null,
+  "execution_plan": [
+    "S1 pack scaffold vs INSTALLED tarball: FIX-A rule-set as gate-B DATA with threshold_derivations from the field text, entity/state declarations (user->[vehicles]), receipts, p2_recommend binding + loader acceptance incl. misalignment refusal (T1)",
+    "S2 synthetic batteries: aggregation, rank/cap/never-empty, question-independence, graded-cooper visibility (T3, T7)",
+    "S3 L1 real-data run via CAEL_P2_DATA_ROOT: 40/40 + anti-gaming strip-probe + score report (T2) + archetype-B replay artifact internal-scope (T6)",
+    "S4 notification engine: triggers + corrected templates + alignment validation + misalignment dispositions (T4)",
+    "S5 port manifest + showcase P2 content + judge-requirements rows + scans + BUILD cooper (T5, T8)"
+  ],
+  "goal_snapshot": {
+    "autonomous_window": {
+      "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+      "max_lifecycle": "until judge-close or block",
+      "mode": "natural_completion",
+      "stop_route": "return_to_radio"
+    },
+    "constraints": [
+      "cael-os-light delivery track (child of goal-20260701-0579)",
+      "fires via RADIO contract AFTER the cael-os-light Part-1 harness (Phase 0) is built",
+      "the converged prep is the INPUT, do NOT start from 0",
+      "archetype=Radio-External",
+      "cluster=A Consumer-Copilot",
+      "eligibility-gate = the pluggable-gate analogue of P1 RBAC",
+      "deterministic state-driven recommender"
+    ],
+    "evidence_refs": [
+      "VERIFIED shape: P2 = the P1 architecture with the rule-set swapped -> an ELIGIBILITY gate (vehicle state x 12-service eligibility rules) instead of RBAC. Same pluggable deterministic-gate primitive; validates the harness gate engine.",
+      "KILLER finding (verified by inspection): the recommendation is a deterministic function of USER STATE, not the question - every repeated user in the 40-row eval gets the IDENTICAL recommendation set regardless of the question asked (U004/U015/U020/U021/U039/U046/U027). Eval reason strings map 1:1 to Services.recommendation_signals.",
+      "Data: vetc_track1_dataset_participants.xlsx (Users 50; Vehicles 50 with insurance/inspection/registration days-left + roadside/civil-liability status + route; Services 12 with eligibility+signals+priority+CTA; User_Activity 250; Content 30; Notification_Templates 6). Public_Evaluation 40 rows (expected_recommendation + reason); a Hidden_Evaluation exists - do NOT overfit.",
+      "New Part-1 primitive P2 needs vs P1: a proactive trigger/notification engine (deadline+signal monitor -> templated action). Harder than P1: output is a ranked SET (1-3 of 12) so ranking by priority + firing-signal count matters (set-overlap scoring).",
+      "COOPER-HARDENED + independently re-verified: the FIX-A rule engine = 40/40 on the public set (I re-ran it via verify_p2_fixA.py, not just cooper-reported). Refutation cooper CONFIRMED deterministic/state-driven/no-leak/ranking-sound and CORRECTED the prior pass: DocWallet is REGISTRATION-specific (inspection<45 OR registration<=60), NOT a uniform window-widen (U015/U020 have identical inspection=60 with opposite labels); the ROADSIDE km/segment clauses are dead weight (age>=3 alone = 40/40) so DELETE them; and a healthy user (nothing fires) returns an EMPTY recommendation -> add a fallback to Service Discovery/Loyalty (N004/N005).",
+      "Hidden-eval fragility (do NOT report 40/40 as the hidden expectation): the registration window is under-determined [61,179] = highest risk; then inspection window, the roadside age>=3 boundary, and insurance<30 (text-grounded only). LOCKED design section: docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md section 5b."
+    ],
+    "execution_plan": [
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Build the eligibility rule-engine over the 12 Services (eligibility + recommendation_signals) x user/vehicle/activity state; join eval user_id -> Users + Vehicles + Activity and fire the matching rules",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s1",
+        "verify": "the eligible-service set is computed deterministically per user from their state"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Rank + select top-N by priority (Cao/TrungBinh/Thap) + firing-signal count; output {recommended_services[], reason_per_service = the firing eligibility rule}",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s2",
+        "verify": "reproduce the expected_recommendation set (set-overlap) on the 40-eval; report the deterministic %"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Proactive notification engine: deadline triggers on the vehicle fields (insurance_days_left<30 -> N001, inspection_due -> N003, registration, wallet-not-active -> N006, roadside-recommendation -> N002) mapping to the 6 templates",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s3",
+        "verify": "the correct notification template fires for a given vehicle/user state"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Grounded conversational assistant wraps the engine (answers 'what services suit me' / 'do I need X' by running the eligibility engine and citing the firing rule); refuse-without-evidence; state-driven, not question-driven",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s4",
+        "verify": ">=10 assistant conversations + >=10 recommendation scenarios; every recommendation cites its firing rule"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "DESIGN NOT YET COOPER-HARDENED: lock after (a) the rule-engine-vs-40-eval validation (the P2 analogue of P1's 49/50 number) and (b) an independent refutation cooper (ranking anomalies + hidden-set traps), same discipline as Track 1",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s5",
+        "verify": "validation run + cooper findings folded into this goal BEFORE the RADIO contract is authored"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "VALIDATION run (rule-engine vs 40-eval): 82% exact set-match (33/40) + 0.917 mean Jaccard from a 3-user-calibrated engine -> recommendation CONFIRMED deterministic from user state. All 7 misses = fixable threshold calibration (DocWallet due-window 45->~60d; Insurance must also fire on insurance_days_left<30 even if status=active/expiring; Roadside age>=3), NO unfixable anomaly (unlike P1's P035).",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s6",
+        "verify": "scratchpad/validate_p2_recommendations.py reproduces 33/40; refutation cooper pressure-tests threshold-generalization + over-recommend/eligibility-leak + hidden-set BEFORE the RADIO contract"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "LOCKED (cooper-hardened, re-verified 40/40): the eligibility-gate design is in AGREEMENT-DRAFT-1.md section 5b (FIX-A rules + rank/cap-3 + fallback). At parity with Track 1; ready for a RADIO contract once the harness (Phase 0) is built.",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s7",
+        "verify": "FIX-A reproduces 40/40 (verify_p2_fixA.py); design section 5b committed; per-user vehicle aggregation + no already-active recommendation in the build"
+      }
+    ],
+    "goal_id": "goal-20260704-0701",
+    "goal_type": "code",
+    "missing_decisions": [],
+    "primary_goal": "",
+    "questions": [],
+    "relations": {
+      "blocked_by": [],
+      "duplicate_of": null,
+      "parent_goal_id": "goal-20260701-0579",
+      "relates_to": [],
+      "supersedes": []
+    },
+    "schema_version": "goal.v0.2",
+    "scope": [
+      "packs/p2-eligibility/** (NEW: the P2 domain pack)",
+      "showcase/content/** + P2 track_port_manifest registration",
+      "docs/handoff/jobs/<lane job dirs>/**",
+      "lane-normal goal/lane state operations"
+    ],
+    "status": "executing",
+    "substrate": "work",
+    "success_criteria": [
+      "Reproduce expected_recommendation on the 40-row Public_Evaluation (state-driven, eligibility-correct, cite the firing rule)",
+      "notification triggers fire on vehicle deadlines",
+      "do not overfit the hidden eval"
+    ],
+    "surface_request": "VETC Mobility Copilot: personalized eligibility-gated service recommendations + grounded assistant + proactive notifications; drive discovery/activation of Roadside, Civil-Liability-Insurance, etc.",
+    "title": "Taco Track 2 (P2) - AI Mobility Growth & Engagement Platform [cael-os-light delivery]",
+    "world_surfaces_needed": []
+  },
+  "goal_snapshot_sha": "f2849a7651f914765ebd3213d8af1d6c2fd2ea347a9bbc0f3fff95305e6fa960",
+  "ground_truth_refs": [
+    "docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md",
+    "docs/handoff/jobs/_briefs/0670-gallery-DESIGN-BRIEF.md",
+    "docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md"
+  ],
+  "hard_rejects": [
+    "building against cael-os-light SOURCE (dogfood law: import the INSTALLED @cael/os-light tarball; any cael-os-light/** edit = red)",
+    "client data in the repo: no user/vehicle/service rows, no xlsx; runtime reads CAEL_P2_DATA_ROOT only; committed fixtures SYNTHETIC",
+    "eval-gaming: expected_recommendation reaching the scored fn in ANY form (the P1 round-1 tautology class); score inflation via question-conditioning (rules are question-INDEPENDENT)",
+    "overfitting the hidden eval: no widening/tightening beyond the text-grounded LOCKED rules (registration window [61,179] under-determined - do not guess); 40/40 reported as PUBLIC",
+    "first-vehicle shortcuts (per-user aggregation across ALL vehicles is law); empty recommendation (never-empty fallback is law)",
+    "secrets; 'demo' strings; real client names outside the permission gate; writes outside the fence; markdown cooper record; self-judge-close; foreground full-suite runs"
+  ],
+  "lifecycle": {
+    "checkpoint_tail": {
+      "log_path": "cael.agent.os/contracts/goal-20260704-0701.phase_chain.ndjson",
+      "seq": 2,
+      "this_hash": "02121f088799e9381f71ef4421903d4b934f9df7d317da09c5e431fa4272dcaa"
+    },
+    "contractor_lane_id": "lane-goal-20260704-0701-1783254170",
+    "mission_id": null,
+    "mission_variant": null,
+    "phase": "contractor_build",
+    "phase_started_at": "2026-07-05T12:22:53Z",
+    "phase_status": "active",
+    "responsible_party": "contractor"
+  },
+  "merge_contract": {
+    "inspect_before_merge": [
+      "lane source delta confined to: packs/p2-eligibility/** (NEW) + showcase/content/** + manifest registration (registry.ts two-line class only) + docs/handoff/jobs/<lane jobs>/** + lane-normal goal/lane state; ZERO writes to cael-os-light/**, cael.agent.os/**, v3/**, boot artifacts",
+      "T2 report present at 40/40 with the anti-gaming probe documented; RADIO re-scans the diff for client data",
+      "aggregation + fallback + question-independence evidence in the lane report; BUILD record attached or MAIN-parked"
+    ]
+  },
+  "out_of_scope": [
+    "tracks P3-P12; P4 engagement layer (mission/XP semantics are P4's, not P2's)",
+    "real-adapter TRY wiring; Vercel owner clicks (tomorrow, with Kajima watching live)",
+    "showcase layout changes beyond P2 content + manifest registration (port law)"
+  ],
+  "owner_forks_resolved": {
+    "missing_decisions": [],
+    "questions": [],
+    "waived_by": null,
+    "waiver_reason": null
+  },
+  "phase_checkpoints": [
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_phase_ready",
+      "next_responsible_party": "radio",
+      "payload_sha": "d0d03026f8262eb73055906bd097d0b32b79cca10d128bba21a85097458936ac",
+      "phase": "radio_converge",
+      "prev_hash": "genesis:radio-contract:radio-contract:goal-20260704-0701:f2849a7651f91476",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 1,
+      "this_hash": "2243dfd2cc119092afd8aa14e16225d1055336b4af1229cbc3980b7a293b50de",
+      "ts": "2026-07-05T12:22:38Z"
+    },
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_build",
+      "next_responsible_party": "contractor",
+      "payload_sha": "f9d49b5ff0c304af37d5e33f8bee156153e222b54ad0786f184827adc354a5dc",
+      "phase": "contractor_phase_ready",
+      "prev_hash": "2243dfd2cc119092afd8aa14e16225d1055336b4af1229cbc3980b7a293b50de",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 2,
+      "this_hash": "02121f088799e9381f71ef4421903d4b934f9df7d317da09c5e431fa4272dcaa",
+      "ts": "2026-07-05T12:22:53Z"
+    }
+  ],
+  "reports_required": {
+    "ready_artifacts": [
+      "contract_close_package"
+    ],
+    "reports": [
+      "report/REPORT.md"
+    ]
+  },
+  "review_disposition": {
+    "cooper_record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0701-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "361cf1facee57098d6b349f4719b36af3fcf3fbc47346614dd716f6e53d6ae21",
+      "source_goal_id": "goal-20260704-0701",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0701"
+    },
+    "cooper_required": false,
+    "review_required": false,
+    "reviewer_outcome": null
+  },
+  "root_goal_id": "goal-20260704-0701",
+  "schema": "cael.radio_contract.v2",
+  "scope": [
+    "packs/p2-eligibility/** (NEW: the P2 domain pack)",
+    "showcase/content/** + P2 track_port_manifest registration",
+    "docs/handoff/jobs/<lane job dirs>/**",
+    "lane-normal goal/lane state operations"
+  ],
+  "signatures": {},
+  "stale_docs": [],
+  "status": "valid",
+  "success_criteria": [
+    "Reproduce expected_recommendation on the 40-row Public_Evaluation (state-driven, eligibility-correct, cite the firing rule)",
+    "notification triggers fire on vehicle deadlines",
+    "do not overfit the hidden eval"
+  ],
+  "validity": {
+    "checked_at": "2026-07-05T12:22:53Z",
+    "checked_by": "cael.agent.os/hooks/contract_gate.py",
+    "contract_sha256": "85009d66eb0eb8ec1f214b85de27ab3b1aabc310a0e103d8ca2fb07221483017",
+    "errors": [],
+    "result": "valid",
+    "validator_version": "radio_contract.py:v2"
+  },
+  "verification_plan": [
+    "Acceptance T1-T8 per the author brief. DOGFOOD: pack proves against the INSTALLED @cael/os-light tarball. L1 real-data 40/40 with the ANTI-GAMING PROBE (expected stripped + question randomized; question-independence must hold) - the P1 round-1 lesson as a standing gate. Per-user vehicle aggregation, rank+cap-3+never-empty fallback, text-grounded rules ONLY (hidden-eval discipline: registration window under-determined), notification template alignment with corrected copies + documented source misalignments. Judged on disk in-lane per unit; BUILD cooper before ready; RADIO merge gate re-scans for client data. LOCKED design refs: agreement s5b (FIX-A rules + cooper corrections), Phase-0 spec s5 archetype B + s6 notify/state-kernel"
+  ]
+}

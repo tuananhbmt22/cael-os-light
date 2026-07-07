@@ -1,0 +1,14 @@
+{
+  "schema": "cael.bounded_cooper_record.v1",
+  "goal_id": "goal-20260704-0701",
+  "builder_verdict": "clean",
+  "court_status": "closed",
+  "unresolved_issues": 0,
+  "review": true,
+  "cooper_required": true,
+  "builder_report": "docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md",
+  "judge_report": "docs/handoff/jobs/_briefs/cael-os-light-HARNESS-PHASE0-SPEC-DRAFT-1.md",
+  "builder_job": "P2 FIX-A convergence cooper (agreement s5b hardening, 2026-07-04)",
+  "accepted_at": "2026-07-05T13:05:00Z",
+  "provenance": "Track-2 (P2) PLAN convergence trail: independent cooper corrected and re-verified the FIX-A rule engine to 40/40 on the public set with NO unfixable anomaly (contrast P1's P035) and no eligibility leak - rules LOCKED in agreement s5b: ROADSIDE(age>=3 AND roadside!=active; km/segment clauses DELETED as dead weight), INSURANCE(status in {Chua kich hoat, Sap het han} OR days<30 text-grounded), DOCWALLET(insp<45 OR reg<=60 ASYMMETRIC - registration is the driver, U015/U020 prove not to widen inspection), BANK(wallet!=active), MONTHLYPASS(>=30 tolls AND frequent_route), rank ROADSIDE>INSURANCE>DOCWALLET>BANK>MONTHLYPASS cap 3, FALLBACK never-empty (Service Discovery/Loyalty). Cooper-caught laws: per-user VEHICLE AGGREGATION (never first-vehicle), question-independence (same state => same rec). Hidden-eval discipline: registration window under-determined [61,179] - text-grounded rules only, 40/40 reported as PUBLIC scope. Notification engine: template<->trigger alignment validated at pack load; source misalignments (no MonthlyPass template, N003 copy wrong for registration-driven DocWallet, N001 wording vs never-activated insurance) get CORRECTED templates + documented dispositions. Phase-0 harness ships archetype B + notify + state-kernel (0712 merged); showcase port law proven by P1 (59fde801). Kajima runway authorization continues (Go, 2026-07-05). ANTI-GAMING RIDER (from the P1 round-1 catch): scored fn input = user state + question ONLY; expected_recommendation never enters the fn; judge probes with the expected field STRIPPED and the score must hold."
+}

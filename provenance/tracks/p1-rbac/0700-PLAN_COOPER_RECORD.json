@@ -1,0 +1,14 @@
+{
+  "schema": "cael.bounded_cooper_record.v1",
+  "goal_id": "goal-20260704-0700",
+  "builder_verdict": "clean",
+  "court_status": "closed",
+  "unresolved_issues": 0,
+  "review": true,
+  "cooper_required": true,
+  "builder_report": "docs/handoff/jobs/_briefs/cael-os-light-P1-FIELD-PREP.md",
+  "judge_report": "docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md",
+  "builder_job": "P1 refutation cooper (agreement s5 hardening, 2026-07-04)",
+  "accepted_at": "2026-07-05T10:55:00Z",
+  "provenance": "Track-1 (P1) PLAN convergence trail: heir-16 field study verified BY EXECUTION (validate_rbac.py 49/50; P035 metadata-ceiling impossibility proof; two dataset inconsistencies mapped) -> independent discovery cooper refuted the Track-1 design with 12 findings F1-F12, ALL folded into agreement s5 (LOCKED design: identify-then-gate dual-channel, abstention floor, classification-across-blocks, canonicalization, never-special-case-P035, UNION doc-ids, atomic-fact index, Privileged=Executive-only, MAX-restrictiveness, vocab out of retrieval namespace) -> Phase-0 harness ships the A-archetype gate + all P1 core primitives (goal-0712 merged, 13/13 green) -> showcase skeleton merged 79ada3b4 with track_port_manifest.v1 as the port contract. Kajima re-opened track 1 as dogfood #1 (2026-07-05 runway authorization). DOGFOOD LAW: the pack builds and proves against the INSTALLED cael-os-light tarball (npm dep), not the source tree. CLIENT-DATA LAW: corpus/eval xlsx stays outside the repo (runtime CAEL_P1_DATA_ROOT); repo carries only synthetic fixtures + score reports + eval-row identifiers; replay artifact ships public_scope=internal pending Kajima permission."
+}
