@@ -1,0 +1,275 @@
+{
+  "acceptance_tests": [
+    "T1 pack loads into the INSTALLED dep: npm pack cael-os-light -> install tarball in packs/p1-rbac -> pack loader accepts p1 pack (threshold_derivations with real derivation evidence from the field, entity/state declarations, receipt schemas, scored-surface bindings p1_answer) and REFUSES the malformed variants",
+    "T2 L1 REAL-CORPUS proof (local, uncommitted data): with CAEL_P1_DATA_ROOT set, the self-harness scores the 50-row Public_Evaluation: permission >=49/50 (P035 the allowed miss, never patched) AND expected_document_id scored on Allow rows + audit-channel Deny rows; score REPORT committed (numbers + row ids only), corpus NOT",
+    "T3 zero-leak battery: deny rows produce generic id-free user refusals; audit records carry resolved ids; string-level leak scan over user-channel outputs vs Restricted/Confidential doc ids + titles = zero hits; abstention floor holds (P007 decoy)",
+    "T4 synthetic fixture suite green offline (mini-corpus fixtures mirroring the archetype-A battery incl. multi-doc deny-if-any, canonicalization, cross-block classification)",
+    "T5 track_port_manifest.v1 for P1 validates; showcase renders /client/track page from manifest+content in project-label mode (no real client name; permission gate respected); judge-requirements rows filled from the P1 brief (their requirement -> our understanding -> how Cael OS achieves it -> our solution on top -> evidence ref)",
+    "T6 showcase.replay.v1 artifact generated from a REAL L1 run with public_scope=internal + redaction fields present; player renders it in the internal mode; W4 diff-test still green (gallery side content-only)",
+    "T7 receipts validate every turn (decision, firing_rule, cited_ids UNION for multi-doc, confidence, escalation_used, pack_id, image_sha); graded-cooper: ordinary rows zero second-brain calls, P035-class residual + Restricted-attempt rows fire the escalation trigger visibly",
+    "T8 scans: zero client-data bodies (rg for content_vi markers + known doc-title strings = empty), zero secrets, suite green from cold clone offline; BUILD cooper record before ready (park-on-MAIN fallback allowed with ready-note)"
+  ],
+  "autonomous_window": {
+    "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+    "max_lifecycle": "until judge-close or block",
+    "mode": "natural_completion",
+    "stop_route": "return_to_radio"
+  },
+  "blocker_policy": {
+    "blocker_route": "return_to_radio"
+  },
+  "constraints": [
+    "cael-os-light delivery track (child of goal-20260701-0579)",
+    "fires via RADIO contract AFTER the cael-os-light Part-1 harness (Phase 0) is built",
+    "the converged prep is the INPUT, do NOT start from 0",
+    "archetype=Radio-Internal",
+    "the flagship",
+    "RBAC=the score",
+    "LOCKED design in cael-os-light-AGREEMENT-DRAFT-1.md sec5 + cael-os-light-P1-FIELD-PREP.md"
+  ],
+  "contract_id": "radio-contract:goal-20260704-0700:f8def0541623588a",
+  "contractor_lane_type": "unsupervise",
+  "cooper_policy": {
+    "cooper_required": false,
+    "record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0700-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "261f4df5a4f54ea4b162580cba48d50bfb57e455fc0454b2d3e8bab0e9148c25",
+      "source_goal_id": "goal-20260704-0700",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0700"
+    },
+    "review": false
+  },
+  "created_at": "2026-07-05T10:44:53Z",
+  "created_by": "CAEL RADIO",
+  "end_manual": null,
+  "execution_plan": [
+    "S1 pack scaffold vs INSTALLED tarball: npm pack the merged cael-os-light -> packs/p1-rbac consumes it as a dep; pack declaration (rules data F1-F12, threshold derivations from field evidence, entity/state, receipts, p1_answer binding) + loader acceptance (T1)",
+    "S2 synthetic archetype-A fixture suite (T4) + zero-leak battery + receipts/graded-cooper visibility (T3, T7)",
+    "S3 L1 real-corpus run via CAEL_P1_DATA_ROOT: 50-row score report (permission + doc-id), corpus uncommitted (T2) + replay artifact internal-scope from the real run (T6)",
+    "S4 port manifest + showcase P1 content (project-label mode, judge-requirements rows) + W4 content-only proof (T5) + scans + BUILD cooper (T8)"
+  ],
+  "goal_snapshot": {
+    "autonomous_window": {
+      "blocker_route": "lane.py blocked to RADIO (owner_fork|hard_blocker|infra_error)",
+      "max_lifecycle": "until judge-close or block",
+      "mode": "natural_completion",
+      "stop_route": "return_to_radio"
+    },
+    "constraints": [
+      "cael-os-light delivery track (child of goal-20260701-0579)",
+      "fires via RADIO contract AFTER the cael-os-light Part-1 harness (Phase 0) is built",
+      "the converged prep is the INPUT, do NOT start from 0",
+      "archetype=Radio-Internal",
+      "the flagship",
+      "RBAC=the score",
+      "LOCKED design in cael-os-light-AGREEMENT-DRAFT-1.md sec5 + cael-os-light-P1-FIELD-PREP.md"
+    ],
+    "evidence_refs": [
+      "LOCKED cooper-hardened design (identify-then-gate, dual-channel) + F1-F12 implementation rules: docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md section 5",
+      "Verified field: 40 docs (8 dept x 5, ~20-25K tokens = whole corpus fits one context window, NO vector DB); RBAC matrix scores 49/50 (P035 = provable metadata ceiling); retrieval/doc-id accuracy is the real battleground: docs/handoff/jobs/_briefs/cael-os-light-P1-FIELD-PREP.md",
+      "Independent refutation cooper confirmed 12 findings; load-bearing: F1 deny-row doc-id-vs-leak (dual channel: audit record carries id, user gets id-free refusal), F2 abstention floor, F3 classification-gate-not-block, F6 score doc-id not just permission"
+    ],
+    "execution_plan": [
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Build the gated identify/route index: strip shared boilerplate, index the 40 docs' section-3 atomic facts + titles (NOT full-doc embeddings, per F9); resolve the true target doc(s) across ALL docs",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s1",
+        "verify": "identify returns the correct expected_document_id on the Allow rows of the 50-eval"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Deterministic gate: classification x role/dept across ALL blocks (F3), canonical dept-name normalization HR<->Human Resources (F4), MAX-restrictiveness for cross-doc facts (F11), credential from the eval row not a Users-join (F10), Executive-only privilege",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s2",
+        "verify": "permission >=49/50 on the 50-eval; P035 left as the ceiling, never special-cased (F5)"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Dual-channel output: ALLOW -> load full cited section, ground the answer, UNION multi-doc ids (F7), keep polarity/number from the full section (F8). DENY -> audit record carries the resolved target id (F1) + the user gets a GENERIC id-free refusal; abstention floor refuses rather than answering a visible near-duplicate (F2)",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s3",
+        "verify": "zero Restricted content/existence leaks; a generic refusal on all 7 deny rows; deny-row doc-id captured only in the audit channel"
+      },
+      {
+        "dispatch_ref": null,
+        "execution_capability": null,
+        "goal_step": "Self-harness scores BOTH permission AND expected_document_id (F6); keep classification-vocabulary out of the content-retrieval namespace (F12); generalize, never overfit the 50 public rows (a Hidden_Evaluation exists)",
+        "owner": null,
+        "state": "todo",
+        "step_id": "s4",
+        "verify": "self-scored on the full 50-eval before submission; retrieval/doc-id measured, not just permission"
+      }
+    ],
+    "goal_id": "goal-20260704-0700",
+    "goal_type": "code",
+    "missing_decisions": [],
+    "primary_goal": "",
+    "questions": [],
+    "relations": {
+      "blocked_by": [],
+      "duplicate_of": null,
+      "parent_goal_id": "goal-20260701-0579",
+      "relates_to": [],
+      "supersedes": []
+    },
+    "schema_version": "goal.v0.2",
+    "scope": [
+      "packs/p1-rbac/** (NEW: the P1 domain pack: rules data, adapters, synthetic fixtures, L1 harness bindings)",
+      "showcase/content/** + P1 track_port_manifest registration (content-only gallery side)",
+      "docs/handoff/jobs/<lane job dirs>/**",
+      "lane-normal goal/lane state operations"
+    ],
+    "status": "executing",
+    "substrate": "work",
+    "success_criteria": [
+      "Pass the 50-row Public_Evaluation (permission >=49/50 incl the P035 metadata-ceiling + expected_document_id) with ZERO leaks",
+      "grounded cited answers",
+      "generic id-free refusal on deny"
+    ],
+    "surface_request": "Internal enterprise knowledge assistant (My Tasco): RBAC-gated natural-language Q&A over 40 company docs; a Restricted doc must never surface (content or existence) to an unauthorized role.",
+    "title": "Taco Track 1 (P1) - AI Workspace: Enterprise Knowledge & Secure AI Search [cael-os-light delivery]",
+    "world_surfaces_needed": []
+  },
+  "goal_snapshot_sha": "f8def0541623588a9e1fe2e489f74a5248788e4f5b4823b6a31c1d3bf02ae789",
+  "ground_truth_refs": [
+    "docs/handoff/jobs/_briefs/cael-os-light-AGREEMENT-DRAFT-1.md",
+    "docs/handoff/jobs/_briefs/cael-os-light-P1-FIELD-PREP.md",
+    "docs/handoff/jobs/_briefs/0670-gallery-DESIGN-BRIEF.md"
+  ],
+  "hard_rejects": [
+    "building against cael-os-light SOURCE: the pack imports the INSTALLED @cael/os-light tarball dep (npm pack from the merged tree; dogfood law); any cael-os-light/** edit = red",
+    "client data in the repo: no content_vi bodies, no corpus rows, no xlsx, no user directory data anywhere in the diff; runtime reads CAEL_P1_DATA_ROOT (Downloads path) only; committed fixtures are SYNTHETIC",
+    "P035 special-cased anywhere (F5: fixing it flips ~8 rows; hidden eval exists); public 49/50 reported as public scope, never as hidden expectation",
+    "grading via Users-sheet join (eval rows are self-contained; U003 conflict documented); dept compare without canonicalization (F4)",
+    "answer path bypassing the gate; UI in scoring path; prose-parsed routing; replay artifact with public_scope=approved (stays internal pending Kajima permission)",
+    "secrets/keys in repo; writes outside the fence; markdown cooper record; self-judge-close; foreground full-suite runs"
+  ],
+  "lifecycle": {
+    "checkpoint_tail": {
+      "log_path": "cael.agent.os/contracts/goal-20260704-0700.phase_chain.ndjson",
+      "seq": 2,
+      "this_hash": "5d371206d96403d029cacfd6baef0a846daa9a230da4910f1395340f9b62e5ef"
+    },
+    "contractor_lane_id": "lane-goal-20260704-0700-1783248352",
+    "mission_id": null,
+    "mission_variant": null,
+    "phase": "contractor_build",
+    "phase_started_at": "2026-07-05T10:45:57Z",
+    "phase_status": "active",
+    "responsible_party": "contractor"
+  },
+  "merge_contract": {
+    "inspect_before_merge": [
+      "lane source delta confined to: packs/p1-rbac/** (NEW pack root) + showcase/content/** + showcase manifest registration + docs/handoff/jobs/<lane jobs>/** + lane-normal goal/lane state; ZERO writes to cael-os-light/**, cael.agent.os/** hooks/canon, v3/**, boot artifacts",
+      "T2 real-corpus score report present with >=49/50 + doc-id table; NO corpus content in the diff (judge re-scans)",
+      "zero-leak battery evidence + receipts samples in the lane report; BUILD cooper record attached or MAIN-parked",
+      "port manifest valid; gallery diff content-only beyond the manifest registration"
+    ]
+  },
+  "out_of_scope": [
+    "tracks P2-P12; Galaxy P1 replication; the real-adapter TRY readiness gate execution (stub TRY only until keys wired)",
+    "Vercel owner clicks; publish-channel decision; permission flips (public_scope stays internal)",
+    "showcase layout changes beyond the P1 content + manifest (port law: gallery side content-only)"
+  ],
+  "owner_forks_resolved": {
+    "missing_decisions": [],
+    "questions": [],
+    "waived_by": null,
+    "waiver_reason": null
+  },
+  "phase_checkpoints": [
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_phase_ready",
+      "next_responsible_party": "radio",
+      "payload_sha": "c94d24dfddbc7b931e9c1b7fc519dc86bbb53e50da64d322b1a96ec8915ff2ac",
+      "phase": "radio_converge",
+      "prev_hash": "genesis:radio-contract:radio-contract:goal-20260704-0700:f8def0541623588a",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 1,
+      "this_hash": "66479eb0b49c323aae4c71d47c4e77026650ef021310a727bcba842d01c71cdf",
+      "ts": "2026-07-05T10:45:28Z"
+    },
+    {
+      "mission_id": null,
+      "mission_variant": null,
+      "next_phase": "contractor_build",
+      "next_responsible_party": "contractor",
+      "payload_sha": "9a8bfe3190400ab327986dd11f2d98ff4d2ea5ccf9d962c31fbdb0ac0ad98663",
+      "phase": "contractor_phase_ready",
+      "prev_hash": "66479eb0b49c323aae4c71d47c4e77026650ef021310a727bcba842d01c71cdf",
+      "responsible_party": "radio",
+      "result": "pass",
+      "seq": 2,
+      "this_hash": "5d371206d96403d029cacfd6baef0a846daa9a230da4910f1395340f9b62e5ef",
+      "ts": "2026-07-05T10:45:57Z"
+    }
+  ],
+  "reports_required": {
+    "ready_artifacts": [
+      "contract_close_package"
+    ],
+    "reports": [
+      "report/REPORT.md"
+    ]
+  },
+  "review_disposition": {
+    "cooper_record": {
+      "accepted_at": null,
+      "accepted_by": null,
+      "builder_verdict": null,
+      "kind": "cooper_record",
+      "path": "docs/handoff/jobs/_briefs/0700-PLAN_COOPER_RECORD.json",
+      "schema": "cael.radio_contract.cooper_record_ref.v1",
+      "sha256": "261f4df5a4f54ea4b162580cba48d50bfb57e455fc0454b2d3e8bab0e9148c25",
+      "source_goal_id": "goal-20260704-0700",
+      "source_job": "docs/handoff/jobs/_briefs",
+      "subject_goal_id": "goal-20260704-0700"
+    },
+    "cooper_required": false,
+    "review_required": false,
+    "reviewer_outcome": null
+  },
+  "root_goal_id": "goal-20260704-0700",
+  "schema": "cael.radio_contract.v2",
+  "scope": [
+    "packs/p1-rbac/** (NEW: the P1 domain pack: rules data, adapters, synthetic fixtures, L1 harness bindings)",
+    "showcase/content/** + P1 track_port_manifest registration (content-only gallery side)",
+    "docs/handoff/jobs/<lane job dirs>/**",
+    "lane-normal goal/lane state operations"
+  ],
+  "signatures": {},
+  "stale_docs": [],
+  "status": "valid",
+  "success_criteria": [
+    "Pass the 50-row Public_Evaluation (permission >=49/50 incl the P035 metadata-ceiling + expected_document_id) with ZERO leaks",
+    "grounded cited answers",
+    "generic id-free refusal on deny"
+  ],
+  "validity": {
+    "checked_at": "2026-07-05T10:45:57Z",
+    "checked_by": "cael.agent.os/hooks/contract_gate.py",
+    "contract_sha256": "f822238d74a3c3bc9a9331f8c3ddb611d208216a197915881d8af30d356133c6",
+    "errors": [],
+    "result": "valid",
+    "validator_version": "radio_contract.py:v2"
+  },
+  "verification_plan": [
+    "DOGFOOD #1: the P1 pack proves against the INSTALLED @cael/os-light tarball. Acceptance T1-T8 per the author brief: pack loads into the installed dep + loader refuses malformed variants; L1 REAL-corpus score >=49/50 permission AND doc-id (P035 = the allowed miss, NEVER patched) with the corpus staying outside the repo (CAEL_P1_DATA_ROOT); zero-leak battery string-level; synthetic archetype-A fixture suite offline; track_port_manifest.v1 + gallery renders P1 in project-label mode with judge-requirements rows; showcase.replay.v1 from a real run at public_scope=internal; receipts + graded-cooper visibility; scans clean. Judged on disk in-lane per unit; BUILD cooper before ready; RADIO merge gate re-scans for client data. LOCKED design refs: agreement s5 (F1-F12 rules), P1-FIELD-PREP (verified field + decision function + canonical dept map), Phase-0 spec s5/s11"
+  ]
+}

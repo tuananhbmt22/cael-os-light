@@ -1,0 +1,17 @@
+{
+  "version": "p6-query-understanding-synthetic-v1",
+  "cases": [
+    { "case_id": "typo-cafe-nearby", "input": { "query": "quan cafe gan day" }, "expected": { "normalized_query": "quán cafe gần đây", "intent": "category_search", "entities": ["category:coffee_shop", "proximity:nearby"] } },
+    { "case_id": "typo-hospital", "input": { "query": "benh vien da khoa" }, "expected": { "normalized_query": "bệnh viện đa khoa", "intent": "category_search", "entities": ["category:hospital"] } },
+    { "case_id": "abbrev-atm-hospital", "input": { "query": "atm gan bv cho ray" }, "expected": { "normalized_query": "atm gần bệnh viện chợ rẫy", "intent": "category_search", "entities": ["category:bank", "landmark:benh vien cho ray", "proximity:nearby"] } },
+    { "case_id": "abbrev-mall-district", "input": { "query": "tttm q1" }, "expected": { "normalized_query": "trung tâm thương mại quận 1", "intent": "category_search", "entities": ["category:shopping_mall", "district:quan 1"] } },
+    { "case_id": "address-ng-hue", "input": { "query": "123 ng hue, p ben nghe" }, "expected": { "normalized_query": "123 nguyễn huệ, phường bến nghé", "intent": "address_navigation", "entities": ["street:nguyen hue", "ward:ben nghe"] } },
+    { "case_id": "address-le-loi", "input": { "query": "le loi, hai chau" }, "expected": { "normalized_query": "lê lợi, hải châu", "intent": "address_navigation", "entities": ["district:hai chau", "street:le loi"] } },
+    { "case_id": "ambiguous-restaurant", "input": { "query": "nha hang" }, "expected": { "normalized_query": "nhà hàng", "intent": "ambiguous", "entities": ["category:restaurant"] } },
+    { "case_id": "ambiguous-lotus", "input": { "query": "lotus" }, "expected": { "normalized_query": "lotus", "intent": "ambiguous", "entities": ["poi_candidate:SYN-POI-LOTUS-CAFE", "poi_candidate:SYN-POI-LOTUS-MARKET"] } },
+    { "case_id": "category-cafe", "input": { "query": "cafe" }, "expected": { "normalized_query": "cafe", "intent": "category_search", "entities": ["category:coffee_shop"] } },
+    { "case_id": "poi-lotus-cafe", "input": { "query": "SYN-POI Lotus Cafe" }, "expected": { "normalized_query": "syn-poi lotus cafe", "intent": "poi_lookup", "entities": ["category:coffee_shop", "poi:SYN-POI-LOTUS-CAFE"] } },
+    { "case_id": "restaurant-with-district", "input": { "query": "nha hang q3" }, "expected": { "normalized_query": "nhà hàng quận 3", "intent": "category_search", "entities": ["category:restaurant", "district:quan 3"] } },
+    { "case_id": "fuel-with-district", "input": { "query": "cay xang q2" }, "expected": { "normalized_query": "cây xăng quận 2", "intent": "category_search", "entities": ["category:fuel_station", "district:quan 2"] } }
+  ]
+}
