@@ -1,0 +1,2076 @@
+{
+  "version": "p7-synthetic-semantic-ranking-v1",
+  "cases": [
+    {
+      "case_id": "P001",
+      "input": {
+        "query": "quán cà phê yên tĩnh để làm việc",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C001",
+          "C004",
+          "C007"
+        ],
+        "poi_names": [
+          "The Workshop Coffee",
+          "Tranquil Books & Coffee",
+          "WorkHub Cafe Cầu Giấy"
+        ],
+        "semantic_requirements": [
+          "wifi",
+          "yên tĩnh",
+          "phù hợp làm việc"
+        ],
+        "ranking_signals": [
+          "relevance",
+          "attributes",
+          "rating"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Attribute",
+          "Ranking"
+        ],
+        "source_row": 2
+      }
+    },
+    {
+      "case_id": "P002",
+      "input": {
+        "query": "cafe có wifi gần hồ gươm",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C003",
+          "C004"
+        ],
+        "poi_names": [
+          "Cộng Cà Phê Hồ Gươm",
+          "Tranquil Books & Coffee"
+        ],
+        "semantic_requirements": [
+          "quán cà phê",
+          "wifi",
+          "gần Hồ Gươm"
+        ],
+        "ranking_signals": [
+          "location",
+          "attributes",
+          "relevance"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Location"
+        ],
+        "source_row": 3
+      }
+    },
+    {
+      "case_id": "P003",
+      "input": {
+        "query": "nơi phù hợp để hẹn hò ở quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "R002",
+          "R008",
+          "C002"
+        ],
+        "poi_names": [
+          "Pizza 4P's Lê Thánh Tôn",
+          "Rooftop Sky Garden",
+          "Highlands Coffee Nguyễn Huệ"
+        ],
+        "semantic_requirements": [
+          "không gian lãng mạn",
+          "Quận 1"
+        ],
+        "ranking_signals": [
+          "relevance",
+          "location",
+          "rating"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Semantic",
+          "Ranking"
+        ],
+        "source_row": 4
+      }
+    },
+    {
+      "case_id": "P004",
+      "input": {
+        "query": "nhà hàng cho gia đình có trẻ nhỏ",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R001",
+          "R010",
+          "R005"
+        ],
+        "poi_names": [
+          "Nhà hàng Ngon 138",
+          "Nhà hàng Gia Đình Hoa Sen",
+          "Bếp Nhà Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "phù hợp gia đình",
+          "trẻ em"
+        ],
+        "ranking_signals": [
+          "attributes",
+          "review",
+          "rating"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Attribute"
+        ],
+        "source_row": 5
+      }
+    },
+    {
+      "case_id": "P005",
+      "input": {
+        "query": "khách sạn gần biển đà nẵng có hồ bơi",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H001",
+          "H002"
+        ],
+        "poi_names": [
+          "Sea Pearl Hotel Đà Nẵng",
+          "Ocean View Resort Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "khách sạn Đà Nẵng",
+          "gần biển",
+          "hồ bơi"
+        ],
+        "ranking_signals": [
+          "location",
+          "attributes",
+          "rating"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Location",
+          "Attribute"
+        ],
+        "source_row": 6
+      }
+    },
+    {
+      "case_id": "P006",
+      "input": {
+        "query": "quán ăn mở cửa sau 11 giờ tối",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R006",
+          "R008"
+        ],
+        "poi_names": [
+          "Quán Ăn Đêm 24h Nguyễn Trãi",
+          "Rooftop Sky Garden"
+        ],
+        "semantic_requirements": [
+          "nhà hàng/quán ăn mở khuya sau 23h"
+        ],
+        "ranking_signals": [
+          "opening_hours",
+          "relevance"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Time"
+        ],
+        "source_row": 7
+      }
+    },
+    {
+      "case_id": "P007",
+      "input": {
+        "query": "địa điểm check-in đẹp ở đà lạt",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A004",
+          "C006",
+          "H004"
+        ],
+        "poi_names": [
+          "Quảng trường Lâm Viên",
+          "Dalat View Coffee",
+          "Dalat Garden Homestay"
+        ],
+        "semantic_requirements": [
+          "điểm check-in",
+          "Đà Lạt",
+          "view đẹp"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "popularity",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Discovery",
+          "Semantic"
+        ],
+        "source_row": 8
+      }
+    },
+    {
+      "case_id": "P008",
+      "input": {
+        "query": "atm rút tiền 24/7 gần phố đi bộ nguyễn huệ",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Nearby Search",
+        "ranked_results": [
+          "S001"
+        ],
+        "poi_names": [
+          "ATM Vietcombank Nguyễn Huệ"
+        ],
+        "semantic_requirements": [
+          "ATM 24/7 gần Nguyễn Huệ"
+        ],
+        "ranking_signals": [
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Location",
+          "Attribute"
+        ],
+        "source_row": 9
+      }
+    },
+    {
+      "case_id": "P009",
+      "input": {
+        "query": "cây xăng có toilet trên đường đi hạ long",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S003"
+        ],
+        "poi_names": [
+          "Trạm xăng Petrolimex Cầu Giấy"
+        ],
+        "semantic_requirements": [
+          "trạm xăng",
+          "toilet",
+          "24/7"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "relevance"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Synonym",
+          "Attribute"
+        ],
+        "source_row": 10
+      }
+    },
+    {
+      "case_id": "P010",
+      "input": {
+        "query": "trạm sạc xe điện gần trung tâm đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S004"
+        ],
+        "poi_names": [
+          "Trạm sạc EV One Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "trạm sạc điện",
+          "gần trung tâm Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "category",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Category Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Category",
+          "Location"
+        ],
+        "source_row": 11
+      }
+    },
+    {
+      "case_id": "P011",
+      "input": {
+        "query": "quán cafe học bài ở hoàn kiếm",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C004",
+          "C003"
+        ],
+        "poi_names": [
+          "Tranquil Books & Coffee",
+          "Cộng Cà Phê Hồ Gươm"
+        ],
+        "semantic_requirements": [
+          "quán cà phê yên tĩnh",
+          "học tập",
+          "Hoàn Kiếm"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Location"
+        ],
+        "source_row": 12
+      }
+    },
+    {
+      "case_id": "P012",
+      "input": {
+        "query": "quán cà phê có chỗ đậu xe ở cầu giấy",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C007"
+        ],
+        "poi_names": [
+          "WorkHub Cafe Cầu Giấy"
+        ],
+        "semantic_requirements": [
+          "cafe",
+          "bãi đỗ xe",
+          "Cầu Giấy"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 13
+      }
+    },
+    {
+      "case_id": "P013",
+      "input": {
+        "query": "nhà hàng chay yên tĩnh quận 3",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R007"
+        ],
+        "poi_names": [
+          "Chay An Lạc"
+        ],
+        "semantic_requirements": [
+          "nhà hàng chay",
+          "yên tĩnh",
+          "Quận 3"
+        ],
+        "ranking_signals": [
+          "category",
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 14
+      }
+    },
+    {
+      "case_id": "P014",
+      "input": {
+        "query": "rooftop view đẹp để đi tối nay",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "R008"
+        ],
+        "poi_names": [
+          "Rooftop Sky Garden"
+        ],
+        "semantic_requirements": [
+          "rooftop",
+          "view đẹp",
+          "mở buổi tối"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "opening_hours",
+          "rating"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Time"
+        ],
+        "source_row": 15
+      }
+    },
+    {
+      "case_id": "P015",
+      "input": {
+        "query": "khách sạn đi công tác gần duy tân",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H003"
+        ],
+        "poi_names": [
+          "Hanoi Business Hotel"
+        ],
+        "semantic_requirements": [
+          "khách sạn phù hợp công tác",
+          "gần Duy Tân"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Location"
+        ],
+        "source_row": 16
+      }
+    },
+    {
+      "case_id": "P016",
+      "input": {
+        "query": "bệnh viện cấp cứu 24/7 hà nội",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S005"
+        ],
+        "poi_names": [
+          "Bệnh viện Bạch Mai"
+        ],
+        "semantic_requirements": [
+          "bệnh viện cấp cứu 24/7 ở Hà Nội"
+        ],
+        "ranking_signals": [
+          "category",
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 17
+      }
+    },
+    {
+      "case_id": "P017",
+      "input": {
+        "query": "trung tâm thương mại có rạp phim ở hà nội",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "M002",
+          "A005"
+        ],
+        "poi_names": [
+          "Vincom Nguyễn Chí Thanh",
+          "Lotte Center Hà Nội"
+        ],
+        "semantic_requirements": [
+          "mall",
+          "rạp phim",
+          "Hà Nội"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Category"
+        ],
+        "source_row": 18
+      }
+    },
+    {
+      "case_id": "P018",
+      "input": {
+        "query": "quán phở nổi tiếng hà nội",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R004"
+        ],
+        "poi_names": [
+          "Phở Thìn Lò Đúc"
+        ],
+        "semantic_requirements": [
+          "phở nổi tiếng Hà Nội"
+        ],
+        "ranking_signals": [
+          "category",
+          "popularity",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "Semantic",
+          "Popularity"
+        ],
+        "source_row": 19
+      }
+    },
+    {
+      "case_id": "P019",
+      "input": {
+        "query": "quán bún chả cho khách du lịch",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R003"
+        ],
+        "poi_names": [
+          "Bún Chả Hương Liên"
+        ],
+        "semantic_requirements": [
+          "bún chả",
+          "phù hợp du lịch"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "popularity"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Popularity"
+        ],
+        "source_row": 20
+      }
+    },
+    {
+      "case_id": "P020",
+      "input": {
+        "query": "resort gần biển cho cặp đôi ở đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H002"
+        ],
+        "poi_names": [
+          "Ocean View Resort Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "resort",
+          "gần biển",
+          "cặp đôi",
+          "Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 21
+      }
+    },
+    {
+      "case_id": "P021",
+      "input": {
+        "query": "mua sắm ăn uống trung tâm quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "M001"
+        ],
+        "poi_names": [
+          "Vincom Center Đồng Khởi"
+        ],
+        "semantic_requirements": [
+          "trung tâm thương mại",
+          "ăn uống",
+          "mua sắm",
+          "Quận 1"
+        ],
+        "ranking_signals": [
+          "category",
+          "location",
+          "popularity"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Discovery",
+          "Location"
+        ],
+        "source_row": 22
+      }
+    },
+    {
+      "case_id": "P022",
+      "input": {
+        "query": "đi đâu với trẻ em ở sài gòn cuối tuần",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A001"
+        ],
+        "poi_names": [
+          "Thảo Cầm Viên Sài Gòn"
+        ],
+        "semantic_requirements": [
+          "địa điểm phù hợp trẻ em",
+          "gia đình",
+          "TP.HCM"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Semantic"
+        ],
+        "source_row": 23
+      }
+    },
+    {
+      "case_id": "P023",
+      "input": {
+        "query": "cafe view đẹp để chụp ảnh ở đà lạt",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C006"
+        ],
+        "poi_names": [
+          "Dalat View Coffee"
+        ],
+        "semantic_requirements": [
+          "cafe view đẹp",
+          "check-in",
+          "Đà Lạt"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 24
+      }
+    },
+    {
+      "case_id": "P024",
+      "input": {
+        "query": "địa điểm miễn phí gần hồ xuân hương",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A004"
+        ],
+        "poi_names": [
+          "Quảng trường Lâm Viên"
+        ],
+        "semantic_requirements": [
+          "địa điểm miễn phí",
+          "gần hồ Xuân Hương"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Discovery",
+          "Location"
+        ],
+        "source_row": 25
+      }
+    },
+    {
+      "case_id": "P025",
+      "input": {
+        "query": "khách sạn trung tâm gần chợ bến thành",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H005"
+        ],
+        "poi_names": [
+          "Saigon Central Hotel"
+        ],
+        "semantic_requirements": [
+          "khách sạn trung tâm Quận 1",
+          "gần chợ"
+        ],
+        "ranking_signals": [
+          "location",
+          "semantic"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Location",
+          "Semantic"
+        ],
+        "source_row": 26
+      }
+    },
+    {
+      "case_id": "P026",
+      "input": {
+        "query": "quán ăn nhóm ở đà lạt trời lạnh",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R009"
+        ],
+        "poi_names": [
+          "Lẩu Gà Lá É Tao Ngộ"
+        ],
+        "semantic_requirements": [
+          "lẩu/ấm cúng",
+          "phù hợp nhóm",
+          "Đà Lạt"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Semantic"
+        ],
+        "source_row": 27
+      }
+    },
+    {
+      "case_id": "P027",
+      "input": {
+        "query": "nơi làm việc ngoài văn phòng cầu giấy",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C007",
+          "H003"
+        ],
+        "poi_names": [
+          "WorkHub Cafe Cầu Giấy",
+          "Hanoi Business Hotel"
+        ],
+        "semantic_requirements": [
+          "work-friendly/coworking-like",
+          "Cầu Giấy"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Intent"
+        ],
+        "source_row": 28
+      }
+    },
+    {
+      "case_id": "P028",
+      "input": {
+        "query": "quán ăn giá rẻ mở khuya quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R006"
+        ],
+        "poi_names": [
+          "Quán Ăn Đêm 24h Nguyễn Trãi"
+        ],
+        "semantic_requirements": [
+          "giá rẻ",
+          "mở khuya",
+          "Quận 1"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location",
+          "price"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Price",
+          "Location"
+        ],
+        "source_row": 29
+      }
+    },
+    {
+      "case_id": "P029",
+      "input": {
+        "query": "bãi đỗ xe và cafe sân vườn thủ đức",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C008"
+        ],
+        "poi_names": [
+          "Mộc Cafe Thủ Đức"
+        ],
+        "semantic_requirements": [
+          "cafe sân vườn",
+          "bãi đỗ xe",
+          "Thủ Đức"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 30
+      }
+    },
+    {
+      "case_id": "P030",
+      "input": {
+        "query": "rạp phim trong vincom đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "POI Search",
+        "ranked_results": [
+          "M004"
+        ],
+        "poi_names": [
+          "CGV Vincom Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "rạp phim CGV trong Vincom Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "poi",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "POI Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "POI",
+          "Location"
+        ],
+        "source_row": 31
+      }
+    },
+    {
+      "case_id": "P031",
+      "input": {
+        "query": "nhà hàng hải sản gần biển mỹ khê cho gia đình",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R005"
+        ],
+        "poi_names": [
+          "Bếp Nhà Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "hải sản",
+          "gần biển",
+          "phù hợp gia đình"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Attribute"
+        ],
+        "source_row": 32
+      }
+    },
+    {
+      "case_id": "P032",
+      "input": {
+        "query": "pharmacy mở muộn quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S007"
+        ],
+        "poi_names": [
+          "Nhà thuốc Pharmacity Nguyễn Trãi"
+        ],
+        "semantic_requirements": [
+          "nhà thuốc mở muộn Quận 1"
+        ],
+        "ranking_signals": [
+          "mixed_language",
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Mixed Language Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "MixedLanguage",
+          "Attribute"
+        ],
+        "source_row": 33
+      }
+    },
+    {
+      "case_id": "P033",
+      "input": {
+        "query": "quiet coffee shop to work near hoan kiem",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C004",
+          "C003"
+        ],
+        "poi_names": [
+          "Tranquil Books & Coffee",
+          "Cộng Cà Phê Hồ Gươm"
+        ],
+        "semantic_requirements": [
+          "cafe yên tĩnh làm việc gần Hoàn Kiếm"
+        ],
+        "ranking_signals": [
+          "mixed_language",
+          "semantic",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Mixed Language Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "MixedLanguage",
+          "Semantic"
+        ],
+        "source_row": 34
+      }
+    },
+    {
+      "case_id": "P034",
+      "input": {
+        "query": "family restaurant with parking in tay ho",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R010"
+        ],
+        "poi_names": [
+          "Nhà hàng Gia Đình Hoa Sen"
+        ],
+        "semantic_requirements": [
+          "nhà hàng gia đình",
+          "bãi đỗ xe",
+          "Tây Hồ"
+        ],
+        "ranking_signals": [
+          "mixed_language",
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Mixed Language Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "MixedLanguage",
+          "Attribute"
+        ],
+        "source_row": 35
+      }
+    },
+    {
+      "case_id": "P035",
+      "input": {
+        "query": "best mall for shopping and food in q1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "M001"
+        ],
+        "poi_names": [
+          "Vincom Center Đồng Khởi"
+        ],
+        "semantic_requirements": [
+          "mall mua sắm ăn uống Quận 1"
+        ],
+        "ranking_signals": [
+          "mixed_language",
+          "category",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Mixed Language Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "MixedLanguage",
+          "Ranking"
+        ],
+        "source_row": 36
+      }
+    },
+    {
+      "case_id": "P036",
+      "input": {
+        "query": "nơi ăn uống lãng mạn view thành phố",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "R008",
+          "R002"
+        ],
+        "poi_names": [
+          "Rooftop Sky Garden",
+          "Pizza 4P's Lê Thánh Tôn"
+        ],
+        "semantic_requirements": [
+          "lãng mạn",
+          "view đẹp",
+          "buổi tối"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Discovery"
+        ],
+        "source_row": 37
+      }
+    },
+    {
+      "case_id": "P037",
+      "input": {
+        "query": "cafe không quá đông để họp nhóm",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C007",
+          "C001"
+        ],
+        "poi_names": [
+          "WorkHub Cafe Cầu Giấy",
+          "The Workshop Coffee"
+        ],
+        "semantic_requirements": [
+          "quán cafe phòng họp/nhóm",
+          "yên tĩnh"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Attribute"
+        ],
+        "source_row": 38
+      }
+    },
+    {
+      "case_id": "P038",
+      "input": {
+        "query": "điểm tham quan gia đình ở đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A003"
+        ],
+        "poi_names": [
+          "Cầu Vàng Bà Nà Hills"
+        ],
+        "semantic_requirements": [
+          "điểm tham quan phù hợp gia đình ở Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "category",
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Discovery",
+          "Location"
+        ],
+        "source_row": 39
+      }
+    },
+    {
+      "case_id": "P039",
+      "input": {
+        "query": "khách sạn có phòng họp gần khu văn phòng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H003"
+        ],
+        "poi_names": [
+          "Hanoi Business Hotel"
+        ],
+        "semantic_requirements": [
+          "khách sạn công tác",
+          "phòng họp",
+          "gần văn phòng"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "semantic"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Attribute",
+          "Semantic"
+        ],
+        "source_row": 40
+      }
+    },
+    {
+      "case_id": "P040",
+      "input": {
+        "query": "cafe gần sông hàn để làm việc",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C005"
+        ],
+        "poi_names": [
+          "Dream Beans Coffee Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "cafe gần sông Hàn",
+          "phù hợp làm việc"
+        ],
+        "ranking_signals": [
+          "location",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Location",
+          "Attribute"
+        ],
+        "source_row": 41
+      }
+    },
+    {
+      "case_id": "P041",
+      "input": {
+        "query": "nhà hàng món việt rộng rãi cho đoàn khách",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R001"
+        ],
+        "poi_names": [
+          "Nhà hàng Ngon 138"
+        ],
+        "semantic_requirements": [
+          "món Việt",
+          "không gian rộng",
+          "nhóm/đoàn"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Attribute"
+        ],
+        "source_row": 42
+      }
+    },
+    {
+      "case_id": "P042",
+      "input": {
+        "query": "địa điểm có view thành phố và ăn tối",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "R008",
+          "A005"
+        ],
+        "poi_names": [
+          "Rooftop Sky Garden",
+          "Lotte Center Hà Nội"
+        ],
+        "semantic_requirements": [
+          "view đẹp",
+          "ăn tối",
+          "rooftop/mall"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Discovery"
+        ],
+        "source_row": 43
+      }
+    },
+    {
+      "case_id": "P043",
+      "input": {
+        "query": "trung tâm thương mại có bãi đậu xe ba đình",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "A005"
+        ],
+        "poi_names": [
+          "Lotte Center Hà Nội"
+        ],
+        "semantic_requirements": [
+          "mall có bãi đỗ xe ở Ba Đình"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 44
+      }
+    },
+    {
+      "case_id": "P044",
+      "input": {
+        "query": "quán ăn healthy không thịt",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R007"
+        ],
+        "poi_names": [
+          "Chay An Lạc"
+        ],
+        "semantic_requirements": [
+          "nhà hàng chay",
+          "healthy"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "category"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Synonym"
+        ],
+        "source_row": 45
+      }
+    },
+    {
+      "case_id": "P045",
+      "input": {
+        "query": "nơi có thể đưa trẻ đi chơi ngoài trời",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A001",
+          "A002"
+        ],
+        "poi_names": [
+          "Thảo Cầm Viên Sài Gòn",
+          "Công viên Thống Nhất"
+        ],
+        "semantic_requirements": [
+          "địa điểm ngoài trời phù hợp trẻ em"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Semantic"
+        ],
+        "source_row": 46
+      }
+    },
+    {
+      "case_id": "P046",
+      "input": {
+        "query": "atm gần hồ gươm 24h",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Nearby Search",
+        "ranked_results": [
+          "S002"
+        ],
+        "poi_names": [
+          "ATM Techcombank Hồ Gươm"
+        ],
+        "semantic_requirements": [
+          "ATM 24/7 gần Hồ Gươm"
+        ],
+        "ranking_signals": [
+          "location",
+          "attribute"
+        ]
+      },
+      "metadata": {
+        "query_category": "Location-Aware Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "Location",
+          "Attribute"
+        ],
+        "source_row": 47
+      }
+    },
+    {
+      "case_id": "P047",
+      "input": {
+        "query": "hotel near beach da nang with pool",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H001",
+          "H002"
+        ],
+        "poi_names": [
+          "Sea Pearl Hotel Đà Nẵng",
+          "Ocean View Resort Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "khách sạn gần biển Đà Nẵng có hồ bơi"
+        ],
+        "ranking_signals": [
+          "mixed_language",
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Mixed Language Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "MixedLanguage",
+          "Attribute"
+        ],
+        "source_row": 48
+      }
+    },
+    {
+      "case_id": "P048",
+      "input": {
+        "query": "quán lẩu ngon đi nhóm ở đà lạt",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R009"
+        ],
+        "poi_names": [
+          "Lẩu Gà Lá É Tao Ngộ"
+        ],
+        "semantic_requirements": [
+          "lẩu",
+          "phù hợp nhóm",
+          "Đà Lạt"
+        ],
+        "ranking_signals": [
+          "category",
+          "semantic",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Location"
+        ],
+        "source_row": 49
+      }
+    },
+    {
+      "case_id": "P049",
+      "input": {
+        "query": "bệnh viện quốc tế ở bình thạnh",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S006"
+        ],
+        "poi_names": [
+          "Bệnh viện Vinmec Central Park"
+        ],
+        "semantic_requirements": [
+          "bệnh viện quốc tế ở Bình Thạnh"
+        ],
+        "ranking_signals": [
+          "category",
+          "location",
+          "attribute"
+        ]
+      },
+      "metadata": {
+        "query_category": "Category Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "Category",
+          "Location"
+        ],
+        "source_row": 50
+      }
+    },
+    {
+      "case_id": "P050",
+      "input": {
+        "query": "cafe giá rẻ có sân vườn",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C008"
+        ],
+        "poi_names": [
+          "Mộc Cafe Thủ Đức"
+        ],
+        "semantic_requirements": [
+          "cafe giá rẻ",
+          "sân vườn"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "price"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Price"
+        ],
+        "source_row": 51
+      }
+    },
+    {
+      "case_id": "P051",
+      "input": {
+        "query": "ăn tối gần biển với hải sản đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R005"
+        ],
+        "poi_names": [
+          "Bếp Nhà Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "nhà hàng hải sản gần biển Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Location"
+        ],
+        "source_row": 52
+      }
+    },
+    {
+      "case_id": "P052",
+      "input": {
+        "query": "địa điểm checkin nổi tiếng ở đà nẵng",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A003"
+        ],
+        "poi_names": [
+          "Cầu Vàng Bà Nà Hills"
+        ],
+        "semantic_requirements": [
+          "điểm check-in nổi tiếng Đà Nẵng"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "popularity"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "Discovery",
+          "Popularity"
+        ],
+        "source_row": 53
+      }
+    },
+    {
+      "case_id": "P053",
+      "input": {
+        "query": "khách sạn giá hợp lý cho nhóm bạn ở đà lạt",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H004"
+        ],
+        "poi_names": [
+          "Dalat Garden Homestay"
+        ],
+        "semantic_requirements": [
+          "homestay/khách sạn giá hợp lý",
+          "phù hợp nhóm"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "price",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Price",
+          "Location"
+        ],
+        "source_row": 54
+      }
+    },
+    {
+      "case_id": "P054",
+      "input": {
+        "query": "quán cà phê specialty yên tĩnh quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C001"
+        ],
+        "poi_names": [
+          "The Workshop Coffee"
+        ],
+        "semantic_requirements": [
+          "specialty coffee",
+          "yên tĩnh",
+          "Quận 1"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Location"
+        ],
+        "source_row": 55
+      }
+    },
+    {
+      "case_id": "P055",
+      "input": {
+        "query": "nơi mua sắm có nhiều nhà hàng gần quận 1",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "M001"
+        ],
+        "poi_names": [
+          "Vincom Center Đồng Khởi"
+        ],
+        "semantic_requirements": [
+          "mall ở Quận 1 có ăn uống và mua sắm"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Discovery Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Discovery",
+          "Location"
+        ],
+        "source_row": 56
+      }
+    },
+    {
+      "case_id": "P056",
+      "input": {
+        "query": "đi chơi miễn phí ở hà nội cho trẻ em",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "ranked_results": [
+          "A002"
+        ],
+        "poi_names": [
+          "Công viên Thống Nhất"
+        ],
+        "semantic_requirements": [
+          "công viên/ngoài trời",
+          "miễn phí/giá rẻ",
+          "trẻ em"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Intent-Based Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Intent",
+          "Semantic"
+        ],
+        "source_row": 57
+      }
+    },
+    {
+      "case_id": "P057",
+      "input": {
+        "query": "tìm chỗ sạc xe điện có bãi đỗ xe",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "S004"
+        ],
+        "poi_names": [
+          "Trạm sạc EV One Đà Nẵng"
+        ],
+        "semantic_requirements": [
+          "trạm sạc điện",
+          "bãi đỗ xe"
+        ],
+        "ranking_signals": [
+          "attribute",
+          "category"
+        ]
+      },
+      "metadata": {
+        "query_category": "Attribute Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Attribute",
+          "Category"
+        ],
+        "source_row": 58
+      }
+    },
+    {
+      "case_id": "P058",
+      "input": {
+        "query": "nơi uống cafe và đọc sách yên tĩnh",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "C004"
+        ],
+        "poi_names": [
+          "Tranquil Books & Coffee"
+        ],
+        "semantic_requirements": [
+          "cafe sách",
+          "yên tĩnh"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "attributes"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "Semantic",
+          "Attribute"
+        ],
+        "source_row": 59
+      }
+    },
+    {
+      "case_id": "P059",
+      "input": {
+        "query": "quán ăn địa phương nổi tiếng cho khách du lịch hà nội",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "R003",
+          "R004"
+        ],
+        "poi_names": [
+          "Bún Chả Hương Liên",
+          "Phở Thìn Lò Đúc"
+        ],
+        "semantic_requirements": [
+          "món địa phương nổi tiếng",
+          "du lịch",
+          "Hà Nội"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location",
+          "popularity"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Popularity"
+        ],
+        "source_row": 60
+      }
+    },
+    {
+      "case_id": "P060",
+      "input": {
+        "query": "khách sạn gần chợ và đi bộ tham quan sài gòn",
+        "limit": 5
+      },
+      "expected": {
+        "intent": "Category Search",
+        "ranked_results": [
+          "H005"
+        ],
+        "poi_names": [
+          "Saigon Central Hotel"
+        ],
+        "semantic_requirements": [
+          "khách sạn trung tâm",
+          "gần chợ",
+          "đi bộ tham quan"
+        ],
+        "ranking_signals": [
+          "semantic",
+          "location"
+        ]
+      },
+      "metadata": {
+        "query_category": "Semantic Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "Semantic",
+          "Location"
+        ],
+        "source_row": 61
+      }
+    }
+  ]
+}

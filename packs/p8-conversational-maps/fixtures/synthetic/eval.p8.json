@@ -1,0 +1,1368 @@
+{
+  "version": "p8-synthetic-conversational-maps-v1",
+  "cases": [
+    {
+      "case_id": "P001",
+      "input": {
+        "message": "Tìm quán cà phê yên tĩnh để làm việc gần tôi.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm quán cà phê yên tĩnh để làm việc gần tôi."
+          }
+        ],
+        "userId": "U001"
+      },
+      "expected": {
+        "intent": "Coffee Shop Search",
+        "recommendation_names": [
+          "The Workshop Coffee",
+          "Trung Nguyên Legend Café"
+        ],
+        "recommendation_ids": [
+          "POI001",
+          "POI017"
+        ],
+        "map_action": "search category cafe near user with work-friendly attributes",
+        "clarification": false,
+        "response_summary": "Trả lời có danh sách cafe phù hợp làm việc, nêu lý do wifi/yên tĩnh.",
+        "response_summary_tags": [
+          "cafe",
+          "wifi",
+          "yen_tinh",
+          "lam_viec"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "intent detection",
+          "recommendation"
+        ],
+        "source_row": 2
+      }
+    },
+    {
+      "case_id": "P002",
+      "input": {
+        "message": "Gần Hoàn Kiếm, phù hợp cho trẻ em.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm nhà hàng."
+          },
+          {
+            "role": "assistant",
+            "content": "Bạn muốn khu vực nào?"
+          },
+          {
+            "role": "user",
+            "content": "Gần Hoàn Kiếm, phù hợp cho trẻ em."
+          }
+        ],
+        "userId": "U002"
+      },
+      "expected": {
+        "intent": "Family Restaurant Search",
+        "recommendation_names": [
+          "Nhà hàng gia đình gần Hoàn Kiếm"
+        ],
+        "recommendation_ids": [
+          "POI021",
+          "POI030"
+        ],
+        "map_action": "search restaurant near Hoàn Kiếm family-friendly",
+        "clarification": false,
+        "response_summary": "Duy trì ngữ cảnh nhà hàng và thêm ràng buộc gia đình/trẻ em.",
+        "response_summary_tags": [
+          "gia_dinh",
+          "tre_em"
+        ]
+      },
+      "metadata": {
+        "category": "Multi-turn Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "context retention",
+          "entity extraction"
+        ],
+        "source_row": 3
+      }
+    },
+    {
+      "case_id": "P003",
+      "input": {
+        "message": "Đưa tôi đến Galaxy.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Đưa tôi đến Galaxy."
+          }
+        ],
+        "userId": "U004"
+      },
+      "expected": {
+        "intent": "Ambiguous Navigation",
+        "recommendation_names": [
+          "Galaxy Nguyễn Du",
+          "Galaxy Hotel Đà Nẵng"
+        ],
+        "recommendation_ids": [
+          "POI008",
+          "POI022",
+          "POI009",
+          "POI013",
+          "POI028",
+          "POI033",
+          "POI038"
+        ],
+        "map_action": "clarify ambiguity",
+        "clarification": true,
+        "response_summary": "Hỏi làm rõ vì Galaxy có thể là rạp phim hoặc khách sạn.",
+        "response_summary_tags": [
+          "khach_san",
+          "lam_ro"
+        ]
+      },
+      "metadata": {
+        "category": "Clarification Dialog",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "ambiguity resolution"
+        ],
+        "source_row": 4
+      }
+    },
+    {
+      "case_id": "P004",
+      "input": {
+        "message": "Gợi ý nơi hẹn hò lãng mạn tối nay ở Quận 1.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Gợi ý nơi hẹn hò lãng mạn tối nay ở Quận 1."
+          }
+        ],
+        "userId": "U005"
+      },
+      "expected": {
+        "intent": "Date Recommendation",
+        "recommendation_names": [
+          "Chill Skybar",
+          "Secret Garden"
+        ],
+        "recommendation_ids": [
+          "POI005",
+          "POI021"
+        ],
+        "map_action": "recommend date places Quận 1",
+        "clarification": false,
+        "response_summary": "Gợi ý rooftop/nhà hàng lãng mạn tại Quận 1, giải thích theo không gian/view.",
+        "response_summary_tags": [
+          "view",
+          "rooftop"
+        ]
+      },
+      "metadata": {
+        "category": "Recommendation Request",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "recommendation",
+          "explainability"
+        ],
+        "source_row": 5
+      }
+    },
+    {
+      "case_id": "P005",
+      "input": {
+        "message": "Tôi ở Đà Nẵng cuối tuần này, muốn đi biển và ăn đặc sản.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi ở Đà Nẵng cuối tuần này, muốn đi biển và ăn đặc sản."
+          }
+        ],
+        "userId": "U003"
+      },
+      "expected": {
+        "intent": "Travel Planning",
+        "recommendation_names": [
+          "Sala Đà Nẵng Beach",
+          "Mì Quảng Bà Mua"
+        ],
+        "recommendation_ids": [
+          "POI009",
+          "POI013",
+          "POI028",
+          "POI033",
+          "POI038",
+          "POI014"
+        ],
+        "map_action": "plan beach + food in Đà Nẵng",
+        "clarification": false,
+        "response_summary": "Đề xuất bãi biển/khách sạn gần biển/quán đặc sản, có lịch trình hợp lý.",
+        "response_summary_tags": [
+          "bien",
+          "dac_san",
+          "khach_san"
+        ]
+      },
+      "metadata": {
+        "category": "Planning Assistance",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "planning",
+          "recommendation"
+        ],
+        "source_row": 6
+      }
+    },
+    {
+      "case_id": "P006",
+      "input": {
+        "message": "Chỉ đường từ Hồ Gươm đến Phở Thìn Lò Đúc.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Chỉ đường từ Hồ Gươm đến Phở Thìn Lò Đúc."
+          }
+        ],
+        "userId": "U006"
+      },
+      "expected": {
+        "intent": "Navigation",
+        "recommendation_names": [
+          "Phở Thìn Lò Đúc"
+        ],
+        "recommendation_ids": [
+          "POI018"
+        ],
+        "map_action": "route origin Hồ Gươm destination Phở Thìn",
+        "clarification": false,
+        "response_summary": "Tạo hành động route từ Hồ Gươm đến Phở Thìn, có thể hỏi phương tiện.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Navigation Assistance",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "map action generation"
+        ],
+        "source_row": 7
+      }
+    },
+    {
+      "case_id": "P007",
+      "input": {
+        "message": "Tìm chỗ học nhóm có wifi, giá không quá cao.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm chỗ học nhóm có wifi, giá không quá cao."
+          }
+        ],
+        "userId": "U007"
+      },
+      "expected": {
+        "intent": "Study Friendly Cafe",
+        "recommendation_names": [
+          "Cafe Mộc",
+          "The Workshop nếu ngân sách phù hợp"
+        ],
+        "recommendation_ids": [
+          "POI031",
+          "POI036",
+          "POI052",
+          "POI055",
+          "POI060",
+          "POI001"
+        ],
+        "map_action": "search cafe attributes wifi;study;budget",
+        "clarification": false,
+        "response_summary": "Ưu tiên cafe có wifi, học nhóm, giá hợp lý; tránh nơi cao cấp.",
+        "response_summary_tags": [
+          "cafe",
+          "wifi"
+        ]
+      },
+      "metadata": {
+        "category": "Personalized Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "personalization",
+          "attribute search"
+        ],
+        "source_row": 8
+      }
+    },
+    {
+      "case_id": "P008",
+      "input": {
+        "message": "Tìm cây xăng có toilet trên đường đi Hạ Long.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm cây xăng có toilet trên đường đi Hạ Long."
+          }
+        ],
+        "userId": "U008"
+      },
+      "expected": {
+        "intent": "Gas Station Search",
+        "recommendation_names": [
+          "Petrolimex"
+        ],
+        "recommendation_ids": [
+          "POI024"
+        ],
+        "map_action": "search gas station attributes toilet on route",
+        "clarification": false,
+        "response_summary": "Tìm trạm xăng có toilet, ưu tiên tuyến đường/24/7.",
+        "response_summary_tags": [
+          "xang",
+          "toilet"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "route-aware search",
+          "attributes"
+        ],
+        "source_row": 9
+      }
+    },
+    {
+      "case_id": "P009",
+      "input": {
+        "message": "Đi với bạn gái, muốn chỗ có view đẹp.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm quán ăn tối."
+          },
+          {
+            "role": "assistant",
+            "content": "Bạn đi với ai?"
+          },
+          {
+            "role": "user",
+            "content": "Đi với bạn gái, muốn chỗ có view đẹp."
+          }
+        ],
+        "userId": "U005"
+      },
+      "expected": {
+        "intent": "Romantic Restaurant Search",
+        "recommendation_names": [
+          "Secret Garden",
+          "Chill Skybar"
+        ],
+        "recommendation_ids": [
+          "POI021",
+          "POI005"
+        ],
+        "map_action": "recommend restaurant date view",
+        "clarification": false,
+        "response_summary": "Giữ ngữ cảnh ăn tối, thêm hẹn hò/view đẹp.",
+        "response_summary_tags": [
+          "hen_ho",
+          "view"
+        ]
+      },
+      "metadata": {
+        "category": "Multi-turn Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "multi-turn",
+          "preference"
+        ],
+        "source_row": 10
+      }
+    },
+    {
+      "case_id": "P010",
+      "input": {
+        "message": "Big C gần tôi.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Big C gần tôi."
+          }
+        ],
+        "userId": "U002"
+      },
+      "expected": {
+        "intent": "Ambiguous/Brand Search",
+        "recommendation_names": [
+          "GO!/Big C candidates"
+        ],
+        "recommendation_ids": [
+          "POI023"
+        ],
+        "map_action": "clarify or nearby brand search",
+        "clarification": true,
+        "response_summary": "Nếu có nhiều Big C/GO!, hỏi khu vực hoặc dùng vị trí người dùng để chọn.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Clarification Dialog",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "ambiguity",
+          "location"
+        ],
+        "source_row": 11
+      }
+    },
+    {
+      "case_id": "P011",
+      "input": {
+        "message": "quán cafe mở sau 10h tối gần quận 1.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "quán cafe mở sau 10h tối gần quận 1."
+          }
+        ],
+        "userId": "U001"
+      },
+      "expected": {
+        "intent": "Late Night Cafe Search",
+        "recommendation_names": [
+          "Cafe mở khuya Quận 1"
+        ],
+        "recommendation_ids": [
+          "POI031",
+          "POI036",
+          "POI052",
+          "POI055",
+          "POI060"
+        ],
+        "map_action": "search cafe open_after=22:00 location Quận 1",
+        "clarification": false,
+        "response_summary": "Tìm cafe mở khuya tại Quận 1.",
+        "response_summary_tags": [
+          "cafe"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "time constraint"
+        ],
+        "source_row": 12
+      }
+    },
+    {
+      "case_id": "P012",
+      "input": {
+        "message": "Tôi cần khách sạn phù hợp đi công tác ở Hà Nội.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi cần khách sạn phù hợp đi công tác ở Hà Nội."
+          }
+        ],
+        "userId": "U004"
+      },
+      "expected": {
+        "intent": "Business Hotel Recommendation",
+        "recommendation_names": [
+          "Lotte Hotel Hanoi"
+        ],
+        "recommendation_ids": [
+          "POI012"
+        ],
+        "map_action": "recommend hotel business Hanoi",
+        "clarification": false,
+        "response_summary": "Gợi ý khách sạn business, wifi tốt, trung tâm.",
+        "response_summary_tags": [
+          "wifi",
+          "khach_san"
+        ]
+      },
+      "metadata": {
+        "category": "Recommendation Request",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "semantic recommendation"
+        ],
+        "source_row": 13
+      }
+    },
+    {
+      "case_id": "P013",
+      "input": {
+        "message": "Lên lịch 2 ngày ở Đà Lạt cho người thích check-in.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Lên lịch 2 ngày ở Đà Lạt cho người thích check-in."
+          }
+        ],
+        "userId": "U006"
+      },
+      "expected": {
+        "intent": "Trip Planning",
+        "recommendation_names": [
+          "Điểm check-in Panorama Đà Lạt"
+        ],
+        "recommendation_ids": [
+          "POI031",
+          "POI035",
+          "POI039",
+          "POI043",
+          "POI044"
+        ],
+        "map_action": "plan city Đà Lạt duration 2 days",
+        "clarification": false,
+        "response_summary": "Đề xuất lịch trình 2 ngày, nhiều điểm check-in, quán view đẹp.",
+        "response_summary_tags": [
+          "view",
+          "check_in"
+        ]
+      },
+      "metadata": {
+        "category": "Planning Assistance",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "planning",
+          "preferences"
+        ],
+        "source_row": 14
+      }
+    },
+    {
+      "case_id": "P014",
+      "input": {
+        "message": "Có chỗ nào cuối tuần cho trẻ em chơi không?",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Có chỗ nào cuối tuần cho trẻ em chơi không?"
+          }
+        ],
+        "userId": "U002"
+      },
+      "expected": {
+        "intent": "Kids Place Search",
+        "recommendation_names": [
+          "Công viên Thỏ Trắng",
+          "Công viên 29/3"
+        ],
+        "recommendation_ids": [
+          "POI015",
+          "POI028",
+          "POI041",
+          "POI057",
+          "POI062",
+          "POI039"
+        ],
+        "map_action": "search kids family place",
+        "clarification": false,
+        "response_summary": "Gợi ý khu vui chơi/công viên phù hợp trẻ em.",
+        "response_summary_tags": [
+          "tre_em"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "semantic intent"
+        ],
+        "source_row": 15
+      }
+    },
+    {
+      "case_id": "P015",
+      "input": {
+        "message": "Đi sân bay Tân Sơn Nhất từ trung tâm quận 1 mất bao lâu?",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Đi sân bay Tân Sơn Nhất từ trung tâm quận 1 mất bao lâu?"
+          }
+        ],
+        "userId": "U008"
+      },
+      "expected": {
+        "intent": "Navigation/ETA",
+        "recommendation_names": [
+          "Sân bay Tân Sơn Nhất"
+        ],
+        "recommendation_ids": [
+          "POI026",
+          "POI027"
+        ],
+        "map_action": "ask origin clarification or route from Quận 1",
+        "clarification": false,
+        "response_summary": "Sinh hành động route/ETA, cần vị trí xuất phát cụ thể nếu thiếu.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Navigation Assistance",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "clarification",
+          "navigation"
+        ],
+        "source_row": 16
+      }
+    },
+    {
+      "case_id": "P016",
+      "input": {
+        "message": "Tôi muốn chỗ gặp đối tác, không quá ồn.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi muốn chỗ gặp đối tác, không quá ồn."
+          }
+        ],
+        "userId": "U001"
+      },
+      "expected": {
+        "intent": "Business Meeting Cafe",
+        "recommendation_names": [
+          "Trung Nguyên Legend",
+          "The Workshop"
+        ],
+        "recommendation_ids": [
+          "POI017",
+          "POI001"
+        ],
+        "map_action": "recommend cafe meeting quiet",
+        "clarification": false,
+        "response_summary": "Gợi ý cafe yên tĩnh, phù hợp gặp đối tác.",
+        "response_summary_tags": [
+          "cafe",
+          "yen_tinh"
+        ]
+      },
+      "metadata": {
+        "category": "Personalized Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "personalization",
+          "semantic"
+        ],
+        "source_row": 17
+      }
+    },
+    {
+      "case_id": "P017",
+      "input": {
+        "message": "Vincom.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Vincom."
+          }
+        ],
+        "userId": "U003"
+      },
+      "expected": {
+        "intent": "Brand Search Ambiguous",
+        "recommendation_names": [
+          "Vincom Center Đồng Khởi",
+          "CGV Vincom Bà Triệu"
+        ],
+        "recommendation_ids": [
+          "POI007",
+          "POI016"
+        ],
+        "map_action": "clarify brand branch",
+        "clarification": true,
+        "response_summary": "Hỏi khu vực hoặc dùng vị trí để chọn chi nhánh Vincom phù hợp.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Clarification Dialog",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "ambiguity"
+        ],
+        "source_row": 18
+      }
+    },
+    {
+      "case_id": "P018",
+      "input": {
+        "message": "Đà Nẵng, có hồ bơi.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm khách sạn gần biển."
+          },
+          {
+            "role": "assistant",
+            "content": "Thành phố nào?"
+          },
+          {
+            "role": "user",
+            "content": "Đà Nẵng, có hồ bơi."
+          }
+        ],
+        "userId": "U003"
+      },
+      "expected": {
+        "intent": "Hotel Search",
+        "recommendation_names": [
+          "Sala Đà Nẵng Beach"
+        ],
+        "recommendation_ids": [
+          "POI009",
+          "POI013",
+          "POI028",
+          "POI033",
+          "POI038"
+        ],
+        "map_action": "search hotel near beach pool Da Nang",
+        "clarification": false,
+        "response_summary": "Giữ ngữ cảnh khách sạn gần biển, thêm Đà Nẵng và hồ bơi.",
+        "response_summary_tags": [
+          "bien",
+          "khach_san"
+        ]
+      },
+      "metadata": {
+        "category": "Multi-turn Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "context",
+          "attributes"
+        ],
+        "source_row": 19
+      }
+    },
+    {
+      "case_id": "P019",
+      "input": {
+        "message": "nơi nào đẹp để chụp hình ở Hà Nội?",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "nơi nào đẹp để chụp hình ở Hà Nội?"
+          }
+        ],
+        "userId": "U006"
+      },
+      "expected": {
+        "intent": "Discovery Search",
+        "recommendation_names": [
+          "Hồ Hoàn Kiếm",
+          "Đường sách Nguyễn Văn Bình?"
+        ],
+        "recommendation_ids": [
+          "POI030",
+          "POI022"
+        ],
+        "map_action": "discover check-in Hanoi",
+        "clarification": false,
+        "response_summary": "Gợi ý điểm check-in/du lịch đẹp ở Hà Nội.",
+        "response_summary_tags": [
+          "du_lich",
+          "check_in"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "semantic discovery"
+        ],
+        "source_row": 20
+      }
+    },
+    {
+      "case_id": "P020",
+      "input": {
+        "message": "Tóm tắt giúp tôi vì sao Lotte Hotel phù hợp công tác.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tóm tắt giúp tôi vì sao Lotte Hotel phù hợp công tác."
+          }
+        ],
+        "userId": "U004"
+      },
+      "expected": {
+        "intent": "Explanation",
+        "recommendation_names": [
+          "Lotte Hotel Hanoi"
+        ],
+        "recommendation_ids": [
+          "POI012"
+        ],
+        "map_action": "explain recommendation",
+        "clarification": false,
+        "response_summary": "Trả lời dựa trên attributes business, trung tâm, wifi, rating.",
+        "response_summary_tags": [
+          "wifi"
+        ]
+      },
+      "metadata": {
+        "category": "AI Assistant",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "explainability"
+        ],
+        "source_row": 21
+      }
+    },
+    {
+      "case_id": "P021",
+      "input": {
+        "message": "tối nay muốn đi rooftop nhưng không quá xa quận 1.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "tối nay muốn đi rooftop nhưng không quá xa quận 1."
+          }
+        ],
+        "userId": "U005"
+      },
+      "expected": {
+        "intent": "Rooftop Search",
+        "recommendation_names": [
+          "Chill Skybar"
+        ],
+        "recommendation_ids": [
+          "POI005"
+        ],
+        "map_action": "search rooftop location Quận 1",
+        "clarification": false,
+        "response_summary": "Tìm rooftop tại/ gần Quận 1, phù hợp tối/hẹn hò.",
+        "response_summary_tags": [
+          "hen_ho",
+          "rooftop"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "intent",
+          "location"
+        ],
+        "source_row": 22
+      }
+    },
+    {
+      "case_id": "P022",
+      "input": {
+        "message": "phở hoặc bún chả, gần trường đại học.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tìm quán ăn rẻ."
+          },
+          {
+            "role": "assistant",
+            "content": "Bạn muốn món gì?"
+          },
+          {
+            "role": "user",
+            "content": "phở hoặc bún chả, gần trường đại học."
+          }
+        ],
+        "userId": "U007"
+      },
+      "expected": {
+        "intent": "Budget Local Food",
+        "recommendation_names": [
+          "Phở Thìn",
+          "Bún Chả Hương Liên"
+        ],
+        "recommendation_ids": [
+          "POI018",
+          "POI019"
+        ],
+        "map_action": "search local food budget near university",
+        "clarification": false,
+        "response_summary": "Giữ ngữ cảnh ăn rẻ, món phở/bún chả, gần đại học.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Multi-turn Search",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "multi-turn",
+          "semantic"
+        ],
+        "source_row": 23
+      }
+    },
+    {
+      "case_id": "P023",
+      "input": {
+        "message": "dẫn tôi đến sân bay.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "dẫn tôi đến sân bay."
+          }
+        ],
+        "userId": "U001"
+      },
+      "expected": {
+        "intent": "Navigation Clarification",
+        "recommendation_names": [
+          "Sân bay Tân Sơn Nhất",
+          "Sân bay Nội Bài"
+        ],
+        "recommendation_ids": [
+          "POI026",
+          "POI027"
+        ],
+        "map_action": "clarify airport",
+        "clarification": true,
+        "response_summary": "Nếu không biết sân bay nào, hỏi Tân Sơn Nhất, Nội Bài, Đà Nẵng... hoặc dùng vị trí.",
+        "response_summary_tags": []
+      },
+      "metadata": {
+        "category": "Clarification Dialog",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "ambiguity",
+          "navigation"
+        ],
+        "source_row": 24
+      }
+    },
+    {
+      "case_id": "P024",
+      "input": {
+        "message": "Nhà hàng nào ở TP.HCM phù hợp gia đình và có chỗ đậu xe?",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Nhà hàng nào ở TP.HCM phù hợp gia đình và có chỗ đậu xe?"
+          }
+        ],
+        "userId": "U002"
+      },
+      "expected": {
+        "intent": "Family Restaurant",
+        "recommendation_names": [
+          "Pizza 4P's",
+          "AEON Mall Tân Phú"
+        ],
+        "recommendation_ids": [
+          "POI004",
+          "POI020"
+        ],
+        "map_action": "recommend family restaurant parking HCMC",
+        "clarification": false,
+        "response_summary": "Gợi ý nhà hàng/TTTM có gia đình và bãi đỗ xe.",
+        "response_summary_tags": [
+          "gia_dinh"
+        ]
+      },
+      "metadata": {
+        "category": "Recommendation Request",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "attributes",
+          "ranking"
+        ],
+        "source_row": 25
+      }
+    },
+    {
+      "case_id": "P025",
+      "input": {
+        "message": "Tôi lái xe đêm, cần nơi ăn khuya và đổ xăng.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi lái xe đêm, cần nơi ăn khuya và đổ xăng."
+          }
+        ],
+        "userId": "U008"
+      },
+      "expected": {
+        "intent": "Driver Support Planning",
+        "recommendation_names": [
+          "Petrolimex",
+          "quán ăn khuya"
+        ],
+        "recommendation_ids": [
+          "POI024"
+        ],
+        "map_action": "search gas + late food",
+        "clarification": false,
+        "response_summary": "Gợi ý trạm xăng 24/7 và quán ăn mở khuya theo tuyến/vị trí.",
+        "response_summary_tags": [
+          "xang"
+        ]
+      },
+      "metadata": {
+        "category": "Planning Assistance",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "multi-service planning"
+        ],
+        "source_row": 26
+      }
+    },
+    {
+      "case_id": "P026",
+      "input": {
+        "message": "khách sạn gần biển mà hợp cho gia đình có trẻ nhỏ.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "khách sạn gần biển mà hợp cho gia đình có trẻ nhỏ."
+          }
+        ],
+        "userId": "U003"
+      },
+      "expected": {
+        "intent": "Family Beach Hotel",
+        "recommendation_names": [
+          "Sala Đà Nẵng Beach",
+          "Galaxy Hotel Đà Nẵng"
+        ],
+        "recommendation_ids": [
+          "POI009",
+          "POI013",
+          "POI028",
+          "POI033",
+          "POI038"
+        ],
+        "map_action": "recommend beach family hotel",
+        "clarification": false,
+        "response_summary": "Gợi ý khách sạn gần biển có gia đình/trẻ em.",
+        "response_summary_tags": [
+          "gia_dinh",
+          "tre_em",
+          "bien",
+          "khach_san"
+        ]
+      },
+      "metadata": {
+        "category": "Conversational Search",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "semantic",
+          "attributes"
+        ],
+        "source_row": 27
+      }
+    },
+    {
+      "case_id": "P027",
+      "input": {
+        "message": "Vì sao bạn gợi ý Secret Garden cho hẹn hò?",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Vì sao bạn gợi ý Secret Garden cho hẹn hò?"
+          }
+        ],
+        "userId": "U005"
+      },
+      "expected": {
+        "intent": "Explain Recommendation",
+        "recommendation_names": [
+          "Secret Garden"
+        ],
+        "recommendation_ids": [
+          "POI021"
+        ],
+        "map_action": "explain POI attributes",
+        "clarification": false,
+        "response_summary": "Giải thích không gian sân vườn, món Việt, phù hợp hẹn hò.",
+        "response_summary_tags": [
+          "hen_ho"
+        ]
+      },
+      "metadata": {
+        "category": "AI Assistant",
+        "difficulty": "Easy",
+        "skills_tested": [
+          "explainability"
+        ],
+        "source_row": 28
+      }
+    },
+    {
+      "case_id": "P028",
+      "input": {
+        "message": "chỗ có thể đi bộ, chụp hình, uống cà phê gần đó.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi muốn đi chơi ở Hà Nội."
+          },
+          {
+            "role": "assistant",
+            "content": "Bạn thích kiểu địa điểm nào?"
+          },
+          {
+            "role": "user",
+            "content": "chỗ có thể đi bộ, chụp hình, uống cà phê gần đó."
+          }
+        ],
+        "userId": "U006"
+      },
+      "expected": {
+        "intent": "Discovery + Nearby Cafe",
+        "recommendation_names": [
+          "Hồ Hoàn Kiếm + Cộng Cà Phê"
+        ],
+        "recommendation_ids": [
+          "POI010",
+          "POI015",
+          "POI028",
+          "POI030",
+          "POI036"
+        ],
+        "map_action": "plan POI + nearby cafe",
+        "clarification": false,
+        "response_summary": "Đề xuất điểm đi bộ/check-in và cafe gần đó.",
+        "response_summary_tags": [
+          "cafe",
+          "check_in"
+        ]
+      },
+      "metadata": {
+        "category": "Long Conversation",
+        "difficulty": "Hard",
+        "skills_tested": [
+          "context",
+          "multi-step"
+        ],
+        "source_row": 29
+      }
+    },
+    {
+      "case_id": "P029",
+      "input": {
+        "message": "kiếm quán cà phê nào gần đây làm việc được không đông quá",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "kiếm quán cà phê nào gần đây làm việc được không đông quá"
+          }
+        ],
+        "userId": "U001"
+      },
+      "expected": {
+        "intent": "Work Cafe Search",
+        "recommendation_names": [
+          "The Workshop",
+          "Trung Nguyên Legend"
+        ],
+        "recommendation_ids": [
+          "POI001",
+          "POI017"
+        ],
+        "map_action": "search cafe work quiet nearby",
+        "clarification": false,
+        "response_summary": "Hiểu câu nói tự nhiên, gợi ý quán cafe làm việc ít đông/yên tĩnh.",
+        "response_summary_tags": [
+          "cafe",
+          "yen_tinh",
+          "lam_viec"
+        ]
+      },
+      "metadata": {
+        "category": "Voice Interaction",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "voice-like NLU"
+        ],
+        "source_row": 30
+      }
+    },
+    {
+      "case_id": "P030",
+      "input": {
+        "message": "Tôi cần nơi tiếp khách nước ngoài ở trung tâm Sài Gòn.",
+        "conversation_history": [
+          {
+            "role": "user",
+            "content": "Tôi cần nơi tiếp khách nước ngoài ở trung tâm Sài Gòn."
+          }
+        ],
+        "userId": "U004"
+      },
+      "expected": {
+        "intent": "Business Dining Recommendation",
+        "recommendation_names": [
+          "Secret Garden",
+          "Pizza 4P's"
+        ],
+        "recommendation_ids": [
+          "POI021",
+          "POI004"
+        ],
+        "map_action": "recommend business dining city center",
+        "clarification": false,
+        "response_summary": "Gợi ý nhà hàng/cafe chất lượng, trung tâm, dễ tiếp khách.",
+        "response_summary_tags": [
+          "cafe"
+        ]
+      },
+      "metadata": {
+        "category": "Recommendation Request",
+        "difficulty": "Medium",
+        "skills_tested": [
+          "semantic",
+          "context"
+        ],
+        "source_row": 31
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "S001",
+      "category": "Conversational Search",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Tôi muốn tìm một quán cà phê yên tĩnh."
+        },
+        {
+          "role": "assistant",
+          "content": "Bạn muốn tìm khu vực nào?"
+        },
+        {
+          "role": "user",
+          "content": "Gần Hồ Hoàn Kiếm."
+        }
+      ],
+      "latest_user_message": "Gần Hồ Hoàn Kiếm.",
+      "expected_assistant_behavior": "Gợi ý quán cà phê yên tĩnh gần Hồ Hoàn Kiếm, nêu lý do như wifi, yên tĩnh, phù hợp làm việc.",
+      "required_map_action": "search(category=cafe, location=Hồ Hoàn Kiếm, attributes=yên tĩnh;wifi;làm việc)",
+      "source_row": 2,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S002",
+      "category": "Clarification Dialog",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Đưa tôi đến Galaxy."
+        }
+      ],
+      "latest_user_message": "Đưa tôi đến Galaxy.",
+      "expected_assistant_behavior": "Không chọn ngay một kết quả. Cần hỏi làm rõ Galaxy Cinema, Galaxy Hotel hay địa điểm khác.",
+      "required_map_action": "clarify(ambiguous_entity=Galaxy, candidates=Galaxy Cinema;Galaxy Hotel)",
+      "source_row": 3,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S003",
+      "category": "Recommendation Request",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Gợi ý nơi hẹn hò lần đầu ở Quận 1."
+        }
+      ],
+      "latest_user_message": "Gợi ý nơi hẹn hò lần đầu ở Quận 1.",
+      "expected_assistant_behavior": "Đề xuất nhà hàng/rooftop/cafe có không gian lãng mạn, giải thích lý do.",
+      "required_map_action": "recommend(intent=date_place, location=Quận 1, attributes=lãng mạn;view đẹp)",
+      "source_row": 4,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S004",
+      "category": "Multi-turn Search",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Tìm nhà hàng."
+        },
+        {
+          "role": "assistant",
+          "content": "Bạn muốn loại nào?"
+        },
+        {
+          "role": "user",
+          "content": "món Ý, dưới 500k, gần trung tâm."
+        }
+      ],
+      "latest_user_message": "món Ý, dưới 500k, gần trung tâm.",
+      "expected_assistant_behavior": "Giữ ngữ cảnh nhà hàng, lọc món Ý, ngân sách, gần trung tâm.",
+      "required_map_action": "search(category=restaurant, cuisine=Italian, budget<=500k, location=center)",
+      "source_row": 5,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S005",
+      "category": "Planning Assistance",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Tôi có 1 ngày ở Đà Nẵng, nên đi đâu?"
+        }
+      ],
+      "latest_user_message": "Tôi có 1 ngày ở Đà Nẵng, nên đi đâu?",
+      "expected_assistant_behavior": "Đề xuất lịch trình ngắn gồm bãi biển, món địa phương, điểm check-in, tối ưu theo vị trí.",
+      "required_map_action": "plan(city=Đà Nẵng, duration=1 day)",
+      "source_row": 6,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S006",
+      "category": "Navigation Assistance",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Làm thế nào để đến Chợ Bến Thành từ Vincom Đồng Khởi?"
+        }
+      ],
+      "latest_user_message": "Làm thế nào để đến Chợ Bến Thành từ Vincom Đồng Khởi?",
+      "expected_assistant_behavior": "Sinh hành động chỉ đường từ điểm xuất phát đến điểm đến, có thể hỏi phương tiện nếu thiếu.",
+      "required_map_action": "route(origin=Vincom Center Đồng Khởi, destination=Chợ Bến Thành)",
+      "source_row": 7,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S007",
+      "category": "Personalized Search",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "Sinh viên, ngân sách thấp."
+        },
+        {
+          "role": "user",
+          "content": "Có quán nào để học nhóm gần đây không?"
+        }
+      ],
+      "latest_user_message": "Có quán nào để học nhóm gần đây không?",
+      "expected_assistant_behavior": "Gợi ý cafe giá hợp lý, wifi, có bàn nhóm, không gợi ý nơi cao cấp.",
+      "required_map_action": "recommend(category=cafe, attributes=wifi;học nhóm;giá hợp lý)",
+      "source_row": 8,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    },
+    {
+      "scenario_id": "S008",
+      "category": "Voice-like Query",
+      "conversation_history": [
+        {
+          "role": "user",
+          "content": "kiếm giúp quán ăn khuya gần sân bay tân sơn nhất với"
+        }
+      ],
+      "latest_user_message": "kiếm giúp quán ăn khuya gần sân bay tân sơn nhất với",
+      "expected_assistant_behavior": "Hiểu dạng nói tự nhiên, tìm nhà hàng mở khuya gần sân bay TSN.",
+      "required_map_action": "search(category=restaurant, location=Sân bay Tân Sơn Nhất, attributes=mở cửa khuya)",
+      "source_row": 9,
+      "provenance": "synthetic-p8-workbook:Conversation_Scenarios"
+    }
+  ]
+}

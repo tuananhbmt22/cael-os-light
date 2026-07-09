@@ -1,0 +1,23 @@
+{
+  "name": "@cael/pack-p8-conversational-maps",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/pack.js",
+  "types": "dist/src/pack.d.ts",
+  "scripts": {
+    "build": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "pack:host": "npm pack ../.. --pack-destination vendor --ignore-scripts"
+  },
+  "dependencies": {
+    "@cael/os-light": "file:vendor/cael-os-light-0.0.0-phase0.tgz",
+    "bmt-digital-twin": "file:../../../cael-os"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

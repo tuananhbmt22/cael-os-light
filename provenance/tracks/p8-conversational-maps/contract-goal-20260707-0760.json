@@ -1,0 +1,18 @@
+{
+  "schema": "cael.track_provenance.contract_summary.v1",
+  "goal_id": "goal-20260707-0760",
+  "track_id": "p8-conversational-maps",
+  "job_folder": "docs/handoff/jobs/603-604-0760-p8-pack-build",
+  "execution_type": "build",
+  "acceptance_tests": [
+    "P8 pack npm install, vitest, and typecheck pass",
+    "All 80 POIs, 8 user profiles, 8 conversation scenarios, and 30 public eval rows are transcribed programmatically from the workbook",
+    "P8 imports P6 understandQuery and P7 evaluateP7RankingWithCorpus through sibling source imports",
+    "Composition proof test fails if P6/P7 calls are removed",
+    "P002 context-retention and P003 Galaxy ambiguity cases pass",
+    "Receipts validate against receiptSchema and modelCalls remains 0",
+    "No files under packs/p6-*, packs/p7-*, showcase/**, or OS/goal/rail surfaces are edited"
+  ],
+  "hard_rejects_observed": [],
+  "builder_verdict": "pass_awaiting_judge"
+}

@@ -1,0 +1,335 @@
+{
+  "version": "p5-vehicle-ownership-synthetic-v1",
+  "cases": [
+    {
+      "case_id": "p5-01-inspection-reminder",
+      "input": {
+        "turnId": "p5-01",
+        "userId": "U001",
+        "vehicleId": "VEH001",
+        "query": "Khi nào xe của tôi cần đăng kiểm?",
+        "now": "2026-07-07",
+        "category": "Inspection Reminder"
+      },
+      "expected": {
+        "task_type": "inspection_reminder",
+        "authorized": true,
+        "primary_check": "inspection:13"
+      },
+      "metadata": {
+        "category": "Inspection Reminder",
+        "expected_focus": "Kiểm tra inspection_expiry, tính số ngày còn lại, nhắc người dùng đặt lịch đăng kiểm và đề xuất bật nhắc nhở tự động.",
+        "task_type_label": "AI Assistant QA",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-02-insurance-renewal",
+      "input": {
+        "turnId": "p5-02",
+        "userId": "U012",
+        "vehicleId": "VEH012",
+        "query": "Bảo hiểm TNDS của tôi sắp hết hạn chưa?",
+        "now": "2026-07-07",
+        "category": "Insurance Renewal"
+      },
+      "expected": {
+        "task_type": "insurance_renewal",
+        "authorized": true,
+        "primary_check": "civil_liability:11"
+      },
+      "metadata": {
+        "category": "Insurance Renewal",
+        "expected_focus": "Kiểm tra civil_liability_expiry, thông báo còn bao nhiêu ngày, hướng dẫn gia hạn và đề xuất sử dụng dịch vụ bảo hiểm VETC.",
+        "task_type_label": "Reminder + Recommendation",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-03-document-wallet",
+      "input": {
+        "turnId": "p5-03",
+        "userId": "U003",
+        "vehicleId": "VEH003",
+        "query": "Tôi còn thiếu giấy tờ nào trong hồ sơ xe?",
+        "now": "2026-07-07",
+        "category": "Document Wallet"
+      },
+      "expected": {
+        "task_type": "document_management",
+        "authorized": true,
+        "primary_check": "missing:DOC004"
+      },
+      "metadata": {
+        "category": "Document Wallet",
+        "expected_focus": "Kiểm tra Vehicle Document Dataset, xác định giấy tờ chưa upload và hướng dẫn bổ sung.",
+        "task_type_label": "Document Management",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-04-regulatory-guidance",
+      "input": {
+        "turnId": "p5-04",
+        "userId": "-",
+        "vehicleId": "-",
+        "query": "Tôi sắp đi đăng kiểm. Cần chuẩn bị giấy tờ gì?",
+        "now": "2026-07-07",
+        "category": "Regulatory Guidance"
+      },
+      "expected": {
+        "task_type": "knowledge_guidance",
+        "authorized": true,
+        "primary_check": "knowledge:K002"
+      },
+      "metadata": {
+        "category": "Regulatory Guidance",
+        "expected_focus": "Trả lời dựa trên Knowledge Dataset, cung cấp checklist đầy đủ và quy trình đăng kiểm.",
+        "task_type_label": "Knowledge Assistant",
+        "difficulty": "Easy"
+      }
+    },
+    {
+      "case_id": "p5-05-roadside-recommendation",
+      "input": {
+        "turnId": "p5-05",
+        "userId": "U006",
+        "vehicleId": "VEH006",
+        "query": "Xe của tôi đã sử dụng 9 năm. Có nên kích hoạt Cứu hộ giao thông không?",
+        "now": "2026-07-07",
+        "category": "Roadside Recommendation"
+      },
+      "expected": {
+        "task_type": "recommendation",
+        "authorized": true,
+        "primary_check": "service:SVC002"
+      },
+      "metadata": {
+        "category": "Roadside Recommendation",
+        "expected_focus": "Phân tích tuổi xe, lịch sử dịch vụ và trạng thái Roadside Assistance để đưa ra khuyến nghị có giải thích.",
+        "task_type_label": "Recommendation",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-06-new-owner",
+      "input": {
+        "turnId": "p5-06",
+        "userId": "U005",
+        "vehicleId": "VEH005",
+        "query": "Tôi mới mua xe. Tôi cần quản lý những giấy tờ nào?",
+        "now": "2026-07-07",
+        "category": "New Owner"
+      },
+      "expected": {
+        "task_type": "onboarding",
+        "authorized": true,
+        "primary_check": "service:SVC004"
+      },
+      "metadata": {
+        "category": "New Owner",
+        "expected_focus": "Đề xuất danh sách giấy tờ cần theo dõi, thời hạn và thiết lập reminder.",
+        "task_type_label": "AI Assistant",
+        "difficulty": "Easy"
+      }
+    },
+    {
+      "case_id": "p5-07-ev-owner",
+      "input": {
+        "turnId": "p5-07",
+        "userId": "U010",
+        "vehicleId": "VEH010",
+        "query": "Tôi sử dụng VinFast VF8. Trợ lý nên hỗ trợ thêm những gì?",
+        "now": "2026-07-07",
+        "category": "EV Owner"
+      },
+      "expected": {
+        "task_type": "personalized_assistance",
+        "authorized": true,
+        "primary_check": "service:SVC005"
+      },
+      "metadata": {
+        "category": "EV Owner",
+        "expected_focus": "Đề xuất hỗ trợ dành cho xe điện: trạm sạc, lịch bảo dưỡng, quản lý giấy tờ và dịch vụ phù hợp.",
+        "task_type_label": "Personalized Assistance",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-08-urgent-deadlines",
+      "input": {
+        "turnId": "p5-08",
+        "userId": "U020",
+        "vehicleId": "VEH020",
+        "query": "Đăng kiểm và bảo hiểm của tôi đều sắp hết hạn. Tôi nên xử lý việc nào trước?",
+        "now": "2026-07-07",
+        "category": "Urgent Deadlines"
+      },
+      "expected": {
+        "task_type": "prioritization",
+        "authorized": true,
+        "primary_check": "inspection:18"
+      },
+      "metadata": {
+        "category": "Urgent Deadlines",
+        "expected_focus": "Xác định mức độ ưu tiên theo thời hạn, giải thích lý do và đưa ra kế hoạch hành động.",
+        "task_type_label": "Prioritization",
+        "difficulty": "Hard"
+      }
+    },
+    {
+      "case_id": "p5-09-notification",
+      "input": {
+        "turnId": "p5-09",
+        "userId": "U001",
+        "vehicleId": "VEH001",
+        "query": "Hãy nhắc tôi trước khi bảo hiểm hết hạn.",
+        "now": "2026-07-07",
+        "category": "Notification"
+      },
+      "expected": {
+        "task_type": "reminder_setup",
+        "authorized": true,
+        "primary_check": "civil_liability:39"
+      },
+      "metadata": {
+        "category": "Notification",
+        "expected_focus": "Thiết lập reminder phù hợp (ví dụ 30 ngày và 7 ngày trước hạn) và xác nhận với người dùng.",
+        "task_type_label": "Reminder Engine",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-10-service-discovery",
+      "input": {
+        "turnId": "p5-10",
+        "userId": "U011",
+        "vehicleId": "VEH011",
+        "query": "Dịch vụ VETC nào phù hợp với hồ sơ xe của tôi?",
+        "now": "2026-07-07",
+        "category": "Service Discovery"
+      },
+      "expected": {
+        "task_type": "recommendation",
+        "authorized": true,
+        "primary_check": "service:SVC002"
+      },
+      "metadata": {
+        "category": "Service Discovery",
+        "expected_focus": "Phân tích hồ sơ người dùng và xe để đề xuất Roadside Assistance, bảo hiểm hoặc các dịch vụ VETC phù hợp.",
+        "task_type_label": "Recommendation",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-11-multi-vehicle",
+      "input": {
+        "turnId": "p5-11",
+        "userId": "U015",
+        "vehicleId": "Multiple Vehicles",
+        "query": "Tôi có 3 chiếc xe. Trợ lý nên quản lý như thế nào?",
+        "now": "2026-07-07",
+        "category": "Multi Vehicle"
+      },
+      "expected": {
+        "task_type": "multi_vehicle",
+        "authorized": true,
+        "primary_check": "multi"
+      },
+      "metadata": {
+        "category": "Multi Vehicle",
+        "expected_focus": "Đề xuất dashboard quản lý nhiều xe, nhóm theo phương tiện, deadline và reminder riêng cho từng xe.",
+        "task_type_label": "UX + Assistant",
+        "difficulty": "Hard"
+      }
+    },
+    {
+      "case_id": "p5-12-missing-upload",
+      "input": {
+        "turnId": "p5-12",
+        "userId": "U006",
+        "vehicleId": "VEH006",
+        "query": "Tôi chưa tải lên bảo hiểm xe. Hệ thống nên hỗ trợ gì?",
+        "now": "2026-07-07",
+        "category": "Missing Upload"
+      },
+      "expected": {
+        "task_type": "document_management",
+        "authorized": true,
+        "primary_check": "missing:DOC007"
+      },
+      "metadata": {
+        "category": "Missing Upload",
+        "expected_focus": "Phát hiện thiếu tài liệu, hướng dẫn upload, giải thích lợi ích của Document Wallet và nhắc người dùng hoàn tất.",
+        "task_type_label": "Document Management",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-13-motorbike-case",
+      "input": {
+        "turnId": "p5-13",
+        "userId": "U014",
+        "vehicleId": "VEH014",
+        "query": "Xe máy có cần quản lý giống ô tô không?",
+        "now": "2026-07-07",
+        "category": "Motorbike Case"
+      },
+      "expected": {
+        "task_type": "knowledge_guidance",
+        "authorized": true,
+        "primary_check": "knowledge:K011"
+      },
+      "metadata": {
+        "category": "Motorbike Case",
+        "expected_focus": "Giải thích sự khác biệt giữa xe máy và ô tô về giấy tờ, đăng kiểm (nếu có), bảo hiểm và các nhắc nhở cần thiết.",
+        "task_type_label": "Knowledge Assistant",
+        "difficulty": "Medium"
+      }
+    },
+    {
+      "case_id": "p5-14-proactive-ai",
+      "input": {
+        "turnId": "p5-14",
+        "userId": "All",
+        "vehicleId": "All",
+        "query": "AI nên chủ động nhắc những người dùng nào trong 30 ngày tới?",
+        "now": "2026-07-07",
+        "category": "Proactive AI"
+      },
+      "expected": {
+        "task_type": "proactive",
+        "authorized": true,
+        "primary_check": "proactive"
+      },
+      "metadata": {
+        "category": "Proactive AI",
+        "expected_focus": "Quét toàn bộ User & Vehicle Dataset, xác định các trường hợp sắp hết hạn giấy tờ, ưu tiên theo mức độ khẩn cấp và đề xuất hành động tiếp theo.",
+        "task_type_label": "Proactive AI",
+        "difficulty": "Hard"
+      }
+    },
+    {
+      "case_id": "p5-15-privacy",
+      "input": {
+        "turnId": "p5-15",
+        "userId": "-",
+        "vehicleId": "-",
+        "query": "Trợ lý AI xử lý giấy tờ xe cần lưu ý những gì về bảo mật?",
+        "now": "2026-07-07",
+        "category": "Privacy"
+      },
+      "expected": {
+        "task_type": "security_guidance",
+        "authorized": true,
+        "primary_check": "security"
+      },
+      "metadata": {
+        "category": "Privacy",
+        "expected_focus": "Trả lời về quyền đồng ý của người dùng (consent), mã hóa dữ liệu, phân quyền truy cập, tối thiểu hóa dữ liệu và bảo vệ tài liệu cá nhân.",
+        "task_type_label": "Security",
+        "difficulty": "Hard"
+      }
+    }
+  ]
+}

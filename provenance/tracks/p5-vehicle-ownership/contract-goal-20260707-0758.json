@@ -1,0 +1,11 @@
+{
+  "schema": "cael.provenance.contract_pointer.v1",
+  "goal_id": "goal-20260707-0758",
+  "job_number": 602,
+  "job_folder": "docs/handoff/jobs/602-p5-vehicle-ownership-build",
+  "pack_id": "p5-vehicle-ownership",
+  "execution_type": "build",
+  "source_context": "docs/handoff/jobs/602-p5-vehicle-ownership-build/_operator_context.md",
+  "source_corpus": "docs/handoff/jobs/602-p5-vehicle-ownership-build/corpus/p5_workbook_raw.json",
+  "status": "builder_ready_for_judge_verification"
+}
