@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node", "vitest"],
+    "baseUrl": ".",
+    "paths": {
+      "@cael/os-light": ["node_modules/@cael/os-light/dist/index.d.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "../p6-query-understanding/src/**/*.ts",
+    "../p7-semantic-ranking/src/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

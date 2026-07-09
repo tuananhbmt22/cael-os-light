@@ -1,0 +1,17 @@
+{
+  "schema": "cael.track_provenance.contract_summary.v1",
+  "goal_id": "goal-20260707-0759",
+  "track_id": "p7-semantic-ranking",
+  "job_folder": "docs/handoff/jobs/602-603-0759-p7-semantic-ranking-build",
+  "execution_type": "build",
+  "acceptance_tests": [
+    "P7 pack tsc and vitest pass",
+    "All 111 POIs, 10 taxonomy rows, 7 ranking signals, and 60 public eval rows are transcribed programmatically from the workbook",
+    "Measured top-k inclusion over 60 eval cases is reported honestly",
+    "Ranker exports a pure function over an injected corpus for P8 readiness",
+    "Receipts use decision score, cited_ids equal ranked poi ids, evidence_refs cite corpus rows, and modelCalls remains 0",
+    "Showcase typecheck and vitest pass with P7 registered as the fifth live track"
+  ],
+  "hard_rejects_observed": [],
+  "builder_verdict": "pass_awaiting_judge"
+}

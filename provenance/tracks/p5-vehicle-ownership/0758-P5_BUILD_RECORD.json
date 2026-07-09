@@ -1,0 +1,37 @@
+{
+  "schema": "cael.provenance.builder_record.v1",
+  "track_id": "p5-vehicle-ownership",
+  "builder": "Codex 5.5",
+  "judge_status": "pending_lane_judge",
+  "corpus_rows": {
+    "User Profiles": 20,
+    "Vehicle Dataset": 20,
+    "Vehicle Documents": 15,
+    "Knowledge Dataset": 12,
+    "VETC Services": 8,
+    "Mock APIs": 10,
+    "Public Evaluation": 15
+  },
+  "pack_verification": {
+    "command": "npm test",
+    "cwd": "cael-os-light/packs/p5-vehicle-ownership",
+    "result": "pass",
+    "test_files": 5,
+    "tests": 9
+  },
+  "showcase_verification": {
+    "typecheck": "pass",
+    "vitest": "pass",
+    "test_files": 30,
+    "tests": 171,
+    "skipped": 1,
+    "scan": "pass"
+  },
+  "hard_rejects_checked": [
+    "no live VETC network calls",
+    "request.now required for deadline math",
+    "modelCalls remains 0 on deterministic path",
+    "cross-user privacy refusal emits no other-user vehicle context or deadline/document arrays",
+    "document handling remains metadata-only"
+  ]
+}
